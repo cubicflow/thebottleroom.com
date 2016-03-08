@@ -44,7 +44,7 @@
 // 1. Global
 // ---------
 
-// $global-font-size: 100%;
+$global-font-size: 14px;
 // $global-width: rem-calc(1200);
 // $global-lineheight: 1.5;
 // $primary-color: #2199e8;
@@ -57,9 +57,9 @@
 // $dark-gray: #8a8a8a;
 // $black: #0a0a0a;
 // $white: #fefefe;
-// $body-background: $white;
-// $body-font-color: $black;
-// $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-background: $grey-warm--dark;
+$body-font-color: $cream;
+$body-font-family: $font-family--regular;
 // $body-antialiased: true;
 // $global-margin: 1rem;
 // $global-padding: 1rem;
@@ -73,13 +73,13 @@
 // 2. Breakpoints
 // --------------
 
-// $breakpoints: (
-//   small: 0,
-//   medium: 640px,
-//   large: 1024px,
-//   xlarge: 1200px,
-//   xxlarge: 1440px,
-// );
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1025px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
 // $breakpoint-classes: (small medium large);
 
 // 3. The Grid
@@ -97,36 +97,38 @@
 // 4. Base Typography
 // ------------------
 
-// $header-font-family: $body-font-family;
+$header-font-family: $font-family--alt;
 // $header-font-weight: $global-weight-normal;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-// $header-sizes: (
-//   small: (
-//     'h1': 24,
-//     'h2': 20,
-//     'h3': 19,
-//     'h4': 18,
-//     'h5': 17,
-//     'h6': 16,
-//   ),
-//   medium: (
-//     'h1': 48,
-//     'h2': 40,
-//     'h3': 31,
-//     'h4': 25,
-//     'h5': 20,
-//     'h6': 16,
-//   ),
-// );
+$header-sizes: (
+  small: (
+    'h1': 44,
+    'h2': 32,
+    'h3': 24,
+    'h4': 20,
+
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 48,
+    'h2': 36,
+    'h3': 28,
+    'h4': 24,
+
+    'h5': 20,
+    'h6': 16,
+  ),
+);
 // $header-color: inherit;
-// $header-lineheight: 1.4;
-// $header-margin-bottom: 0.5rem;
+$header-lineheight: 1.4;
+$header-margin-bottom: 0.5rem;
 // $header-text-rendering: optimizeLegibility;
 // $small-font-size: 80%;
 // $header-small-font-color: $medium-gray;
-// $paragraph-lineheight: 1.6;
-// $paragraph-margin-bottom: 1rem;
+$paragraph-lineheight: 1.6;
+$paragraph-margin-bottom: 1rem;
 // $paragraph-text-rendering: optimizeLegibility;
 // $code-color: $black;
 // $code-font-family: $font-family-monospace;

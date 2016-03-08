@@ -2,9 +2,49 @@
 // Config
 // --------------------------------------------------
 
+
+@font-face {
+    font-family: Brown-Light;
+    src: url(../fonts/Brown-Light.otf);
+}
+@font-face {
+    font-family: Brown-Light-Italic;
+    src: url(../fonts/Brown-Light-Italic.otf);
+}
+@font-face {
+    font-family: Brown-Regular;
+    src: url(../fonts/Brown-Regular.otf);
+}
+@font-face {
+    font-family: Brown-Bold;
+    src: url(../fonts/Brown-Bold.otf);
+}
+@font-face {
+    font-family: LyonDisplay-Black;
+    src: url(../fonts/LyonDisplay-Black.otf);
+}
+$font-family--light: 'Brown-Light', Helvetica, Roboto, Arial, sans-serif;
+$font-family--light-italic: 'Brown-Light-Italic', Helvetica, Roboto, Arial, sans-serif;
+$font-family--regular: 'Brown-Regular', Helvetica, Roboto, Arial, sans-serif;
+$font-family--bold: 'Brown-Bold', Helvetica, Roboto, Arial, sans-serif;
+
+$font-family--alt: 'LyonDisplay-Black', Helvetica, Roboto, Arial, sans-serif;
+
 //
 // Colors
 // --------------------------------------------------
 
 $black: #000;
 $white: #fff;
+
+$grey-warm--xdark: #2C2B2A;
+$grey-warm--dark: #383736;
+$grey-warm--medium: #807D7B;
+
+$grey-cool--green: #ECEEEB;
+$grey-cool--blue: #E1E3E3;
+
+$beige: #E4E1DE;
+$cream: #FAF8F4;
+
+$brick: #7D3029;
