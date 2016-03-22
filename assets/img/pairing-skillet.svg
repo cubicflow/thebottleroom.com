@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="69px" height="37px" viewBox="0 0 69 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>pairing-skillet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pairing-skillet" fill="#FAF8F4">
+            <path d="M67,24 L47.686,24 C47.789,23.36 47.87,22.697 47.92,22 L67,22 L67,24 Z M24,35 C8.98,35 2.798,31.435 2.073,22 L5,22 L24.062,22 L39,22 L43,22 L45.927,22 C45.202,31.435 39.02,35 24,35 L24,35 Z M8.669,13 L39.331,13 L40.604,20 L39,20 L24.062,20 L7.396,20 L8.669,13 Z M17,9 C17,5.14 20.141,2 24,2 C27.859,2 31,5.14 31,9 C31,9.695 30.895,10.366 30.705,11 L17.295,11 C17.105,10.366 17,9.695 17,9 L17,9 Z M48,20 L47,20 L42.637,20 L41,11 L32.77,11 C32.916,10.356 33,9.688 33,9 C33,4.029 28.971,0 24,0 C19.029,0 15,4.029 15,9 C15,9.688 15.084,10.356 15.23,11 L7,11 L5.364,20 L0,20 C0,32.979 8,37 24,37 C37.201,37 44.941,34.247 47.25,26 L69,26 L69,22 L69,20 L48,20 Z"></path>
+        </g>
+    </g>
+</svg>
