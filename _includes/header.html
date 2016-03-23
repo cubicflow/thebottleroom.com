@@ -1,8 +1,17 @@
 <div class="nav">
 
-  <a class="nav__logo" href="">
-    <img src="/assets/img/crest--light.svg">
-  </a>
+
+  {% if include.style == 'logo' %}
+    <a class="nav__logo" href="">
+      <img src="/assets/img/crest--light.svg">
+    </a>
+  {% endif %}
+  {% if include.style == 'button' %}
+    <a class="nav__button" href="">
+      Order
+    </a>
+  {% endif %}
+
 
   <div class="nav__expand">
     <div class="nav__expand__circle">

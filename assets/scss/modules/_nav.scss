@@ -11,6 +11,16 @@
       width: 51px;
     }
   }
+
+  &__button {
+
+    @extend .button, .button--outline;
+    margin-top: 30px;
+    margin-left: 0px;
+    float: left;
+    min-width: 0px;
+  }
+
   &__links {
 
     float: right;
@@ -69,6 +79,19 @@
     right: 0px;
     top: 30px;
 
+    &.active, &:hover {
+      .nav__expand__line--top {
+        top: 19px;
+        transform: rotate(45deg);
+        background-color: $grey-warm--dark;
+      }
+      .nav__expand__line--bottom {
+        top: 19px;
+        transform: rotate(-45deg);
+        background-color: $grey-warm--dark;
+      }
+    }
+
     &__circle {
       display: block;
       position: relative;
@@ -84,17 +107,17 @@
       width: 20px;
       height: 1px;
       position: absolute;
+      transition: all 0.3s ease-in-out;
 
       &--top {
         left: 9px;
-        top: 16px;
+        top: 15px;
       }
       &--bottom {
         left: 9px;
-        top: 19px;
+        top: 22px;
       }
     }
   }
-
 
 }
