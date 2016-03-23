@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>right-circle-dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="right-circle-dark" fill="#807D7B">
+            <path d="M9.8535,5.1465 C9.763,5.056 9.638,5 9.5,5 C9.224,5 9,5.224 9,5.5 C9,5.638 9.056,5.7635 9.1465,5.8535 L13.825,11 L9.1465,16.1465 C9.056,16.2375 9,16.3625 9,16.5 C9,16.7765 9.224,17 9.5,17 C9.638,17 9.763,16.9445 9.8535,16.8535 L14.8535,11.3535 C14.944,11.263 15,11.138 15,11 C15,10.8625 14.944,10.7375 14.8535,10.6465 L9.8535,5.1465 L9.8535,5.1465 Z M11,0 C4.925,0 0,4.925 0,11 C0,17.0755 4.925,22 11,22 C17.075,22 22,17.0755 22,11 C22,4.925 17.075,0 11,0 L11,0 Z M11,21 C5.477,21 1,16.523 1,11 C1,5.4775 5.477,1 11,1 C16.523,1 21,5.4775 21,11 C21,16.523 16.523,21 11,21 L11,21 Z"></path>
+        </g>
+    </g>
+</svg>
