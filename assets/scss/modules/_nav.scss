@@ -1,12 +1,13 @@
 .nav {
   @include container();
-  height: 100px;
   position: relative;
+  height: 80px;
+  z-index: 100;
 
   &__logo {
     float: left;
     img {
-      margin-top: 25px;
+      margin-top: 15px;
       height: 50px;
       width: 51px;
     }
@@ -15,7 +16,7 @@
   &__button {
 
     @extend .button, .button--outline;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 0px;
     float: left;
     min-width: 0px;
@@ -27,7 +28,7 @@
     @include show-for(medium);
 
     ul {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     li {
@@ -77,7 +78,7 @@
     @include hide-for(medium);
     position: absolute;
     right: 0px;
-    top: 30px;
+    top: 20px;
 
     &.active, &:hover {
       .nav__expand__line--top {
