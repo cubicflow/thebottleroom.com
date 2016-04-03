@@ -55,6 +55,7 @@
       transition: all 0.3s;
       text-transform: uppercase;
       padding-top: 20px;
+      letter-spacing: 1px;
 
       @include breakpoint(medium) {
         padding-left: 8px;
