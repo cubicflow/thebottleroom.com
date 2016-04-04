@@ -21,6 +21,12 @@ $(function() {
 
 	window.addEventListener('scroll', function(){
 
+		window.requestAnimationFrame(fadeIfVisible());
+
+	});
+
+	var fadeIfVisible = function(){
+
 		var scrollTop  = window.pageYOffset || document.documentElement.scrollTop;
 
 		for (let i = 0; i < slides.length; i++){
@@ -33,6 +39,6 @@ $(function() {
 
 		}
 
-	});
+	};
 
 });
