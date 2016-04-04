@@ -75,12 +75,13 @@
   &__foot {
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 10px;
     width: 100%;
+
 
     &__container{
       @include container();
-      overflow: hidden;
+      overflow: visible;
       position: relative;
 
     }

@@ -12,7 +12,20 @@ $(document).foundation();
 // Custom JS
 // --------------------------------------------------
 
+var opts = {
+  responsiveClass: '.cf-responsive',
+  mediumSuffix: '--medium',
+  largeSuffix: '--large',
+  retinaSuffix: '@2x',
+  addMediumSuffix: true,
+  addLargeSuffix: true,
+  addRetinaSuffix: true,
+  smallBrowserWidth: 600,
+  mediumBrowserWidth: 1025,
+  largeBrowserWidth: 1280
+};
 
+var responsiveImages = cf.imgSwap(opts);
 
 
 $(function() {
@@ -21,7 +34,7 @@ $(function() {
 
 	window.addEventListener('scroll', function(){
 
-		window.requestAnimationFrame(fadeIfVisible());
+		window.requestAnimationFrame(fadeIfVisible);
 
 	});
 

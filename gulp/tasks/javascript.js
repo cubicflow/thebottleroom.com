@@ -13,7 +13,10 @@ gulp.task('javascript', function() {
 
   return gulp.src(config.src)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({
+      presets: ['es2015'],
+      plugins: ['transform-object-assign']
+    }))
     .pipe($.concat(config.filename))
     .pipe($.if(isProduction, $.uglify({ mangle: false })))
     .pipe($.if(!isProduction, $.sourcemaps.write()))

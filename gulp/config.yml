@@ -21,7 +21,7 @@ javascript:
   src:
     # Libraries requried by Foundation
     - "assets/vendor/jquery/dist/jquery.js"
-    - "assets/vendor/what-input/what-input.js"
+    # - "assets/vendor/what-input/what-input.js"
 
     # Core Foundation files, all Foundation components need this!
     - "assets/vendor/foundation-sites/js/foundation.core.js"
@@ -59,7 +59,8 @@ javascript:
     # Paths to your own project code are here
     # All the files in this list are concatenated into all.js
     - "!assets/js/all.js"
-    - "assets/js/*.js"
+    - "assets/js/cf-imgswap.js"
+    - "assets/js/app.js"
 
 jekyll:
   notification: "Running jekyll"
