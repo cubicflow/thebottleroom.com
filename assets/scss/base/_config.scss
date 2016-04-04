@@ -17,6 +17,8 @@ $cream: #FAF8F4;
 
 $brick: #7D3029;
 
+
+
 //
 // Fonts
 // --------------------------------------------------
@@ -56,3 +58,44 @@ $font-size--medium: 20px;
 $font-size--large: 24px;
 $font-size--xlarge: 32px;
 $font-size--xxlarge: 44px;
+
+
+@mixin font-size--xsmall(){
+  font-size: $font-size--xsmall;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--xsmall + 2px };
+  }
+}
+
+@mixin font-size--medium(){
+  font-size: $font-size--medium;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--medium + 4px };
+  }
+}
+
+@mixin font-size--large(){
+  font-size: $font-size--large;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--large + 4px };
+  }
+}
+
+@mixin font-size--xlarge(){
+  font-size: $font-size--xlarge;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--xlarge + 4px };
+  }
+}
+
+@mixin font-size--xxlarge(){
+  font-size: $font-size--xxlarge;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--xxlarge + 4px };
+  }
+}
