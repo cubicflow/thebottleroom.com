@@ -1,27 +1,15 @@
 
 body {
 
-  //font-size: 14px;  // set in _settings.scss
+  font-size: $font-size--xsmall;
   line-height: 1.75em;
 
-  @include breakpoint(medium){
-    font-size: 16px;
-  }
 }
 
 p {
-  font-size: 14px;
+
+  @include font-size--xsmall();
   margin-bottom: 2.5em;
   line-height: 1.75em;
 
-
-  @include breakpoint(medium){
-    font-size: 16px;
-  }
-}
-
-
-@mixin text-style--small {
-  font-size: 14px;
-  font-family: $font-family--alt;
 }

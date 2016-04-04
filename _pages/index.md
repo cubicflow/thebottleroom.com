@@ -14,7 +14,7 @@ title: Homepage
   <div class="homepage-cover__content">
     <img class="homepage-cover__content__crest" src="/assets/img/crest--light.svg">
     <img class="homepage-cover__content__masthead" src="/assets/img/masthead.svg">
-    <span>Upscale pub-fare in Uptown Whittier</span>
+    <span>Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
   </div>
 
   <div class="homepage-cover__foot">

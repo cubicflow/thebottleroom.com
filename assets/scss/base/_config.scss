@@ -68,6 +68,18 @@ $font-size--xxlarge: 44px;
   }
 }
 
+@mixin font-size--small(){
+  font-size: $font-size--small;
+
+  @include breakpoint(medium) {
+    font-size: #{ $font-size--small + 2px };
+  }
+
+  @include breakpoint(large) {
+    font-size: #{ $font-size--small + 4px };
+  }
+}
+
 @mixin font-size--medium(){
   font-size: $font-size--medium;
 
