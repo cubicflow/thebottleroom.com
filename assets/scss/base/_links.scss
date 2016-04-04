@@ -3,9 +3,10 @@
 // --------------------------------------------------
 a {
   color: $brick--tint;
+  transition: 0.2s;
 
   &:hover {
-
+    color: lighten($brick--tint, 15);
   }
 }
 
@@ -19,9 +20,9 @@ a {
 
   display: inline-block;
   margin: 0.25em;
-  padding: 0.68em 1.22em 0em 1.22em;
+  padding: 0.68em 1.22em 0.68em 1.22em;
   letter-spacing: 0.07em;
-  height: 2.85em;
+  //height: 2.85em;
   border-radius: 4px;
   text-align: center;
   text-transform: uppercase;

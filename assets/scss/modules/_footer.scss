@@ -1,14 +1,15 @@
 .footer {
   background-color: $grey-warm--xdark;
   min-height: 200px;
-  padding: 60px 0px 60px 0px;
+  padding: 60px 0px 0px 0px;
+  max-width: none;
 
     @include breakpoint(medium) {
-      padding: 80px 0px 80px 0px;
+      padding: 80px 0px 0px 0px;
     }
 
     @include breakpoint(large) {
-      padding: 100px 0px 100px 0px;
+      padding: 100px 0px 0px 0px;
     }
 
   &__container {
@@ -19,6 +20,20 @@
     text-transform: none;
     min-width: 50px;
     margin: 0px 0.5em 0.75em 0px;
+  }
+
+
+  ul {
+
+    // margin: 0px;
+    // padding: 0px;
+    // line-height: 2em;
+
+    li {
+      // margin: 0px;
+      // padding: 0px;
+      // line-height: 2em;
+    }
   }
 
   &__label {
@@ -46,10 +61,77 @@
     @include grid-row();
   }
   &__col {
-    @include grid-column(12);
+    @include grid-column(12, 0px);
+    position: relative;
+    margin-bottom: 60px;
 
     @include breakpoint(medium){
-      @include grid-column(6);
+      @include grid-column(6, 0px);
+      margin-bottom: 80px;
     }
+
+    @include breakpoint(large){
+      margin-bottom: 100px;
+    }
+
+    a {
+      color: $cream;
+      opacity: 0.7;
+      display: block;
+      line-height: 2.5em;
+
+      @include breakpoint(medium){
+        line-height: 2em;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &__crest {
+
+    position: absolute;
+    top: 55px;
+    right: 0px;
+
+    img {
+    }
+  }
+
+
+  &__etc {
+
+    font-family: $font-family--light;
+    width: 100%;
+    background-color: $grey-warm--dark;
+    padding: 35px 0px 35px 0px;
+
+    &__container {
+      @include container-small();
+
+      a {
+        opacity: 0.7;
+        display: block;
+        color: $cream;
+        line-height: 2.5em;
+
+        @include breakpoint(medium) {
+          display: inline-block;
+          margin-right: 20px;
+          line-height: 2em;
+        }
+        @include breakpoint(large) {
+          margin-right: 40px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
   }
 }
