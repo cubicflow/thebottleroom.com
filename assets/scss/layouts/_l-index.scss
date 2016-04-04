@@ -17,6 +17,7 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  max-height: 960px;
 
   background-size: cover;
   background-position: center;
@@ -29,6 +30,9 @@ main {
   }
   &--moment {
     background-image: url(/assets/img/home/hero-taps.jpg);
+  }
+  &--inspired {
+    background-image: url(/assets/img/home/hero-charcuterie.jpg);
   }
 
   &.active {

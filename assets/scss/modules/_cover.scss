@@ -1,17 +1,18 @@
 .homepage-cover {
   width: 100%;
-  height: 88vh;
+  height: 90vh;
   margin-top: -80px;
   max-width: none;
   min-width: none;
   min-height: 430px;
+  max-height: 960px;
   position: relative;
   background-image: url(/assets/img/home/hero-cover.jpg);
   background-position: center;
   background-size: cover;
 
   @include breakpoint(medium) {
-    height: 100vh;
+    height: 98vh;
   }
 
   &__overlay {
