@@ -1,3 +1,55 @@
 .footer {
-  
+  background-color: $grey-warm--xdark;
+  min-height: 200px;
+  padding: 60px 0px 60px 0px;
+
+    @include breakpoint(medium) {
+      padding: 80px 0px 80px 0px;
+    }
+
+    @include breakpoint(large) {
+      padding: 100px 0px 100px 0px;
+    }
+
+  &__container {
+    @include container-small();
+  }
+
+  .button--outline {
+    text-transform: none;
+    min-width: 50px;
+    margin: 0px 0.5em 0.75em 0px;
+  }
+
+  &__label {
+    font-family: $font-family--bold;
+    font-size: $font-size--xsmall;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+  }
+
+  &__popular-items {
+    margin-bottom: 60px;
+
+    @include breakpoint(medium) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 100px;
+    }
+
+  }
+
+  &__row {
+    @include grid-row();
+  }
+  &__col {
+    @include grid-column(12);
+
+    @include breakpoint(medium){
+      @include grid-column(6);
+    }
+  }
 }

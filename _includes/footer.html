@@ -1,3 +1,41 @@
 <footer class="footer">
+  <div class="footer__container">
 
+    <div class="footer__popular-items">
+
+      <div class="footer__label">
+        Some of our popular menu items
+      </div>
+
+      {% for item in site.data.featured-items.featured_items %}
+        <a class="button button--outline" href="{{item.item__url}}">{{item.name}}</a>
+      {% endfor %}
+
+    </div>
+
+    <div class="footer__row">
+
+      <div class="footer__col">
+        <div class="footer__label">
+          Upcoming events
+        </div>
+
+        <ul>
+          <li><a href="#">Superbowl ‘16 Party</a></li>
+          <li><a href="#">Pliney the Younger</a></li>
+          <li><a href="#">7th Anniversary</a></li>
+          <li><a href="#">Spring Menu Launch</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__label">
+          Connect with us
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </footer>
