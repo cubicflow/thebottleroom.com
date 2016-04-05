@@ -1,0 +1,13 @@
+---
+permalink: menu/
+layout: index
+title: Menu
+---
+{% for category in site.menu %}
+  {{ category.title }}
+
+  {% for subcategory in category.subcategories %}
+    {{ subcategory.name }}
+  {% endfor %}
+
+{% endfor %}

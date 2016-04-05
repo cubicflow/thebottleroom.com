@@ -47,3 +47,6 @@ incremental:      true
 permalink:        "/blog/:year/:title/"
 paginate_path:    "/blog/page:num"
 paginate:         5
+
+collections:
+- menu
