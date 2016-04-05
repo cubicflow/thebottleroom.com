@@ -1,19 +1,17 @@
 featured_items:
-  - name: Fried Calamari
-    item_url: google.com
   - name: Spanish Chorizo
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Vizza Pizza
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Vermont Cheddar Mac
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Tony Tots
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Kurobuta Pork Tacos
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Bottle Room Burger
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Uptown Bacon Burger
-    item_url: google.com
+    item_url: /menu/eats/#good-bread
   - name: Famous Bread Pudding
-    item_url: google.com
+    item_url: /menu/eats/#good-bread

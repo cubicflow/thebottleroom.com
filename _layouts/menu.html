@@ -3,20 +3,24 @@ layout: default
 ---
 
 <div class="menu-cover cf-responsive">
+
 </div>
 
 <div class="menu">
   <div class="menu__sidebar">
     <div class="menu__sidebar__category">
-    {% for category in site.menu %}
+    {% assign menu = site.menu | sort: 'sidebar_order' %}
+    {% for category in menu %}
 
       <a href="{{category.url}}">{{ category.title }}</a>
 
+      {% if page.url == category.url %}
       <div class="menu__sidebar__category__subcategories">
       {% for subcategory in category.subcategories %}
-        <a href="#">{{ subcategory.name }}</a>
+        <a href="#{{ subcategory.name | slugify }}">{{ subcategory.name }}</a>
       {% endfor %}
       </div>
+      {% endif %}
 
     {% endfor %}
     </div>
@@ -26,12 +30,12 @@ layout: default
 
     {% for subcategory in page.subcategories %}
 
-    <div class="menu__subcategory">
+    <div id="{{ subcategory.name | slugify }}" class="menu__subcategory">
 
       <div class="menu__subcategory__title">{{ subcategory.name }}</div>
 
       {% for item in subcategory.items %}
-      <div class="menu__subcategory__item">
+      <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
 
         <div class="menu__subcategory__item__title">{{ item.name }}</div>
         <div class="menu__subcategory__item__description">{{ item.description }}</div>

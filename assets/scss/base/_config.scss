@@ -63,6 +63,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--xsmall(){
   font-size: $font-size--xsmall;
+  line-height: 1.5em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--xsmall + 2px };
@@ -71,6 +72,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--small(){
   font-size: $font-size--small;
+  line-height: 1.75em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--small + 2px };
@@ -83,6 +85,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--medium(){
   font-size: $font-size--medium;
+  line-height: 1.5em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--medium + 4px };
@@ -91,6 +94,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--large(){
   font-size: $font-size--large;
+  line-height: 1.4em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--large + 4px };
@@ -99,6 +103,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--xlarge(){
   font-size: $font-size--xlarge;
+  line-height: 1.3em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--xlarge + 4px };
@@ -107,6 +112,7 @@ $font-size--xxlarge: 44px;
 
 @mixin font-size--xxlarge(){
   font-size: $font-size--xxlarge;
+  line-height: 1.2em;
 
   @include breakpoint(medium) {
     font-size: #{ $font-size--xxlarge + 4px };

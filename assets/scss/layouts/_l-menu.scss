@@ -4,13 +4,17 @@
 
 .menu {
   @include container();
-  padding-top: 50px;
+  padding: 40px 0px 30px 0px;
   overflow: auto;
 
   &__sidebar {
     @include show-for(medium);
     width: 200px;
     position: absolute;
+
+    @include breakpoint(large) {
+      width: 230px;
+    }
 
     &__category {
 
@@ -52,8 +56,12 @@
     margin-left: 0px;
     min-height: 500px;
 
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
       margin-left: 200px;
+    }
+
+    @include breakpoint(large) {
+      margin-left: 230px;
     }
 
   }
@@ -75,6 +83,17 @@
     &__item {
       @include grid-column(12, 0px);
       margin-bottom: 40px;
+
+      @include breakpoint(large) {
+        @include grid-column(6, 0px);
+
+        &:nth-child(odd){
+          padding-left: 20px;
+        }
+        &:nth-child(even){
+          padding-right: 20px;
+        }
+      }
 
       &__title {
         font-size: $font-size--small;
@@ -111,12 +130,6 @@
           padding-right: 10px;
         }
 
-
-
-      }
-
-      @include breakpoint(large) {
-        @include grid-column(6);
       }
     }
   }

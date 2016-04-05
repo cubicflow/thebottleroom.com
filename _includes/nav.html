@@ -31,11 +31,11 @@
 
     <nav class="nav__links">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Craft Beer</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">More +</a></li>
+        <li><a {% if page.url == '/' %} class="active" {% endif %} href="/">Home</a></li>
+        <li><a {% if page.url == '/menu/eats/' %} class="active" {% endif %} href="/menu/eats">Menu</a></li>
+        <li><a {% if page.url == '/menu/ontap/' %} class="active" {% endif %} href="/menu/ontap">Craft Beer</a></li>
+        <li><a {% if page.url == '/events' %} class="active" {% endif %} href="/events">Events</a></li>
+        <li><a {% if page.url == '/more' %} class="active" {% endif %} href="/more">More +</a></li>
       </ul>
     </nav>
 
