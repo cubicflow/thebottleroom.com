@@ -49,4 +49,5 @@ paginate_path:    "/blog/page:num"
 paginate:         5
 
 collections:
-- menu
+  menu:
+    output: true

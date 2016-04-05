@@ -1,0 +1,124 @@
+// --------------------------------------------------
+// Layout index page
+// --------------------------------------------------
+
+.menu {
+  @include container();
+  padding-top: 50px;
+  overflow: auto;
+
+  &__sidebar {
+    @include show-for(medium);
+    width: 200px;
+    position: absolute;
+
+    &__category {
+
+      a {
+        @include font-size--xlarge();
+        line-height: 1em;
+        font-family: $font-family--alt;
+        color: $cream;
+        display: block;
+        margin-bottom: 35px;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      &__subcategories {
+
+        margin-bottom: 40px;
+
+        a {
+          font-size: $font-size--small;
+          font-family: $font-family--regular;
+          display: block;
+          margin: 10px 0px 10px 20px;
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__body {
+    position: relative;
+    margin-left: 0px;
+    min-height: 500px;
+
+    @include breakpoint(medium){
+      margin-left: 200px;
+    }
+
+  }
+
+
+  &__subcategory {
+    @include grid-row();
+
+    &__title {
+      font-size: $font-size--large;
+      font-family: $font-family--light;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid fade-out($cream, 0.6);
+    }
+
+    &__item {
+      @include grid-column(12, 0px);
+      margin-bottom: 40px;
+
+      &__title {
+        font-size: $font-size--small;
+        font-family: $font-family--bold;
+        margin-bottom: 5px;
+      }
+
+      &__description {
+        font-size: $font-size--xsmall;
+        font-family: $font-family--light;
+        margin-bottom: 10px;
+      }
+
+      &__price {
+        font-size: $font-size--xsmall;
+        font-family: $font-family--regular;
+        float: left;
+      }
+
+
+      &__bag {
+        opacity: 0.6;
+        display: block;
+        float: right;
+
+        &:hover {
+          opacity: 1.0;
+        }
+
+        span {
+          font-size: 12px;
+          font-family: $font-family--regular;
+          color: $cream;
+          padding-right: 10px;
+        }
+
+
+
+      }
+
+      @include breakpoint(large) {
+        @include grid-column(6);
+      }
+    }
+  }
+
+}

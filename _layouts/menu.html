@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="menu-cover cf-responsive">
+</div>
+
+<div class="menu">
+  <div class="menu__sidebar">
+    <div class="menu__sidebar__category">
+    {% for category in site.menu %}
+
+      <a href="{{category.url}}">{{ category.title }}</a>
+
+      <div class="menu__sidebar__category__subcategories">
+      {% for subcategory in category.subcategories %}
+        <a href="#">{{ subcategory.name }}</a>
+      {% endfor %}
+      </div>
+
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="menu__body">
+
+    {% for subcategory in page.subcategories %}
+
+    <div class="menu__subcategory">
+
+      <div class="menu__subcategory__title">{{ subcategory.name }}</div>
+
+      {% for item in subcategory.items %}
+      <div class="menu__subcategory__item">
+
+        <div class="menu__subcategory__item__title">{{ item.name }}</div>
+        <div class="menu__subcategory__item__description">{{ item.description }}</div>
+        <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
+
+        {% if item.orderable %}
+          <a href="#" class="menu__subcategory__item__bag">
+            <span>Add to Bag</span>
+            <img src="/assets/img/bag.svg">
+          </a>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+</div>

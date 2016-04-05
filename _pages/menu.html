@@ -3,11 +3,29 @@ permalink: menu/
 layout: index
 title: Menu
 ---
-{% for category in site.menu %}
-  {{ category.title }}
 
-  {% for subcategory in category.subcategories %}
-    {{ subcategory.name }}
-  {% endfor %}
+<div class="menu-cover">
+</div>
 
-{% endfor %}
+<div class="menu">
+  <div class="menu__sidebar">
+    <div class="menu__sidebar__category">
+    {% for category in site.menu %}
+
+      <a href="{{category.url}}">{{ category.title }}</a>
+
+      <div class="menu__sidebar__category__subcategories">
+      {% for subcategory in category.subcategories %}
+        <a href="#">{{ subcategory.name }}</a>
+      {% endfor %}
+      </div>
+
+    {% endfor %}
+    </div>
+  </div>
+
+  <div class="menu__body">
+
+  </div>
+
+</div>

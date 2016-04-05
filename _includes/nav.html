@@ -1,35 +1,44 @@
+{% if include.style == 'button' %}
 <div class="nav">
+{% endif %}
+
+{% if include.style == 'logo' %}
+<div class="nav nav--solidbg">
+{% endif %}
+
+  <div class="nav__container">
+
+    {% if include.style == 'logo' %}
+      <a class="nav__logo" href="">
+        <img src="/assets/img/crest--light.svg">
+      </a>
+    {% endif %}
+    {% if include.style == 'button' %}
+      <a class="nav__button" href="">
+        Order
+      </a>
+    {% endif %}
 
 
-  {% if include.style == 'logo' %}
-    <a class="nav__logo" href="">
-      <img src="/assets/img/crest--light.svg">
-    </a>
-  {% endif %}
-  {% if include.style == 'button' %}
-    <a class="nav__button" href="">
-      Order
-    </a>
-  {% endif %}
-
-
-  <div class="nav__expand">
-    <div class="nav__expand__circle">
-      <div class="nav__expand__line nav__expand__line--top">
-      </div>
-      <div class="nav__expand__line nav__expand__line--bottom">
+    <div class="nav__expand">
+      <div class="nav__expand__circle">
+        <div class="nav__expand__line nav__expand__line--top">
+        </div>
+        <div class="nav__expand__line nav__expand__line--bottom">
+        </div>
       </div>
     </div>
-  </div>
 
-  <nav class="nav__links">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Craft Beer</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">More +</a></li>
-    </ul>
-  </nav>
+    <nav class="nav__links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Craft Beer</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">More +</a></li>
+      </ul>
+    </nav>
+
+  </div>
 
 </div>

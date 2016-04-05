@@ -4,7 +4,11 @@ layout: compress
 
 {% include head.html %}
 
-{% include nav.html style="button" %}
+{% if page.url == '/' %}
+  {% include nav.html style="button" %}
+{% else %}
+  {% include nav.html style="logo" %}
+{% endif %}
 
 {{ content }}
 
