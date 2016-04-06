@@ -3,40 +3,163 @@
   #snipcart-main-container {
 
     font-family: $font-family--regular;
+    background: $beige;
+    padding-bottom: 0px;
+
+    i.icon-snipcart-close {
+      background: none;
+      background-image: url(/assets/img/close--light.svg);
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: -6px 0px 0px 0px;
+      opacity: 0.7;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin: 22px 9px 0px 0px;
+      }
+
+    }
+    i.icon-snipcart-close::before {
+      content: none;
+    }
+
+    #snipcart-sub-content {
+      background: $cream;
+    }
+
+    ul#snipcart-steps {
+
+      li {
+        background: $beige;
+
+        span.snipcart-step-text {
+          font-family: $font-family--regular;
+        }
+
+        span.snipcart-step-number {
+          margin-top: 14px;
+
+          @media screen and (min-width: 768px) {
+            margin-top: 15px;
+          }
+
+          @include breakpoint(large) {
+            margin-top: 10px;
+          }
+        }
+
+        @include breakpoint(large) {
+          padding-left: 20px;
+        }
+
+        &.active {
+          background: $cream;
+        }
+      }
+
+    }
 
     // BUTTON BASE STYLES
-    a.snipcart-btn {
-      background: $brick;
-      border: none;
+    a.snipcart-btn, button.snipcart-btn {
+      font-family: $font-family--regular;
+      background: $cream;
+      border: 1px solid fade-out($grey-warm--medium, 0.6);
       text-shadow: none;
-      color: $cream;
+      box-shadow: none;
+      color: $grey-warm--medium;
+      letter-spacing: 1px;
+      line-height: 40px;
+      transition: all 0.2s;
+      padding: 0px 20px 0px 20px;
+
+      &:hover {
+        border: 1px solid $grey-warm--medium;
+        color: $grey-warm--dark;
+      }
     }
 
     // PRIMARY ACTION BUTTON
     a.snipcart-next, .cf-snipcart #snipcart-main-container a.snipcart-finalize, .cf-snipcart #snipcart-main-container a.snipcart-mainaction {
+      font-family: $font-family--regular;
       background: $brick;
       border: none;
       text-shadow: none;
       color: $cream;
+      letter-spacing: 1px;
+      line-height: 40px;
+      height: 40px;
+      padding-top: 2px;
+
+      &:hover {
+        font-family: $font-family--regular;
+        background: $brick--tint;
+        border: none;
+        text-shadow: none;
+        color: $cream;
+        letter-spacing: 1px;
+        line-height: 40px;
+        height: 40px;
+      }
+    }
+
+    .snipcart-step {
+
+      #snipcart-actions {
+        background: $cream;
+      }
+
+    }
+
+
+    #snipcart-footer {
+      display: none;
     }
 
 
     // HEADER
     #snipcart-header {
 
-      background: $beige;
+      background: $grey-warm--xdark;
 
-      #snipcart-total {
-        .snipcart-label {
+      #snipcart-header-total {
+        border: 0px;
+        box-shadow: 0px 0px 0px transparent;
+
+        @media screen and (min-width: 768px) {
+          margin-top: 33px;
+        }
+
+        #snipcart-total {
+
+          font-family: $font-family--regular;
+          background: $grey-warm--xdark;
+          border: 1px solid fade-out($grey-warm--medium, 0.6);
+          box-shadow: 0px 0px 0px transparent;
+
+          .snipcart-label {
+
+          }
+
+          .snipcart-ammount {
+
+          }
 
         }
+
       }
 
       #snipcart-title {
         text-transform: capitalize;
         font-family: $font-family--alt;
         font-size: $font-size--xlarge;
-        color: $grey-warm--dark;
+        color: $cream;
+        padding-left: 0px;
       }
 
     }
@@ -44,6 +167,23 @@
 
     // MAIN TABLE
     table.snipcart-list {
+
+      span.snipcart-product-description {
+        display: none;
+      }
+
+      table#snipcart-items {
+
+        tr {
+          td.snipcart-td-1.snipcart-td-left {
+            span {
+              display: none;
+            }
+          }
+        }
+
+
+      }
 
       // TABLE LABELS
       th {
@@ -62,4 +202,11 @@
       display: none;
   }
 
+}
+
+
+// SELECTOR OF DOOM
+// FOR TABLE BACKGROUND COLOR
+.cf-snipcart #snipcart-main-container table#snipcart-items td.snipcart-td-3, #snipcart-main-container table#snipcart-items td.snipcart-td-4, #snipcart-main-container table#snipcart-items td.snipcart-td-5 {
+  background: $cream!important;
 }
