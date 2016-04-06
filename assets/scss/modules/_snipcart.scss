@@ -24,8 +24,19 @@
     // HEADER
     #snipcart-header {
 
+      background: $beige;
+
+      #snipcart-total {
+        .snipcart-label {
+
+        }
+      }
+
       #snipcart-title {
-        font-family: $font-family--light;
+        text-transform: capitalize;
+        font-family: $font-family--alt;
+        font-size: $font-size--xlarge;
+        color: $grey-warm--dark;
       }
 
     }
