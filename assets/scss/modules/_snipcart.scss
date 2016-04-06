@@ -1,0 +1,54 @@
+.cf-snipcart {
+
+  #snipcart-main-container {
+
+    font-family: $font-family--regular;
+
+    // BUTTON BASE STYLES
+    a.snipcart-btn {
+      background: $brick;
+      border: none;
+      text-shadow: none;
+      color: $cream;
+    }
+
+    // PRIMARY ACTION BUTTON
+    a.snipcart-next, .cf-snipcart #snipcart-main-container a.snipcart-finalize, .cf-snipcart #snipcart-main-container a.snipcart-mainaction {
+      background: $brick;
+      border: none;
+      text-shadow: none;
+      color: $cream;
+    }
+
+
+    // HEADER
+    #snipcart-header {
+
+      #snipcart-title {
+        font-family: $font-family--light;
+      }
+
+    }
+
+
+    // MAIN TABLE
+    table.snipcart-list {
+
+      // TABLE LABELS
+      th {
+        font-family: $font-family--regular;
+      }
+
+      span.snipcart-product-name {
+        font-family: $font-family--regular;
+      }
+    }
+
+  }
+
+  // POWERED BY SNIPCART ICON
+  #snipcart-footer #snipcart-powered {
+      display: none;
+  }
+
+}
