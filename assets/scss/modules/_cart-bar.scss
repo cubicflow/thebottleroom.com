@@ -3,10 +3,19 @@
   min-height: 50px;
   background-color: $beige;
   position: fixed;
-  bottom: 0px;
+  bottom: -50px;
   line-height: 50px;
   z-index: 10;
-  text-align: center;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(-50px);
+  }
 
   &__container {
     position: relative;
@@ -17,18 +26,33 @@
   }
 
   &__text {
-    color: $grey-warm--xdark;
+    color: $grey-warm--medium;
     letter-spacing: 1px;
     position: absolute;
     left: 0px;
     top: 0px;
     height: 50px;
     width: 50%;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
 
     &:hover {
       background-color: $cream;
     }
+
+    &__items {
+      @include hide-for(medium);
+
+      &--medium {
+        @include show-for(medium);
+      }
+    }
+
 
   }
 
@@ -41,12 +65,32 @@
     background-color: $brick;
     color: $cream;
     display: block;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: auto;
+
+    @include breakpoint(medium) {
+      height: 40px;
+      width: auto;
+      min-width: 10em;
+      top: 5px;
+      line-height: 42px;
+      border-radius: 4px;
+    }
 
     &:hover {
       background-color: $brick--tint;
       color: $white;
     }
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      margin-top: -3px;
+      margin-left: 5px;
+    }
+
   }
 
 }

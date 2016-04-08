@@ -1,13 +1,16 @@
-<div class="cart-bar">
-  <div class="cart-bar__container">
+<a id="cart-bar" class="cart-bar snipcart-checkout">
+  <div class="cart-bar__container snipcart-summary">
 
     <div class="cart-bar__text">
-      4 items
+      <span class="cart-bar__text__items">Items:</span>
+      <span class="cart-bar__text__items--medium">Items in order:</span> 
+      <span class="snipcart-total-items"></span>
     </div>
 
-    <a href="#" class="cart-bar__subtotal">
-      Subtotal: $500.00
-    </a>
+    <div href="#" class="cart-bar__subtotal">
+      Total: <span class="snipcart-total-price"></span>
+      <img src="/assets/img/arrow-right.svg">
+    </div>
 
   </div>
-</div>
+</a>
