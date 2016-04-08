@@ -70,4 +70,9 @@ $(function() {
     }
   });
 
+  Snipcart.execute('config', 'show_continue_shopping', true);
+  Snipcart.execute('config', 'allowed_provinces', [
+    { country: 'US', provinces: ['CA'] },
+  ]);
+
 });

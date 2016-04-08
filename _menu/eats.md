@@ -8,10 +8,20 @@ subcategories:
     items:
       - name: Hummus
         description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-        price: 5.00
+        price: 7.00
         image_path: /assets/menu/
-        stackable: true
+        stackable: false
         orderable: true
+        custom_fields:
+          - name: Add Crazy Sauce
+            options: true|false
+            required: true
+          - name: pepperoni
+            options: "No|Yes[+5.00]"
+            required: true
+          - name: cheese
+            options: "No|Yes[+3.00]"
+            required: true
       - name: Crispy Fried Calamari
         description: I Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
         price: 10.00
@@ -66,4 +76,3 @@ subcategories:
         orderable: true
 
 ---
-Hey I like the kak

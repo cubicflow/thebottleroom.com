@@ -50,6 +50,11 @@ layout: default
           data-item-description="{{item.description}}}"
           data-item-stackable="{{item.stackable}}"
           data-item-shipable="false"
+          {% for custom_field in item.custom_fields %}
+            data-item-custom{{forloop.index}}-name="{{custom_field.name}}"
+            {% if custom_field.options %} data-item-custom{{forloop.index}}-options="{{custom_field.options}}" {% endif %}
+            data-item-custom{{forloop.index}}-required="{{custom_field.required}}"
+          {% endfor %}
           >
             <span>Add to Order</span>
             <img src="/assets/img/bag.svg">
