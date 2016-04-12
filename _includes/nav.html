@@ -34,8 +34,15 @@
         <li><a {% if page.url == '/' %} class="active" {% endif %} href="/">Home</a></li>
         <li><a {% if page.url == '/menu/eats/' %} class="active" {% endif %} href="/menu/eats">Menu</a></li>
         <li><a {% if page.url == '/menu/ontap/' %} class="active" {% endif %} href="/menu/ontap">Craft Beer</a></li>
-        <li><a {% if page.url == '/events' %} class="active" {% endif %} href="/events">Events</a></li>
-        <li><a {% if page.url == '/more' %} class="active" {% endif %} href="/more">More +</a></li>
+        <li><a {% if page.url == '/events' %} class="active" {% endif %} href="/events">Location</a></li>
+        <li>
+          <a {% if page.url == '/more' %} class="active" {% endif %} href="/more">More +</a>
+          <ul class="nav__links__dropdown">
+            <li><a href="">Events</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Chef&nbsp;Tony</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 

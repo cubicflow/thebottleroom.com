@@ -1,0 +1,43 @@
+.nav-expanded {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 99;
+  background-color: $beige;
+
+  @include hide-for(medium);
+
+  &__container {
+    @include container();
+  }
+
+  &__crest {
+    margin-top: 15px;
+  }
+
+  &__links {
+
+    border-top: 1px solid fade-out($grey-warm--medium, 0.6);
+    border-bottom: 1px solid fade-out($grey-warm--medium, 0.6);
+    margin-top: 10px;
+    padding-top: 10px;
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+
+      li {
+        list-style-type: none;
+
+        a {
+          font-family: $font-family--alt;
+          font-size: #{ $font-size--large + 4px };
+        }
+      }
+    }
+
+  }
+
+}

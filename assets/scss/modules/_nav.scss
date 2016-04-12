@@ -1,7 +1,6 @@
 .nav {
   position: relative;
   height: 80px;
-  z-index: 100;
 
   &--solidbg {
     background-color: $grey-warm--xdark;
@@ -43,6 +42,7 @@
 
       margin: 0px;
       display: inline-block;
+      position: relative;
 
       &:first-child {
         margin-left: 0px;
@@ -55,6 +55,17 @@
         margin-left: 15px;
       }
 
+
+      // HOVER EFFECTS FOR DROPDOWN
+      // ul.nav__links__dropdown
+      &:hover {
+        ul {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0px);
+        }
+      }
+
     }
 
     a {
@@ -63,6 +74,7 @@
       transition: all 0.3s;
       text-transform: uppercase;
       padding-top: 20px;
+      padding-bottom: 28px;
       letter-spacing: 1px;
       font-size: $font-size--xsmall;
 
@@ -81,12 +93,40 @@
         color: $cream;
       }
     }
+
+    &__dropdown {
+      position: absolute;
+      top: 60px;
+      right: 0px;
+      background-color: $grey-warm--xdark;
+      opacity: 0;
+      text-align: right;
+      margin: 0px -15px 0px 0px;
+      padding: 20px 15px 5px 0px;
+      min-width: 150px;
+      pointer-events: none;
+      transform: translateY(-40px);
+      transition: 0.2s all;
+
+      li {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        opacity: 1;
+      }
+
+      a {
+        padding: 0px 0px 15px 20px;
+      }
+
+    }
+
   }
 
   &__expand {
 
     @include hide-for(medium);
     position: absolute;
+    z-index: 1000;
     right: 0px;
     top: 20px;
 

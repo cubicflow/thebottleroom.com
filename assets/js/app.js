@@ -130,10 +130,18 @@ $(function() {
 
 
   const disableOrdering = function(){
+
     for (let i = 0; i < buyButtons.length; i++){
+
       buyButtons[i].classList.add('disabled');
+
+      let buyButtonText = buyButtons[i].querySelector('span');
+      buyButtonText.innerHTML = 'Ordering Disabled';
+
     }
+
     console.log('Ordering is disabled');
+
   };
 
 
@@ -162,6 +170,8 @@ $(function() {
     return number;
 
   };
+
+
 
 
   const isTimeWithin = function(time, start, end){
@@ -200,6 +210,7 @@ $(function() {
   };
 
 
+
   const isOrderingOpen = function(){
 
     $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
@@ -216,7 +227,7 @@ $(function() {
 
   };
 
-
+  disableOrdering();
 
   Snipcart.subscribe('cart.ready', function() {
     showBarIfNeeded();
@@ -235,7 +246,5 @@ $(function() {
   Snipcart.execute('config', 'allowed_provinces', [
     { country: 'US', provinces: ['CA'] },
   ]);
-
-  console.log(isOrderingOpen());
 
 });
