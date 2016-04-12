@@ -1,13 +1,53 @@
 .nav-expanded {
-  width: 100%;
-  height: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
   top: 0px;
   left: 0px;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   background-color: $beige;
 
+
+
   @include hide-for(medium);
+
+  &.active {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+
+  &.drilldown-active {
+
+    .nav-expanded__crest {
+      display: none;
+    }
+
+    .nav-expanded__back {
+      opacity: 1;
+      pointer-events: all;
+      position: relative;
+    }
+
+    .nav-expanded__links--level1 {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .nav-expanded__links--level2 {
+      width: auto;
+      height: auto;
+      opacity: 1;
+      pointer-events: all;
+      position: relative;
+    }
+
+  }
 
   &__container {
     @include container();
@@ -17,24 +57,77 @@
     margin-top: 15px;
   }
 
-  &__links {
+  &__back {
+    @extend .button;
+    @extend .button--outline-alt;
+    width: 90px;
+    min-width: 90px;
+    background-image: url(/assets/img/back.svg);
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+    text-align: left;
+    padding-left: 30px;
+    margin: 0px;
+    margin-top: 19px;
 
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &__links {
     border-top: 1px solid fade-out($grey-warm--medium, 0.6);
     border-bottom: 1px solid fade-out($grey-warm--medium, 0.6);
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 19px;
+    padding: 20px 0px 20px 0px;
 
     ul {
       margin: 0px;
-      padding: 0px;
 
       li {
         list-style-type: none;
 
         a {
+          padding: 3px 0px 3px 0px;
           font-family: $font-family--alt;
-          font-size: #{ $font-size--large + 4px };
+          font-size: $font-size--large;
+          color: fade-out($grey-warm--dark, 0.6);
+          transition: all 0.2s;
+          display: block;
+
+          &:hover {
+            color: $grey-warm--dark;
+          }
         }
+      }
+    }
+
+    &--level1 {
+
+    }
+
+    &--level2 {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+  }
+
+  &__social {
+    text-align: center;
+
+    &__button {
+      padding: 12px;
+      margin: 16px 4% 0px 4%;
+      display: inline-block;
+      opacity: 0.6;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 1.0;
       }
     }
 

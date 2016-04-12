@@ -35,6 +35,19 @@ $(function() {
 
 
   //
+  // MOBILE NAVIGATION
+  //
+  const expandBtn = document.querySelector('.nav__expand');
+  const mobileNav = document.querySelector('nav-expanded');
+
+  expandBtn.addEventListener('click', function(){
+    
+  });
+
+
+
+
+  //
   // FADE IN SLIDES IF VISIBLE
   //
 	const slides = document.querySelectorAll('.slide');
