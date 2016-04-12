@@ -123,6 +123,11 @@
           opacity: 1.0;
         }
 
+        &.disabled {
+          opacity: 0.2;
+          pointer-events: none;
+        }
+
         span {
           font-size: 12px;
           font-family: $font-family--regular;
