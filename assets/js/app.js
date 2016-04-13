@@ -34,6 +34,57 @@ $(function() {
   var responsiveImages = cf.imgSwap(opts);
 
 
+
+  //
+  // Hours Modal
+  //
+  const openModalBtn = document.querySelector('#open-hours-modal');
+  const hoursModal = document.querySelector('#hours-modal');
+  const closeModalBtn = hoursModal.querySelector('.modal__close');
+  const modalOverlay = hoursModal.querySelector('.modal__overlay');
+
+  openModalBtn.addEventListener('click', function(){
+    hoursModal.classList.add('active');
+    disableBodyScroll();
+  })
+
+  closeModalBtn.addEventListener('click', function(){
+    hoursModal.classList.remove('active');
+    enableBodyScroll();
+  })
+
+  modalOverlay.addEventListener('click', function(){
+    hoursModal.classList.remove('active');
+    enableBodyScroll();
+  })
+
+
+  const disableBodyScroll = function(){
+
+    const htmlElem = document.querySelector('html');
+    const bodyElem = document.querySelector('body');
+
+    if(cf.isSmallBrowser(opts)){
+      htmlElem.style.overflow = 'hidden';
+      bodyElem.style.overflow = 'hidden';
+      bodyElem.style.position = 'fixed';
+      console.log('scroll disabled');
+    }
+
+  }
+
+  const enableBodyScroll = function(){
+
+    const htmlElem = document.querySelector('html');
+    const bodyElem = document.querySelector('body');
+
+    htmlElem.style.overflow = 'auto';
+    bodyElem.style.overflow = 'auto';
+    bodyElem.style.position = 'static';
+
+  }
+
+
   //
   // MOBILE NAVIGATION
   //
@@ -46,18 +97,16 @@ $(function() {
     expandBtn.classList.remove('active');
     mobileNav.classList.remove('drilldown-active');
 
-    document.querySelector('html').style.overflow = 'auto';
-    document.querySelector('body').style.overflow = 'auto';
-    document.querySelector('body').style.position = 'relative';
+    enableBodyScroll();
+
   });
 
   document.querySelector('#open-nav').addEventListener('click', function(){
     mobileNav.classList.add('active');
     expandBtn.classList.add('active');
 
-    document.querySelector('html').style.overflow = 'hidden';
-    document.querySelector('body').style.overflow = 'hidden';
-    document.querySelector('body').style.position = 'fixed';
+    disableBodyScroll();
+
   });
 
   document.querySelector('#nav-more').addEventListener('click', function(){

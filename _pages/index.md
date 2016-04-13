@@ -14,16 +14,33 @@ title: Homepage
   <div class="homepage-cover__content">
     <img class="homepage-cover__content__crest" src="/assets/img/crest--light.svg">
     <img class="homepage-cover__content__masthead" src="/assets/img/masthead.svg">
-    <span>Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
+    <span class="homepage-cover__content__tagline">Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
+
+    <div class="homepage-cover__content__icons">
+      <a href="#">
+        <img src="/assets/img/call.svg">
+        <span>Call</span>
+      </a>
+      <a href="#">
+        <img src="/assets/img/menu.svg">
+        <span>Menu</span>
+      </a>
+      <a href="#">
+        <img src="/assets/img/directions.svg">
+        <span>Map</span>
+      </a>
+    </div>
+
   </div>
+
 
   <div class="homepage-cover__foot">
     <div class="homepage-cover__foot__container">
 
-      <div class="homepage-cover__foot__hours">
+      <a class="homepage-cover__foot__hours" id="open-hours-modal">
         <span>Open Today: 3P - 12A </span>
-        <span>Happy Hour: 3P - 7P </span>
-      </div>
+        <span>Show All Hours</span>
+      </a>
 
       <div class="homepage-cover__foot__social">
         <a href="#"><img src="/assets/img/social-yelp.svg"></a>
