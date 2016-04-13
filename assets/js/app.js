@@ -38,12 +38,35 @@ $(function() {
   // MOBILE NAVIGATION
   //
   const expandBtn = document.querySelector('.nav__expand');
-  const mobileNav = document.querySelector('nav-expanded');
+  const mobileNav = document.querySelector('.nav-expanded');
 
-  expandBtn.addEventListener('click', function(){
-    
+
+  document.querySelector('#close-nav').addEventListener('click', function(){
+    mobileNav.classList.remove('active');
+    expandBtn.classList.remove('active');
+    mobileNav.classList.remove('drilldown-active');
+
+    document.querySelector('html').style.overflow = 'auto';
+    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('body').style.position = 'relative';
   });
 
+  document.querySelector('#open-nav').addEventListener('click', function(){
+    mobileNav.classList.add('active');
+    expandBtn.classList.add('active');
+
+    document.querySelector('html').style.overflow = 'hidden';
+    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('body').style.position = 'fixed';
+  });
+
+  document.querySelector('#nav-more').addEventListener('click', function(){
+    mobileNav.classList.add('drilldown-active');
+  });
+
+  document.querySelector('#nav-back').addEventListener('click', function(){
+    mobileNav.classList.remove('drilldown-active');
+  });
 
 
 
@@ -89,17 +112,18 @@ $(function() {
 
   const cartBar = document.querySelector('#cart-bar');
   const buyButtons = document.querySelectorAll('.snipcart-add-item');
+  let orderingEnabled = false;
   let itemsCount = 0;
 
   const schedule = {
     monday: {
-      open: '04:00',
+      open: '08:00',
       close: '22:00',
       breakfast: {}
     },
     tuesday: {
-      open: '08:00',
-      close: '22:00',
+      open: '05:55',
+      close: '06:20',
       breakfast: {}
     },
     wednesday: {
@@ -133,7 +157,8 @@ $(function() {
 
   const showBarIfNeeded = function(){
     itemsCount = Snipcart.api.getItemsCount();
-    if (itemsCount > 0){
+
+    if (itemsCount > 0 && orderingEnabled){
       cartBar.classList.add('active');
     } else {
       cartBar.classList.remove('active');
@@ -153,6 +178,9 @@ $(function() {
 
     }
 
+    Snipcart.api.closeCart();
+    orderingEnabled = false
+
     console.log('Ordering is disabled');
 
   };
@@ -160,10 +188,20 @@ $(function() {
 
 
   const enableOrdering = function(){
+
     for (let i = 0; i < buyButtons.length; i++){
-      buyButtons[i].classList.add('disabled');
+
+      buyButtons[i].classList.remove('disabled');
+
+      let buyButtonText = buyButtons[i].querySelector('span');
+      buyButtonText.innerHTML = 'Add to Order';
+
     }
+
+    orderingEnabled = true;
+
     console.log('Ordering is enabled');
+
   };
 
 
@@ -202,7 +240,7 @@ $(function() {
 
     } else if (currentTimeHours == startTimeHours){
 
-      if(currentTimeMinutes >= openingTimeMinutes){
+      if(currentTimeMinutes >= startTimeMinutes){
         return true;
       } else {
         return false;
@@ -223,8 +261,9 @@ $(function() {
   };
 
 
-
   const isOrderingOpen = function(){
+
+    console.log('checking');
 
     $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
 
@@ -233,26 +272,49 @@ $(function() {
       let currentTimeHours = zeroPad(data.hours, 2);
       let currentTimeMinutes = zeroPad(data.minutes, 2);
       let currentTime = currentTimeHours + ":" + currentTimeMinutes;
+      let orderingOpen = isTimeWithin(currentTime, schedule[dayOfWeek].open, schedule[dayOfWeek].close);
 
-      console.log(isTimeWithin(currentTime, schedule[dayOfWeek].open, schedule[dayOfWeek].close));
+      if(orderingOpen){
+        console.log('can order');
+        enableOrdering();
+      } else {
+        console.log('cant order');
+        disableOrdering();
+      }
+
+      showBarIfNeeded();
 
     });
 
   };
 
-  disableOrdering();
+  const getServerTime = function(){
 
-  Snipcart.subscribe('cart.ready', function() {
-    showBarIfNeeded();
-  });
+    $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
 
-  Snipcart.subscribe('item.added', function (item) {
-    showBarIfNeeded();
-  });
+    });
 
-  Snipcart.subscribe('item.removed', function (item) {
-    showBarIfNeeded();
-  });
+  };
+
+  const checkEveryMin = function(){
+
+    window.setTimeout(function(){
+      isOrderingOpen()
+      checkEveryMin();
+    }, 60000)
+
+  };
+
+  const init = function(){
+    getServerTime();
+    checkEveryMin();
+  };
+
+  init();
+
+
+  Snipcart.subscribe('cart.ready', isOrderingOpen);
+  Snipcart.subscribe('cart.opened', isOrderingOpen);
 
   // CONFIG
   Snipcart.execute('config', 'show_continue_shopping', true);

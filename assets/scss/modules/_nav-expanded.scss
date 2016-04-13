@@ -1,34 +1,37 @@
 .nav-expanded {
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
   top: 0px;
   left: 0px;
   position: fixed;
+  overflow: scroll;
   z-index: 99;
   background-color: $beige;
-
-
-
+  pointer-events: none;
   @include hide-for(medium);
 
+  transition: all 0.3s;
+
+
+
   &.active {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    opacity: 1;
+    pointer-events: all;
   }
 
 
   &.drilldown-active {
 
     .nav-expanded__crest {
-      display: none;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .nav-expanded__back {
       opacity: 1;
       pointer-events: all;
-      position: relative;
+      position: absolute;
     }
 
     .nav-expanded__links--level1 {
@@ -37,6 +40,7 @@
       opacity: 0;
       pointer-events: none;
       position: absolute;
+      display: none;
     }
 
     .nav-expanded__links--level2 {
@@ -45,16 +49,25 @@
       opacity: 1;
       pointer-events: all;
       position: relative;
+      display: block;
+    }
+
+    .nav-expanded__social {
+      opacity: 0;
     }
 
   }
 
   &__container {
     @include container();
+    position: relative;
+    overflow: hidden;
   }
 
   &__crest {
     margin-top: 15px;
+
+    transition: opacity 0.3s;
   }
 
   &__back {
@@ -70,9 +83,10 @@
     margin: 0px;
     margin-top: 19px;
 
-    opacity: 0;
     pointer-events: none;
     position: absolute;
+    top: 0px;
+    opacity: 0;
   }
 
   &__links {
@@ -80,6 +94,7 @@
     border-bottom: 1px solid fade-out($grey-warm--medium, 0.6);
     margin-top: 19px;
     padding: 20px 0px 20px 0px;
+    transition: opacity 0.5s;
 
     ul {
       margin: 0px;
@@ -112,6 +127,7 @@
       opacity: 0;
       pointer-events: none;
       position: absolute;
+      display: none;
     }
 
   }
@@ -121,7 +137,7 @@
 
     &__button {
       padding: 12px;
-      margin: 16px 4% 0px 4%;
+      margin: 16px 4% 16px 4%;
       display: inline-block;
       opacity: 0.6;
       transition: all 0.2s;

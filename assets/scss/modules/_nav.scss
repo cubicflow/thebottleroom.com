@@ -1,6 +1,7 @@
 .nav {
   position: relative;
   height: 80px;
+  z-index: 99;
 
   &--solidbg {
     background-color: $grey-warm--xdark;
@@ -126,11 +127,14 @@
 
     @include hide-for(medium);
     position: absolute;
-    z-index: 1000;
+    z-index: 99;
     right: 0px;
     top: 20px;
 
-    &.active, &:hover {
+
+
+    &.active {
+
       .nav__expand__line--top {
         top: 19px;
         transform: rotate(45deg);
