@@ -57,7 +57,7 @@ html {
   }
 
   &__content {
-    @include container-small();
+    @include container-xsmall();
     opacity: 0;
     position: relative;
     z-index: 1;

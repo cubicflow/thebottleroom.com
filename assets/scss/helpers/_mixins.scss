@@ -12,6 +12,12 @@
   }
 }
 
+@mixin container-xsmall() {
+  max-width: 720px;
+  margin: 0px auto;
+  width: 90%;
+}
+
 @mixin container-small() {
   max-width: 960px;
   margin: 0px auto;
@@ -36,6 +42,8 @@
   border-bottom: 1px solid fade-out($cream, 0.6);
 }
 
+
+
 @mixin small-cover-bottom-margin(){
   margin-bottom: 30px;
   @include breakpoint(medium) {
@@ -43,5 +51,15 @@
   };
   @include breakpoint(large) {
     margin-bottom: 50px;
+  };
+}
+
+@mixin small-cover-top-margin(){
+  margin-top: 30px;
+  @include breakpoint(medium) {
+    margin-top: 40px;
+  };
+  @include breakpoint(large) {
+    margin-top: 50px;
   };
 }

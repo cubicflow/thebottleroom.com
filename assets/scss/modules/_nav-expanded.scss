@@ -73,16 +73,8 @@
   &__back {
     @extend .button;
     @extend .button--outline-alt;
-    width: 90px;
     min-width: 90px;
-    background-image: url(/assets/img/back.svg);
-    background-repeat: no-repeat;
-    background-position: left 12px center;
-    text-align: left;
-    padding-left: 30px;
-    margin: 0px;
     margin-top: 19px;
-
     pointer-events: none;
     position: absolute;
     top: 0px;

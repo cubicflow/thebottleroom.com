@@ -4,6 +4,39 @@ layout: index
 title: Events
 cover_bgimage_path: /assets/img/events/bgtile.jpg
 cover_image_path: /assets/img/events/image.svg
+events:
+  - date: 11.11.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: true
+  - date: 12.11.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: true
+  - date: 11.21.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: true
+  - date: 11.21.01
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: true
+  - date: 11.11.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: false
+  - date: 12.11.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: false
+  - date: 11.21.11
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: false
+  - date: 11.21.01
+    description: I like big ducks
+    url: http://www.facebook.com
+    upcoming: false
 ---
 
 <div class="events-cover cf-responsive" style="background-image: url({{page.cover_bgimage_path}})">
@@ -27,15 +60,64 @@ cover_image_path: /assets/img/events/image.svg
 
     <div class="events__col">
       <div class="events__col__title">
-        Title
+        Upcoming Events
       </div>
+
+      {% for event in page.events %}
+        {% if event.upcoming %}
+        <a href="{{event.url}}" target="_blank" class="events__event">
+          <span class="events__event__date">{{event.date}}</span>
+          <span class="events__event__description">{{event.description}}</span>
+        </a>
+        {% endif %}
+      {% endfor %}
+
     </div>
 
     <div class="events__col">
       <div class="events__col__title">
-        Title
+        Past Events
       </div>
+      {% for event in page.events %}
+        {% if event.upcoming == false %}
+        <a href="{{event.url}}" target="_blank" class="events__event">
+          <span class="events__event__date">{{event.date}}</span>
+          <span class="events__event__description">{{event.description}}</span>
+        </a>
+        {% endif %}
+      {% endfor %}
     </div>
 
   </div>
+
+  <div class="events__call-to-action">
+    <div class="events__call-to-action__container">
+      <span>Follow us for the latest news and events</span>
+      <a href="{{site.data.settings.social_media.facebook_url}}" target="_blank" class="button button--outline-alt">
+        <img src="/assets/img/social-facebook--dark.svg">
+        Facebook
+      </a>
+      <a href="{{site.data.settings.social_media.twitter_url}}" target="_blank" class="button button--outline-alt">
+        <img src="/assets/img/social-twitter--dark.svg">
+        Twitter
+      </a>
+    </div>
+  </div>
+
+  <div class="events__in-the-press">
+    <h2>In the Press</h2>
+    <h3>LA Magazine</h3>
+    <a href="">L.A.’s Top 5 Beer Bars (May 20, 2015)</a>
+    <a href="">Beer Frenzy: The Inside Scoop on Where to Taste Pliny the Younger (Febrary 18, 2015)</a>
+
+    <h3>LA Times</h3>
+    <a href="">Here’s a secret about Whittier: It’s ascending as a great food city (February 26, 2014)</a>
+    <a href="">The Bottle Room: A beer bar with Sichuan-seasoned calamari and next-level shrimp tacos (August 7, 2013)</a>
+
+    <h3>LA Weekly</h3>
+    <a href="">Whittier’s The Bottle Room Serves Up a Breaking Bad-Inspired Burger (July 16, 2014)</a>
+    <a href="">The Bottle Room’s 3rd Anniversary (March 9, 2012)</a>
+    <a href="">30 Burgers in 30 Days: Burgers & Beer at The Bottle Room (Day 10) (February 14, 2011)</a>
+  </div>
+
 </div>

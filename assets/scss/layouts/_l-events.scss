@@ -45,6 +45,7 @@
 
   &__col {
     @include grid-column(12, 0px);
+    margin-bottom: 40px;
 
     @include breakpoint(medium) {
       @include grid-column(6, 40px);
@@ -54,4 +55,96 @@
       @include subcategory-title();
     }
   }
+
+  &__event {
+
+    position: relative;
+    display: block;
+    color: $cream;
+    margin-bottom: 20px;
+
+    @include breakpoint(large) {
+      margin-bottom: 30px;
+    }
+
+    &:visited {
+      color: $cream;
+    }
+
+    &:hover {
+      color: $brick--lighter;
+    }
+
+
+    &__date {
+      font-family: $font-family--bold;
+      font-size: $font-size--small;
+      width: 70px;
+    }
+
+    &__description {
+      font-family: $font-family--light;
+      font-size: $font-size--xsmall;
+      position: absolute;
+
+      left: 90px;
+
+      @include breakpoint(medium) {
+        left: 100px;
+      }
+
+      @include breakpoint(large) {
+        left: 110px;
+      }
+
+    }
+  }
+
+  &__call-to-action {
+    background-color: $cream;
+    width: 100%;
+    color: $grey-warm--medium;
+    padding: 20px 0px 20px 0px;
+
+    &__container {
+      @include container-large();
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__in-the-press {
+    @include container-xsmall();
+    @include small-cover-top-margin();
+    @include small-cover-bottom-margin();
+    text-align: center;
+
+    h3 {
+      display: block;
+      @extend h6;
+      font-family: $font-family--bold;
+      @include small-cover-top-margin();
+    }
+
+    a {
+      display: block;
+      color: $cream;
+      font-family: $font-family--light;
+      margin-bottom: 10px;
+
+      &:visited {
+        color: $cream;
+      }
+
+      &:hover {
+        color: $brick--lighter;
+      }
+
+    }
+  }
+
 }

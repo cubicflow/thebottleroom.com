@@ -20,7 +20,7 @@ a {
 
   display: inline-block;
   margin: 0.25em;
-  padding: 0.68em 1.22em 0.68em 1.22em;
+  padding: 0.80em 1.22em 0.68em 1.22em;
   letter-spacing: 0.07em;
   //height: 2.85em;
   border-radius: 4px;
@@ -30,6 +30,26 @@ a {
   font-size: $font-size--xsmall;
   line-height: 1.5em;
   transition: all 0.3s;
+
+  img {
+    margin-left: -3px;
+    margin-right: 8px;
+    margin-top: -3px;
+    vertical-align: middle;
+    display: inline-block;
+    opacity: 0.6;
+    transition: all 0.2s;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
 
 
   &--fill {
@@ -63,7 +83,7 @@ a {
   }
   &--outline-alt {
     border: 1px solid fade-out($grey-warm--medium, 0.6);
-    color: $grey-warm--dark;
+    color: $grey-warm--medium;
 
     &.active, &:hover {
       border: 1px solid $grey-warm--medium;
