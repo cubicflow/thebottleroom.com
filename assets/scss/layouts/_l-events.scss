@@ -4,6 +4,7 @@
   width: 100%;
   background-size: 200px 200px;
   padding: 40px 0px 20px 0px;
+  @include small-cover-bottom-margin();
 
   &__content {
     @include container-small();
@@ -40,7 +41,6 @@
   &__row {
     @include container();
     @include grid-row();
-    margin-top: 50px;
   }
 
   &__col {

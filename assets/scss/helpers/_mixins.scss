@@ -35,3 +35,13 @@
   width: 100%;
   border-bottom: 1px solid fade-out($cream, 0.6);
 }
+
+@mixin small-cover-bottom-margin(){
+  margin-bottom: 30px;
+  @include breakpoint(medium) {
+    margin-bottom: 40px;
+  };
+  @include breakpoint(large) {
+    margin-bottom: 50px;
+  };
+}

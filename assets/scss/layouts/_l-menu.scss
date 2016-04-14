@@ -2,9 +2,20 @@
 // Layout index page
 // --------------------------------------------------
 
+.menu-cover {
+  margin-top: 0px;
+  height: 400px;
+  width: 100%;
+  background-image: url(/assets/img/home/hero-pairings.jpg);
+  background-size: cover;
+  background-position: center;
+  @include small-cover-bottom-margin();
+}
+
+
 .menu {
   @include container();
-  padding: 40px 0px 30px 0px;
+  padding: 0px 0px 30px 0px;
   overflow: auto;
 
   &__sidebar {
