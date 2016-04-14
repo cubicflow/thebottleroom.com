@@ -167,6 +167,7 @@ $(function() {
   const buyButtons = document.querySelectorAll('.snipcart-add-item');
   let orderingEnabled = false;
   let itemsCount = 0;
+  let serverTime = {};
 
   const schedule = {
     monday: {
@@ -207,13 +208,13 @@ $(function() {
   }
 
 
-  const updateOpenToday = function(weekDayName){
+  const updateOpenToday = function(dayofweekName){
 
-    weekDayName = weekDayName.toLowerCase();
+    dayofweekName = dayofweekName.toLowerCase();
 
     const openTodayLabel = document.querySelector('#open-today');
-    const todayOpenTime = militaryToStandardTime(schedule[weekDayName].open);
-    const todayCloseTime = militaryToStandardTime(schedule[weekDayName].close);
+    const todayOpenTime = militaryToStandardTime(schedule[dayofweekName].open);
+    const todayCloseTime = militaryToStandardTime(schedule[dayofweekName].close);
 
     if (openTodayLabel){
       openTodayLabel.innerHTML = "Open Today: " + removeZeroPad(todayOpenTime) + ' - ' + removeZeroPad(todayCloseTime);
@@ -262,6 +263,7 @@ $(function() {
 
     Snipcart.api.closeCart();
     orderingEnabled = false
+
 
     console.log('Ordering is disabled');
 
@@ -352,42 +354,112 @@ $(function() {
   };
 
 
-  const isOrderingOpen = function(){
+  const isOrderingOpen = function(dateObject){
 
-    console.log('checking');
+    console.log(dateObject);
 
-    $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles&callback=?", function( serverTime ) {
+    let weekDayName = dateObject.dayofweekName.toLowerCase();
 
-      let weekDayName = serverTime.dayofweekName.toLowerCase();
+    let currentTimeHours = zeroPad(dateObject.hours, 2);
+    let currentTimeMinutes = zeroPad(dateObject.minutes, 2);
+    let currentTime = currentTimeHours + ":" + currentTimeMinutes;
 
-      let currentTimeHours = zeroPad(serverTime.hours, 2);
-      let currentTimeMinutes = zeroPad(serverTime.minutes, 2);
-      let currentTime = currentTimeHours + ":" + currentTimeMinutes;
+    let orderingOpen = isTimeWithin(currentTime, schedule[weekDayName].open, schedule[weekDayName].close);
 
-      let orderingOpen = isTimeWithin(currentTime, schedule[weekDayName].open, schedule[weekDayName].close);
+    if(orderingOpen){
+      return true;
+    } else {
+      return false;
+    }
 
-      if(orderingOpen){
-        console.log('can order');
-        enableOrdering();
-      } else {
-        console.log('cant order');
-        disableOrdering();
-      }
-
-      updateOpenToday(weekDayName);
-      showBarIfNeeded();
-
-    });
 
   };
 
-  const getServerTime = function(){
+  const getDateTime = function(callback){
 
-    // $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
-    //   console.log(data);
-    // });
+    let storedDateObject = sessionStorage.getItem('dateTime');
+
+    if(storedDateObject){
+
+      let parsedDateObject = JSON.parse(storedDateObject);
+
+      updateDateObject(parsedDateObject, function(err, updatedDateObject){
+
+        if (err) {
+          sessionStorage.clear();
+          getDateTime(callback);
+        }
+
+        callback(updatedDateObject);
+
+      });
+
+
+    } else {
+      $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles&callback=?", function( data ) {
+
+        const dateObject = {
+          day: data.day,
+          dayofweekName: data.dayofweekName,
+          hours: data.hours,
+          minutes: data.minutes,
+          localTime: new Date()
+        }
+
+        sessionStorage.setItem('dateTime', JSON.stringify(dateObject));
+        if (callback) callback(dateObject);
+      });
+    }
 
   };
+
+  const updateDateObject = function(dateObject, callback){
+
+    let now = new Date();
+    let then = new Date(dateObject.localTime);
+
+    // time difference in ms
+    var timeDiff = now - then;
+    // strip the ms
+    timeDiff /= 1000;
+
+    // get seconds
+    var seconds = Math.round(timeDiff % 60);
+    // remove seconds from the date
+    timeDiff = Math.floor(timeDiff / 60);
+
+    // get minutes
+    var minutes = Math.round(timeDiff % 60);
+    // remove minutes from the date
+    timeDiff = Math.floor(timeDiff / 60);
+
+    // get hours
+    var hours = Math.round(timeDiff % 24);
+    // remove hours from the date
+    timeDiff = Math.floor(timeDiff / 24);
+
+    // the rest of timeDiff is number of days
+    var days = timeDiff;
+
+    console.log(minutes);
+    console.log(hours);
+    console.log(days);
+
+    dateObject.hours = dateObject.hours + hours;
+    dateObject.minutes = dateObject.minutes + minutes;
+
+    if (dateObject.minutes >= 60) {
+      dateObject.minutes = dateObject.minutes - 60;
+      dateObject.hours = dateObject.hours + 1;
+    }
+
+    if (dateObject.hours >= 24 || days > 0) {
+      return callback(err);
+    }
+
+    return callback(null, dateObject);
+
+  }
 
   const checkEveryMin = function(){
 
@@ -399,20 +471,29 @@ $(function() {
   };
 
   const init = function(){
-    getServerTime();
-    checkEveryMin();
+    getDateTime(function(dateTime){
+
+      updateOpenToday(dateTime.dayofweekName);
+
+      if (isOrderingOpen(dateTime)){
+        enableOrdering();
+      } else {
+        disableOrdering();
+      };
+
+    });
   };
 
   init();
 
 
-  Snipcart.subscribe('cart.ready', isOrderingOpen);
-  Snipcart.subscribe('cart.opened', isOrderingOpen);
+  // Snipcart.subscribe('cart.ready', isOrderingOpen);
+  // Snipcart.subscribe('cart.opened', isOrderingOpen);
 
   // CONFIG
-  Snipcart.execute('config', 'show_continue_shopping', true);
-  Snipcart.execute('config', 'allowed_provinces', [
-    { country: 'US', provinces: ['CA'] },
-  ]);
+  // Snipcart.execute('config', 'show_continue_shopping', true);
+  // Snipcart.execute('config', 'allowed_provinces', [
+  //   { country: 'US', provinces: ['CA'] },
+  // ]);
 
 });
