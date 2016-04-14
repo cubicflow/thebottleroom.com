@@ -340,7 +340,7 @@ $(function() {
   const getServerTime = function(){
 
     $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
-
+      console.log(data);
     });
 
   };
