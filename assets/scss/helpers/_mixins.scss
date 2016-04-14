@@ -22,3 +22,16 @@
   margin: 0px auto;
   width: 100%;
 }
+
+
+
+
+@mixin subcategory-title() {
+  font-size: $font-size--large;
+  font-family: $font-family--light;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid fade-out($cream, 0.6);
+}
