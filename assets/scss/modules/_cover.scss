@@ -196,3 +196,24 @@
   background-size: cover;
   background-position: center;
 }
+
+
+.events-cover {
+  position: relative;
+  height: 400px;
+  width: 100%;
+
+  &__content {
+    @include container-small();
+    text-align: center;
+
+    &__image {
+
+    }
+    &__text {
+      span {
+
+      }
+    }
+  }
+}

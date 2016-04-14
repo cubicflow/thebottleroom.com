@@ -34,35 +34,51 @@ layout: default
 
       <div class="menu__subcategory__title">{{ subcategory.name }}</div>
 
+
+      {% if page.is_alcohol %}
+
       {% for item in subcategory.items %}
       <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
 
         <div class="menu__subcategory__item__title">{{ item.name }}</div>
-        <div class="menu__subcategory__item__description">{{ item.description }}</div>
+        <div class="menu__subcategory__item__description">{{item.abv}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.origin}}&nbsp;&nbsp;&nbsp;&nbsp;{{ item.description }}</div>
         <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
-
-        {% if item.orderable %}
-          <a href="#" class="menu__subcategory__item__bag snipcart-add-item"
-          data-item-id="{{item.name | slugify}}{{forloop.index}}"
-          data-item-name="{{item.name}}"
-          data-item-price="{{item.price}}"
-          data-item-url="{{site.url}}{{page.url}}"
-          data-item-description="{{item.description}}}"
-          data-item-stackable="{{item.stackable}}"
-          data-item-shipable="false"
-          {% for custom_field in item.custom_fields %}
-            data-item-custom{{forloop.index}}-name="{{custom_field.name}}"
-            {% if custom_field.options %} data-item-custom{{forloop.index}}-options="{{custom_field.options}}" {% endif %}
-            data-item-custom{{forloop.index}}-required="{{custom_field.required}}"
-          {% endfor %}
-          >
-            <span>Add to Order</span>
-            <img src="/assets/img/bag.svg">
-          </a>
-        {% endif %}
 
       </div>
       {% endfor %}
+
+
+      {% else %}
+        {% for item in subcategory.items %}
+        <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
+
+          <div class="menu__subcategory__item__title">{{ item.name }}</div>
+          <div class="menu__subcategory__item__description">{{ item.description }}</div>
+          <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
+
+          {% if item.orderable %}
+            <a href="#" class="menu__subcategory__item__bag snipcart-add-item"
+            data-item-id="{{item.name | slugify}}{{forloop.index}}"
+            data-item-name="{{item.name}}"
+            data-item-price="{{item.price}}"
+            data-item-url="{{site.url}}{{page.url}}"
+            data-item-description="{{item.description}}}"
+            data-item-stackable="{{item.stackable}}"
+            data-item-shipable="false"
+            {% for custom_field in item.custom_fields %}
+              data-item-custom{{forloop.index}}-name="{{custom_field.name}}"
+              {% if custom_field.options %} data-item-custom{{forloop.index}}-options="{{custom_field.options}}" {% endif %}
+              data-item-custom{{forloop.index}}-required="{{custom_field.required}}"
+            {% endfor %}
+            >
+              <span>Add to Order</span>
+              <img src="/assets/img/bag.svg">
+            </a>
+          {% endif %}
+
+        </div>
+        {% endfor %}
+      {% endif %}
 
     </div>
     {% endfor %}

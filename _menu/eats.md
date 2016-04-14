@@ -3,6 +3,7 @@ title: Eats
 layout: menu
 sidebar_order: 1
 is_public: true
+is_alcohol: false
 subcategories:
   - name: Small Bites
     items:
