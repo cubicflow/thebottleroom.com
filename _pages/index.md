@@ -38,7 +38,7 @@ title: Homepage
     <div class="homepage-cover__foot__container">
 
       <a class="homepage-cover__foot__hours" id="open-hours-modal">
-        <span>Open Today: 3P - 12A </span>
+        <span id="open-today">Open Today:</span>
         <span>Show All Hours</span>
       </a>
 

@@ -207,6 +207,35 @@ $(function() {
   }
 
 
+  const updateOpenToday = function(weekDayName){
+
+    weekDayName = weekDayName.toLowerCase();
+
+    const openTodayLabel = document.querySelector('#open-today');
+    const todayOpenTime = militaryToStandardTime(schedule[weekDayName].open);
+    const todayCloseTime = militaryToStandardTime(schedule[weekDayName].close);
+
+    if (openTodayLabel){
+      openTodayLabel.innerHTML = "Open Today: " + removeZeroPad(todayOpenTime) + ' - ' + removeZeroPad(todayCloseTime);
+    }
+
+  };
+
+  const militaryToStandardTime = function(militaryTime){
+    let hours = militaryTime.slice(0, 2);
+    let minutes = militaryTime.slice(3, 5);
+    let period = '';
+
+    if (hours >= 12) {
+      period = 'PM';
+      hours = hours - 12;
+    } else if (hours <= 12) {
+      period = 'AM';
+    }
+
+    return hours + ':' + minutes + ' ' + period
+  }
+
 
   const showBarIfNeeded = function(){
     itemsCount = Snipcart.api.getItemsCount();
@@ -216,7 +245,7 @@ $(function() {
     } else {
       cartBar.classList.remove('active');
     }
-  }
+  };
 
 
 
@@ -276,6 +305,15 @@ $(function() {
   };
 
 
+  const removeZeroPad = function(number){
+
+    while(number.toString().slice(0,1) == '0'){
+      number = number.toString().slice(1);
+    }
+    return number;
+
+  };
+
 
 
   const isTimeWithin = function(time, start, end){
@@ -318,14 +356,15 @@ $(function() {
 
     console.log('checking');
 
-    $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
+    $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles&callback=?", function( serverTime ) {
 
-      let dayOfWeek = data.dayofweekName.toLowerCase();
+      let weekDayName = serverTime.dayofweekName.toLowerCase();
 
-      let currentTimeHours = zeroPad(data.hours, 2);
-      let currentTimeMinutes = zeroPad(data.minutes, 2);
+      let currentTimeHours = zeroPad(serverTime.hours, 2);
+      let currentTimeMinutes = zeroPad(serverTime.minutes, 2);
       let currentTime = currentTimeHours + ":" + currentTimeMinutes;
-      let orderingOpen = isTimeWithin(currentTime, schedule[dayOfWeek].open, schedule[dayOfWeek].close);
+
+      let orderingOpen = isTimeWithin(currentTime, schedule[weekDayName].open, schedule[weekDayName].close);
 
       if(orderingOpen){
         console.log('can order');
@@ -335,6 +374,7 @@ $(function() {
         disableOrdering();
       }
 
+      updateOpenToday(weekDayName);
       showBarIfNeeded();
 
     });
@@ -343,9 +383,9 @@ $(function() {
 
   const getServerTime = function(){
 
-    $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
-      console.log(data);
-    });
+    // $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles", function( data ) {
+    //   console.log(data);
+    // });
 
   };
 
