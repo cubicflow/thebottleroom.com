@@ -43,10 +43,10 @@ title: Homepage
       </a>
 
       <div class="homepage-cover__foot__social">
-        <a href="#"><img src="/assets/img/social-yelp.svg"></a>
-        <a href="#"><img src="/assets/img/social-instagram.svg"></a>
-        <a href="#"><img src="/assets/img/social-twitter.svg"></a>
-        <a href="#"><img src="/assets/img/social-facebook.svg"></a>
+        <a href="#"><img src="/assets/img/social-yelp--light.svg"></a>
+        <a href="#"><img src="/assets/img/social-instagram--light.svg"></a>
+        <a href="#"><img src="/assets/img/social-twitter--light.svg"></a>
+        <a href="#"><img src="/assets/img/social-facebook--light.svg"></a>
       </div>
 
       <div class="homepage-cover__foot__arrow">
