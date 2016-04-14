@@ -43,20 +43,24 @@ $(function() {
   const closeModalBtn = hoursModal.querySelector('.modal__close');
   const modalOverlay = hoursModal.querySelector('.modal__overlay');
 
-  openModalBtn.addEventListener('click', function(){
-    hoursModal.classList.add('active');
-    disableBodyScroll();
-  })
+  if (openModalBtn && hoursModal && closeModalBtn) {
 
-  closeModalBtn.addEventListener('click', function(){
-    hoursModal.classList.remove('active');
-    enableBodyScroll();
-  })
+    openModalBtn.addEventListener('click', function(){
+      hoursModal.classList.add('active');
+      disableBodyScroll();
+    })
 
-  modalOverlay.addEventListener('click', function(){
-    hoursModal.classList.remove('active');
-    enableBodyScroll();
-  })
+    closeModalBtn.addEventListener('click', function(){
+      hoursModal.classList.remove('active');
+      enableBodyScroll();
+    })
+
+    modalOverlay.addEventListener('click', function(){
+      hoursModal.classList.remove('active');
+      enableBodyScroll();
+    })
+
+  }
 
 
   const disableBodyScroll = function(){

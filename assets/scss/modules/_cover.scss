@@ -198,21 +198,24 @@
 }
 
 
+
+
 .events-cover {
   position: relative;
-  height: 400px;
+  min-height: 200px;
   width: 100%;
+  background-size: 200px 200px;
 
   &__content {
     @include container-small();
-    text-align: center;
 
-    &__image {
 
-    }
     &__text {
-      span {
+      text-align: center;
 
+      span {
+        display: block;
+        text-align: center;
       }
     }
   }
