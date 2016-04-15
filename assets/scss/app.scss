@@ -71,6 +71,7 @@
 @import 'base/headings';
 @import 'base/typography';
 @import 'base/links';
+@import 'base/forms';
 
 //
 // 7. Layout
@@ -81,6 +82,8 @@
 @import 'layouts/l-post';
 @import 'layouts/l-menu';
 @import 'layouts/l-events';
+@import 'layouts/l-chef';
+@import 'layouts/l-location';
 
 //
 // 8. Modules

@@ -3,3 +3,9 @@ social_media:
   twitter_url: http://www.google.com
   instagram_url: http://www.google.com
   yelp_url: http://www.google.com
+location:
+  phone_number: 562-696-8000
+  fax: 626-389-5407
+  address_line_1: 6741 Greenleaf Avenue
+  address_line_2: Whittier, CA 90601
+  email: info@thebottleroombar.com

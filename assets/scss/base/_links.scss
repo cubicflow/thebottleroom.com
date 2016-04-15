@@ -2,11 +2,15 @@
 // Links
 // --------------------------------------------------
 a {
-  color: $brick--tint;
+  color: $cream;
   transition: 0.2s;
 
+  &:visited {
+    color: $cream;
+  }
+
   &:hover {
-    color: lighten($brick--tint, 15);
+    color: $brick--lighter;
   }
 }
 

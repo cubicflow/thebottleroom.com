@@ -1,0 +1,71 @@
+---
+permalink: location/
+layout: index
+title: Location
+---
+
+<div class="location-cover">
+
+</div>
+
+<div class="location">
+  <div class="location__row">
+
+    <div class="location__col location__col--small">
+      <div class="location__col__title">
+        Location
+      </div>
+
+      <span class="location__label">Uptown Whittier</span>
+      <span class="location__value">
+        <a href="https://www.google.com/maps/place/6741+Greenleaf+Ave,+Whittier,+CA+90601,+USA/@33.9796758,-118.0398032,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2d3ebc221eae5:0x54b2124521a22852?hl=en" target="_blank">{{site.data.settings.location.address_line_1}}
+        <br>
+        {{site.data.settings.location.address_line_2}}</a>
+      </span>
+
+      <span class="location__label">Contact</span>
+      <span class="location__value">
+        <a href="tel:{{site.data.settings.location.phone_number}}">{{site.data.settings.location.phone_number}}</a>
+        <br>
+        {{site.data.settings.location.fax}}
+        <br>
+        <a href="mailto:{{site.data.settings.location.email}}">{{site.data.settings.location.email}}</a>
+      </span>
+
+    </div>
+
+    <div class="location__col location__col--medium">
+      <div class="location__col__title">
+        Hours
+      </div>
+      {% for timePeriod in site.data.hours-display.timePeriods %}
+        <span class="location__label">{{timePeriod.label}}</span>
+        <span class="location__value">
+          {{timePeriod.normalService}}
+          {% if timePeriod.breakfast %}
+            <br>
+            Breakfast: {{timePeriod.breakfast}}
+          {% endif %}
+        </span>
+      {% endfor %}
+    </div>
+
+    <div class="location__col location__col--large">
+      <div class="location__col__title">
+        Send your comments
+      </div>
+
+      <form>
+        <input type="text" placeholder="Name"></input>
+        <input type="text" placeholder="Email address or Phone number (optional)"></input>
+        <textarea>
+        </textarea>
+        <div class="button button--fill">
+          Submit
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>

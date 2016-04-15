@@ -4,7 +4,7 @@
 
 .menu-cover {
   margin-top: 0px;
-  height: 400px;
+  min-height: $cover-min-height;
   width: 100%;
   background-image: url(/assets/img/home/hero-pairings.jpg);
   background-size: cover;
