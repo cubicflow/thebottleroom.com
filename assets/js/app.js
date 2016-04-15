@@ -187,7 +187,7 @@ $(function() {
     },
     thursday: {
       open: '08:00',
-      close: '22:00',
+      close: '23:30',
       breakfast: {}
     },
     friday: {
@@ -487,8 +487,9 @@ $(function() {
   init();
 
 
-  // Snipcart.subscribe('cart.ready', isOrderingOpen);
-  // Snipcart.subscribe('cart.opened', isOrderingOpen);
+  Snipcart.subscribe('cart.opened', disableBodyScroll);
+
+  Snipcart.subscribe('cart.closed', enableBodyScroll);
 
   // CONFIG
   // Snipcart.execute('config', 'show_continue_shopping', true);
