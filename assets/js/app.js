@@ -249,7 +249,10 @@ $(function() {
 
 
   const showBarIfNeeded = function(){
-    itemsCount = Snipcart.api.getItemsCount();
+
+    Snipcart.subscribe('cart.ready', function() {
+      itemsCount = Snipcart.api.getItemsCount();
+    });
 
     if (itemsCount > 0 && orderingEnabled){
       cartBar.classList.add('active');
@@ -274,7 +277,7 @@ $(function() {
     Snipcart.subscribe('cart.ready', function() {
       Snipcart.api.closeCart();
     });
-    
+
     orderingEnabled = false
 
 
@@ -485,8 +488,10 @@ $(function() {
 
       if (isOrderingOpen(dateTime)){
         enableOrdering();
+        showBarIfNeeded();
       } else {
         disableOrdering();
+        showBarIfNeeded();
       };
 
     });
