@@ -1,7 +1,22 @@
 .location-cover {
-  background-color: $grey-warm--medium;
+  background-color: $beige;
   min-height: $cover-min-height;
+  height: $cover-min-height;
   @include small-cover-bottom-margin();
+  overflow: hidden;
+
+  iframe {
+    height: $cover-min-height;
+    width: 100%;
+    border: 0px;
+    pointer-events: none;
+  }
+
+  &.active {
+    iframe {
+      pointer-events: all;
+    }
+  }
 }
 
 .location {

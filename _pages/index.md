@@ -17,15 +17,15 @@ title: Homepage
     <span class="homepage-cover__content__tagline">Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
 
     <div class="homepage-cover__content__icons">
-      <a href="#">
+      <a href="tel:{{site.data.settings.location.phone_number}}">
         <img src="/assets/img/call.svg">
         <span>Call</span>
       </a>
-      <a href="#">
+      <a href="/menu/eats">
         <img src="/assets/img/menu.svg">
         <span>Menu</span>
       </a>
-      <a href="#">
+      <a href="/location">
         <img src="/assets/img/directions.svg">
         <span>Map</span>
       </a>

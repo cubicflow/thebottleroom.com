@@ -34,6 +34,16 @@ $(function() {
   var responsiveImages = cf.imgSwap(opts);
 
 
+  //
+  // MAPS iframe disable/enable
+  //
+  const locationMap = document.getElementById('location-map');
+  if (locationMap){
+    locationMap.addEventListener('click', function(){
+      locationMap.classList.add('active');
+    });
+  }
+
 
   //
   // Hours Modal
@@ -48,17 +58,17 @@ $(function() {
     openModalBtn.addEventListener('click', function(){
       hoursModal.classList.add('active');
       disableBodyScroll();
-    })
+    });
 
     closeModalBtn.addEventListener('click', function(){
       hoursModal.classList.remove('active');
       enableBodyScroll();
-    })
+    });
 
     modalOverlay.addEventListener('click', function(){
       hoursModal.classList.remove('active');
       enableBodyScroll();
-    })
+    });
 
   }
 
@@ -261,7 +271,10 @@ $(function() {
 
     }
 
-    Snipcart.api.closeCart();
+    Snipcart.subscribe('cart.ready', function() {
+      Snipcart.api.closeCart();
+    });
+    
     orderingEnabled = false
 
 
@@ -382,18 +395,13 @@ $(function() {
     if(storedDateObject){
 
       let parsedDateObject = JSON.parse(storedDateObject);
-
       updateDateObject(parsedDateObject, function(err, updatedDateObject){
-
         if (err) {
           sessionStorage.clear();
           getDateTime(callback);
         }
-
         callback(updatedDateObject);
-
       });
-
 
     } else {
       $.getJSON( "https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=America/Los_Angeles&callback=?", function( data ) {
@@ -454,7 +462,7 @@ $(function() {
     }
 
     if (dateObject.hours >= 24 || days > 0) {
-      return callback(err);
+      return callback('error');
     }
 
     return callback(null, dateObject);

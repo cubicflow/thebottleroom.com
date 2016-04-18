@@ -57,7 +57,7 @@ layout: default
           <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
 
           {% if item.orderable %}
-            <a href="#" class="menu__subcategory__item__bag snipcart-add-item"
+            <a href="#" class="menu__subcategory__item__bag snipcart-add-item disabled"
             data-item-id="{{item.name | slugify}}{{forloop.index}}"
             data-item-name="{{item.name}}"
             data-item-price="{{item.price}}"
@@ -71,7 +71,7 @@ layout: default
               data-item-custom{{forloop.index}}-required="{{custom_field.required}}"
             {% endfor %}
             >
-              <span>Add to Order</span>
+              <span>Ordering Disabled</span>
               <img src="/assets/img/bag.svg">
             </a>
           {% endif %}
