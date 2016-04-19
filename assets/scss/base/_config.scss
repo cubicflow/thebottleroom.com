@@ -120,4 +120,14 @@ $font-size--xxlarge: 44px;
 // OTHER VARS
 //////
 
-$cover-min-height: 280px;
+@mixin cover-min-height {
+  min-height: 320px;
+
+  @include breakpoint(medium) {
+    min-height: 400px;
+  }
+
+  @include breakpoint(large) {
+    min-height: 480px;
+  }
+}

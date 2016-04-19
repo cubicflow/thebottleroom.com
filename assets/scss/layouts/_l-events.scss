@@ -1,10 +1,10 @@
 .events-cover {
   position: relative;
-  min-height: 200px;
   width: 100%;
   background-size: 200px 200px;
   padding: 40px 0px 20px 0px;
   @include small-cover-bottom-margin();
+  @include cover-min-height();
 
   &__content {
     @include container-small();
