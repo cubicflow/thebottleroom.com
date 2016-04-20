@@ -14,6 +14,10 @@
 
 {{ content }}
 
+{% if page.show_call_to_action == true %}
+  {% include call-to-action.html %}
+{% endif %}
+
 {% include footer.html %}
 
 {% include cart-bar.html %}
