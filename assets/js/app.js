@@ -187,7 +187,7 @@ $(function() {
     },
     tuesday: {
       open: '05:55',
-      close: '06:20',
+      close: '22:00',
       breakfast: {}
     },
     wednesday: {
@@ -252,13 +252,14 @@ $(function() {
 
     Snipcart.subscribe('cart.ready', function() {
       itemsCount = Snipcart.api.getItemsCount();
+
+      if (itemsCount > 0 && orderingEnabled){
+        cartBar.classList.add('active');
+      } else {
+        cartBar.classList.remove('active');
+      }
     });
 
-    if (itemsCount > 0 && orderingEnabled){
-      cartBar.classList.add('active');
-    } else {
-      cartBar.classList.remove('active');
-    }
   };
 
 

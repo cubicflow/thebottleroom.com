@@ -8,12 +8,12 @@
   background-image: url(/assets/img/home/hero-pairings.jpg);
   background-size: cover;
   background-position: center;
-  @include small-cover-bottom-margin();
   @include cover-min-height();
 }
 
 
 .menu {
+  @include small-cover-top-margin();
   @include container();
   padding: 0px 0px 30px 0px;
   overflow: auto;
