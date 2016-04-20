@@ -1,15 +1,14 @@
 .location-cover {
   background-color: $beige;
   @include small-cover-bottom-margin();
-  @include cover-min-height();
+  min-height: $cover-min-height;
   overflow: hidden;
 
   iframe {
     width: 100%;
     border: 0px;
     pointer-events: none;
-
-    @include cover-min-height();
+    min-height: $cover-min-height;
   }
 
   &.active {

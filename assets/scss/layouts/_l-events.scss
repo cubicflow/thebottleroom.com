@@ -3,8 +3,8 @@
   width: 100%;
   background-size: 200px 200px;
   padding: 40px 0px 20px 0px;
+  min-height: $cover-min-height;
   @include small-cover-bottom-margin();
-  @include cover-min-height();
 
   &__content {
     @include container-small();
