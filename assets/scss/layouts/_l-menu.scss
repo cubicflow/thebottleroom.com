@@ -13,12 +13,12 @@
 
 
 .menu {
-  @include small-cover-top-margin();
   @include container();
   padding: 0px 0px 30px 0px;
   overflow: auto;
 
   &__sidebar {
+    @include small-cover-top-margin();
     @include show-for(medium);
     width: 200px;
     position: absolute;
@@ -63,6 +63,7 @@
 
 
   &__body {
+    @include small-cover-top-margin();
     position: relative;
     margin-left: 0px;
     min-height: 500px;
