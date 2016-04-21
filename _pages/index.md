@@ -15,7 +15,7 @@ show_call_to_action: true
   <div class="homepage-cover__content">
     <img class="homepage-cover__content__crest" src="/assets/img/crest--light.svg">
     <img class="homepage-cover__content__masthead" src="/assets/img/masthead.svg">
-    <span class="homepage-cover__content__tagline">Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
+    <span class="homepage-cover__content__tagline editable">Upscale&nbsp;pub-fare in&nbsp;Uptown&nbsp;Whittier</span>
 
     <div class="homepage-cover__content__icons">
       <a href="tel:{{site.data.settings.location.phone_number}}">
@@ -61,8 +61,8 @@ show_call_to_action: true
 
 <div class="slide slide--atmosphere cf-responsive">
   <div class="slide__content">
-    <h1>A simple atmosphere</h1>
-    <p>Showcased by a beautifully exposed brick wall and raw construction along side modern amenities, The Bottle Room evokes the idea of historic building revivals. The simplicity is intentional. It allows guests the opportunity to surround themselves in a cozy environment free from unwanted distractions. We believe the design should be in the food, the drinks and friends.</p>
+    <h1 class="editable">A simple atmosphere</h1>
+    <p class="editable">Showcased by a beautifully exposed brick wall and raw construction along side modern amenities, The Bottle Room evokes the idea of historic building revivals. The simplicity is intentional. It allows guests the opportunity to surround themselves in a cozy environment free from unwanted distractions. We believe the design should be in the food, the drinks and friends.</p>
   </div>
 
   <div class="slide__overlay">
@@ -73,8 +73,8 @@ show_call_to_action: true
 
 <div class="slide slide--pairings cf-responsive">
   <div class="slide__content">
-    <h1>Delightful pairings</h1>
-    <p>We pair the finest craft beer and carefully selected wines with traditional dishes done better — we try to keep things that simple. The menu is designed to infuse fresh and vibrant ingredients into everyone’s favorite dishes. The food is not fancy, but the way it’s prepared is.</p>
+    <h1 class="editable">Delightful pairings</h1>
+    <p class="editable">We pair the finest craft beer and carefully selected wines with traditional dishes done better — we try to keep things that simple. The menu is designed to infuse fresh and vibrant ingredients into everyone’s favorite dishes. The food is not fancy, but the way it’s prepared is.</p>
   </div>
 
   <div class="slide__overlay">
@@ -85,8 +85,8 @@ show_call_to_action: true
 
 <div class="slide slide--moment cf-responsive">
   <div class="slide__content">
-    <h1>In the moment</h1>
-    <p>Seasonal menus. Pairing dinners. Special events. Ultra-rare beers. We live in the moment at The Bottle Room with the mission to deliver the fresh and exciting. Everyday is an idea, an experiment, an adventure. Pro-tip: The Bottle Room features 24 rotating taps of craft beer so there’s always something new to try when you return.</p>
+    <h1 class="editable">In the moment</h1>
+    <p class="editable">Seasonal menus. Pairing dinners. Special events. Ultra-rare beers. We live in the moment at The Bottle Room with the mission to deliver the fresh and exciting. Everyday is an idea, an experiment, an adventure. Pro-tip: The Bottle Room features 24 rotating taps of craft beer so there’s always something new to try when you return.</p>
   </div>
 
   <div class="slide__overlay">
@@ -96,8 +96,8 @@ show_call_to_action: true
 
 <div class="slide slide--inspired cf-responsive">
   <div class="slide__content">
-    <h1>Distinctly inspired</h1>
-    <p>The Bottle Room’s chef, Tony Alcazar, has drawn from his years of fine-dining cooking experience to upgrade our most enjoyed meals into distinctive creations. We would love for you to come and join us.</p>
+    <h1 class="editable">Distinctly inspired</h1>
+    <p class="editable">The Bottle Room’s chef, Tony Alcazar, has drawn from his years of fine-dining cooking experience to upgrade our most enjoyed meals into distinctive creations. We would love for you to come and join us.</p>
   </div>
 
   <div class="slide__overlay">
@@ -107,6 +107,6 @@ show_call_to_action: true
 
 <div class="new-menu-cta">
   <a href="/menu/eats/" class="new-menu-cta__container">
-    <span>The New Menu</span>
+    <span class="editable">The New Menu</span>
   </a>
 </div>
