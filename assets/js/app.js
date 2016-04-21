@@ -100,6 +100,22 @@ $(function() {
 
 
   //
+  // SENT FORM ALERT
+  //
+  function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+  }
+
+  var thankYouBar = document.querySelector('#contact-form-thankyou');
+
+  if(thankYouBar && getParameterByName('form')){
+    thankYouBar.classList.add('active');
+  }
+
+
+
+  //
   // MOBILE NAVIGATION
   //
   const expandBtn = document.querySelector('.nav__expand');

@@ -71,3 +71,25 @@
   }
 
 }
+
+
+
+.contact-form-thankyou {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: $brick;
+  @include font-size--small();
+  font-family: $font-family--light;
+  opacity: 0;
+  transform: translateY(-40px);
+  position: absolute;
+  transition: all 0.3s;
+  pointer-events: none;
+
+
+  &.active {
+    opacity: 0.9;
+    transform: translateY(0px);
+  }
+}

@@ -44,10 +44,10 @@ show_call_to_action: true
       </a>
 
       <div class="homepage-cover__foot__social">
-        <a href="#"><img src="/assets/img/social-yelp--light.svg"></a>
-        <a href="#"><img src="/assets/img/social-instagram--light.svg"></a>
-        <a href="#"><img src="/assets/img/social-twitter--light.svg"></a>
-        <a href="#"><img src="/assets/img/social-facebook--light.svg"></a>
+        <a href="{{site.data.settings.social_media.yelp_url}}" target="_blank"><img src="/assets/img/social-yelp--light.svg"></a>
+        <a href="{{site.data.settings.social_media.instagram_url}}" target="_blank"><img src="/assets/img/social-instagram--light.svg"></a>
+        <a href="{{site.data.settings.social_media.twitter_url}}" target="_blank"><img src="/assets/img/social-twitter--light.svg"></a>
+        <a href="{{site.data.settings.social_media.facebook_url}}" target="_blank"><img src="/assets/img/social-facebook--light.svg"></a>
       </div>
 
       <div class="homepage-cover__foot__arrow">
