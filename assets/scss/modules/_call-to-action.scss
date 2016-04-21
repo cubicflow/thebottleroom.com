@@ -1,6 +1,7 @@
 .call-to-action {
   width: 100%;
-  background: linear-gradient(to right, $grey_cool__green, $grey_cool__green, $grey_cool__green, $grey_cool__blue, $grey_cool__blue, $grey_cool__blue); /* Standard syntax */
+  background-color: $grey-cool--green;
+  background-image: linear-gradient(to right, $grey-cool--green 50%, $grey-cool--green 50%, $grey-cool--blue 50% ); /* W3C */
 
   &__row {
     @include grid-row();
@@ -65,5 +66,55 @@
       }
     }
 
+  }
+}
+
+
+.new-menu-cta {
+  width: 100%;
+  background-color: $beige;
+
+  &__container {
+    @include container();
+    background-image: url(/assets/img/cta-menu-spring-16.svg);
+    display: block;
+    position: relative;
+    height: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+
+    @include breakpoint(medium) {
+      height: 350px;
+    }
+    @include breakpoint(large) {
+      height: 400px;
+    }
+
+    &:hover {
+      background-color: lighten($beige, 3%);
+    }
+
+    span {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color: $grey_warm__medium;
+      @include font-size--xlarge();
+      font-family: $font-family--light;
+      background-image: url(/assets/img/go--dark.svg);
+      background-repeat: no-repeat;
+      background-position: right top 11px;
+      padding-right: 30px;
+
+      @include breakpoint(medium) {
+        bottom: 30px;
+        left: 40px;
+      }
+      @include breakpoint(large) {
+        bottom: 40px;
+        left: 60px;
+      }
+    }
   }
 }
