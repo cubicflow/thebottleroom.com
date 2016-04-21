@@ -35,10 +35,67 @@ html {
   }
   &--pairings {
     background-image: url(/assets/img/home/hero-pairings.jpg);
+
+    &__row {
+      @include grid-row();
+    }
+
+    &__col {
+      @include grid-column(4,0px);
+      min-height: 140px;
+      line-height: 140px;
+
+      @include breakpoint(large) {
+        @include grid-column(2,0px);
+      }
+
+      img {
+        max-height: 140px;
+        vertical-align: middle;
+      }
+    }
   }
   &--moment {
     background-image: url(/assets/img/home/hero-taps.jpg);
+
+    &__row {
+      @include grid-row();
+    }
+
+    &__col {
+      @include grid-column(6,0px);
+      min-height: 140px;
+      margin-top: 20px;
+
+      font-size: 64px;
+      font-family: $font-family--light;
+      line-height: 1em;
+
+      @include breakpoint(medium) {
+        //@include grid-column(6,0px);
+        margin-top: 40px;
+      }
+
+      @include breakpoint(large) {
+        @include grid-column(3,0px);
+      }
+
+      span {
+        display: block;
+        @include font-size--xsmall();
+        font-family: $font-family--regular;
+        margin-top: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 0px auto 30px auto;
+        max-height: 140px;
+        vertical-align: middle;
+      }
+    }
   }
+
   &--inspired {
     background-image: url(/assets/img/home/hero-charcuterie.jpg);
   }

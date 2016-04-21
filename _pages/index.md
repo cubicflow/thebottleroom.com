@@ -75,6 +75,26 @@ show_call_to_action: true
   <div class="slide__content">
     <h1 class="editable">Delightful pairings</h1>
     <p class="editable">We pair the finest craft beer and carefully selected wines with traditional dishes done better — we try to keep things that simple. The menu is designed to infuse fresh and vibrant ingredients into everyone’s favorite dishes. The food is not fancy, but the way it’s prepared is.</p>
+    <div class="slide--pairings__row">
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-goblet.svg">
+      </div>
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-burger.svg">
+      </div>
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-pint.svg">
+      </div>
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-skillet.svg">
+      </div>
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-wine.svg">
+      </div>
+      <div class="slide--pairings__col">
+        <img src="/assets/img/home/pairing-cheese.svg">
+      </div>
+    </div>
   </div>
 
   <div class="slide__overlay">
@@ -87,6 +107,24 @@ show_call_to_action: true
   <div class="slide__content">
     <h1 class="editable">In the moment</h1>
     <p class="editable">Seasonal menus. Pairing dinners. Special events. Ultra-rare beers. We live in the moment at The Bottle Room with the mission to deliver the fresh and exciting. Everyday is an idea, an experiment, an adventure. Pro-tip: The Bottle Room features 24 rotating taps of craft beer so there’s always something new to try when you return.</p>
+    <div class="slide--moment__row">
+      <div class="slide--moment__col">
+        24
+        <span>Rotating craft taps</span>
+      </div>
+      <div class="slide--moment__col">
+        4
+        <span>Seasonal menus</span>
+      </div>
+      <div class="slide--moment__col">
+        <img src="/assets/img/home/reserve-bottles.svg">
+        <span>Reserve bottles</span>
+      </div>
+      <div class="slide--moment__col">
+        <img src="/assets/img/home/special-events.svg">
+        <span>Special events</span>
+      </div>
+    </div>
   </div>
 
   <div class="slide__overlay">
