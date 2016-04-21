@@ -5,6 +5,8 @@ description:            "Site description"
 url:                    "thebottleroom.com"
 google-verification:    ""
 
+version: 3.0.3
+
 # Handling Reading
 include:
   - ".htaccess"
