@@ -24,6 +24,6 @@ exclude:
 - "README.md"
 - "rev-manifest.json"
 # additional excludes for production
-#- "assets/css/app.css"
-#- "assets/js/all.js"
-#- "assets/img/**"
+- "assets/css/app.css"
+- "assets/js/all.js"
+- "assets/img/**"
