@@ -4,7 +4,74 @@ layout: index
 title: Gallery
 show_call_to_action: false
 gallery_images:
-  - title:
-    thumbnail_path:
-    fullsize_path:
+  - title: Sample Title
+    image_path: /assets/gallery/img-01.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-02.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-03.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-04.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-05.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-06.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-07.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-08.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-09.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-10.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-11.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-12.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-13.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-14.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-15.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-16.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-17.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-18.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-19.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-20.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-21.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-22.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-23.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-24.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-25.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-26.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-27.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-28.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-29.jpg
+  - title: Sample Title
+    image_path: /assets/gallery/img-30.jpg
 ---
+
+<div class="gallery">
+  <div class="gallery__row">
+    {% for image in page.gallery_images %}
+    <div class="gallery__col">
+      <img class="gallery-img" data-src="{{image.image_path}}">
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.gallery {
+
+  @include container();
+
+  &__row {
+    width: 100%;
+    column-count: 1;
+    column-gap: 0px;
+    margin-bottom: 10px;
+
+    @include breakpoint(medium) {
+      column-count: 2;
+      column-gap: 10px;
+    }
+  }
+
+  &__col {
+
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 150px;
+    background-image: url(/assets/img/loader.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: fade-out($grey-warm--xdark, 0.2);
+
+    img {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      opacity: 0.5;
+      transition: all 0.3s;
+
+      &.loaded {
+        opacity: 1;
+      }
+    }
+
+  }
+
+}

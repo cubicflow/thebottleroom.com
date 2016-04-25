@@ -32,6 +32,7 @@ $(function() {
     largeBrowserWidth: 1280
   };
   var responsiveImages = cf.imgSwap(opts);
+  window.responsiveImages = responsiveImages;
 
 
   //
