@@ -23,12 +23,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  max-height: 960px;
+  min-height: 100vh;
+  padding: 60px 0px 60px 0px;
 
   background-size: cover;
   background-position: center;
-  //background-attachment: fixed;
+
+  @include breakpoint(medium) {
+    height: 100vh;
+    max-height: 960px;
+  }
 
   &--atmosphere {
     background-image: url(/assets/img/home/hero-atmosphere.jpg);
