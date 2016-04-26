@@ -2,14 +2,18 @@
 // SNIPCART BAR & SNIPCART SETTINGS
 ///////////
 
-$(function() {
+if (typeof theBottleRoom !== 'object') {
+  window.theBottleRoom = {};
+}
+
+theBottleRoom.menu = (function(){
 
   const cartBar = document.querySelector('#cart-bar');
   const buyButtons = document.querySelectorAll('.snipcart-add-item');
   const statusBar = document.querySelector('#menu-status-bar');
   let orderingEnabled = false;
+  let isInitialized = false;
   let itemsCount = 0;
-  let serverTime = {};
 
   const schedule = {
     monday: {
@@ -19,7 +23,7 @@ $(function() {
     },
     tuesday: {
       open: '01:00',
-      close: '04:00',
+      close: '05:26',
       breakfast: {}
     },
     wednesday: {
@@ -47,7 +51,7 @@ $(function() {
       close: '22:00',
       breakfast: {}
     },
-  }
+  };
 
 
   const updateOpenToday = function(dayofweekName){
@@ -59,7 +63,7 @@ $(function() {
     const todayCloseTime = militaryToStandardTime(schedule[dayofweekName].close);
 
     if (openTodayLabel){
-      openTodayLabel.innerHTML = "Open Today: " + removeZeroPad(todayOpenTime) + ' - ' + removeZeroPad(todayCloseTime);
+      openTodayLabel.innerHTML = "Open Today: " + todayOpenTime + ' - ' + todayCloseTime;
     }
 
   };
@@ -76,21 +80,19 @@ $(function() {
       period = 'AM';
     }
 
-    return hours + ':' + minutes + ' ' + period
+    return removeZeroPad(hours) + ':' + minutes + ' ' + period
   }
 
 
   const showBarIfNeeded = function(){
 
-    Snipcart.subscribe('cart.ready', function() {
-      itemsCount = Snipcart.api.getItemsCount();
+    itemsCount = Snipcart.api.getItemsCount();
 
-      if (itemsCount > 0 && orderingEnabled){
-        cartBar.classList.add('active');
-      } else {
-        cartBar.classList.remove('active');
-      }
-    });
+    if (itemsCount > 0 && orderingEnabled){
+      cartBar.classList.add('active');
+    } else {
+      cartBar.classList.remove('active');
+    }
 
   };
 
@@ -107,11 +109,10 @@ $(function() {
 
     }
 
-    Snipcart.subscribe('cart.ready', function() {
-      Snipcart.api.closeCart();
-    });
 
-    orderingEnabled = false
+    Snipcart.api.closeCart();
+
+    orderingEnabled = false;
 
   };
 
@@ -209,8 +210,6 @@ $(function() {
 
   const isOrderingOpen = function(dateObject){
 
-    console.log(dateObject);
-
     const weekDayName = dateObject.dayofweekName.toLowerCase();
     const currentTimeHours = zeroPad(dateObject.hours, 2);
     const currentTimeMinutes = zeroPad(dateObject.minutes, 2);
@@ -218,15 +217,16 @@ $(function() {
 
     const orderingOpen = isTimeWithin(currentTime, schedule[weekDayName].open, schedule[weekDayName].close);
 
+    console.log(currentTime);
+
     if(orderingOpen){
       return true;
     } else {
       return false;
     }
 
-
   };
-  
+
 
   const willCloseSoon = function(dateObject){
 
@@ -306,9 +306,9 @@ $(function() {
     // the rest of timeDiff is number of days
     var days = timeDiff;
 
-    console.log(minutes);
-    console.log(hours);
-    console.log(days);
+    // console.log(minutes);
+    // console.log(hours);
+    // console.log(days);
 
     dateObject.hours = dateObject.hours + hours;
     dateObject.minutes = dateObject.minutes + minutes;
@@ -326,14 +326,14 @@ $(function() {
 
   }
 
-  const checkEveryMin = function(){
+  const checkAgainNextMin = function(){
 
     window.setTimeout(function(){
-      isOrderingOpen()
-      checkEveryMin();
-    }, 60000)
+      init();
+    }, 30000)
 
   };
+
 
   const init = function(){
 
@@ -359,12 +359,20 @@ $(function() {
 
     });
 
+    if (!isInitialized) {
+      Snipcart.subscribe('cart.opened', theBottleRoom.disableBodyScroll);
+      Snipcart.subscribe('cart.closed', theBottleRoom.enableBodyScroll);
+      isInitialized = true;
+    }
+
+    checkAgainNextMin();
+
   };
 
-  init();
 
-  Snipcart.subscribe('cart.opened', disableBodyScroll);
+  return {
+    init: init
+  };
 
-  Snipcart.subscribe('cart.closed', enableBodyScroll);
 
-});
+})();

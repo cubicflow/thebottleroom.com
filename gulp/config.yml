@@ -62,6 +62,8 @@ javascript:
     - "assets/js/cf-imgswap.js"
     - "assets/js/app.js"
     - "assets/js/gallery.js"
+    - "assets/js/menu.js"
+    - "assets/js/init.js"
 
 jekyll:
   notification: "Running jekyll"
@@ -100,6 +102,8 @@ watch:
   javascript:
     - "assets/js/app.js"
     - "assets/js/gallery.js"
+    - "assets/js/menu.js"
+    - "assets/js/init.js"
   sass: "assets/scss/**/*.scss"
   pages:
     - "*.{md,html,yml,xml}"

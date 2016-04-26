@@ -1,6 +1,10 @@
-const initGallery = function(selector){
+if (typeof theBottleRoom !== 'object') {
+  window.theBottleRoom = {};
+}
 
-  let images = document.querySelectorAll(selector);
+theBottleRoom.gallery = (function(){
+
+  let images = [];
 
   const debounce = function(func, wait, immediate) {
   	var timeout;
@@ -53,14 +57,22 @@ const initGallery = function(selector){
     }
 
     window.responsiveImages.reflow();
+
   };
 
-  window.addEventListener('scroll', debounce(loadVisibleImages, 250));
+  const init = function(selector){
 
-  $(document).ready(function(){
-    loadVisibleImages();
-  });
+    images = document.querySelectorAll(selector);
 
-};
+    if (images) {
+      window.addEventListener('scroll', debounce(loadVisibleImages, 250));
+      loadVisibleImages();
+    }
 
-initGallery('.gallery-img');
+  };
+
+  return {
+    init: init
+  }
+
+})();
