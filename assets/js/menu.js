@@ -23,7 +23,7 @@ theBottleRoom.menu = (function(){
     },
     tuesday: {
       open: '01:00',
-      close: '07:47',
+      close: '22:47',
       breakfast: {}
     },
     wednesday: {

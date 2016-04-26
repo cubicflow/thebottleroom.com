@@ -150,9 +150,10 @@
 .menu-status-bar {
   width: 100%;
   background-color: $brick;
-  padding: 15px;
+  height: 50px;
   text-align: center;
   @include font-size--xsmall();
+  line-height: 50px;
   font-family: $font-family--light;
 
   opacity: 0;
