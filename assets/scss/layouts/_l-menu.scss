@@ -156,13 +156,21 @@
   font-family: $font-family--light;
 
   opacity: 0;
-  margin-top: -100%;
+  margin-top: 0px;
   pointer-events: none;
   transition: opacity 0.5s;
 
+  @include breakpoint(medium) {
+    margin-top: -100%;
+  }
+
   &.active {
     opacity: 1;
-    margin-top: 0px;
+    margin-top: 60px;
     pointer-events: all;
+
+    @include breakpoint(medium) {
+      margin-top: 0px;
+    }
   }
 }

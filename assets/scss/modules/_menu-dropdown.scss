@@ -1,0 +1,54 @@
+.menu-dropdown {
+  background-color: $grey-warm--dark;
+  @include font-size--medium();
+  font-family: $font-family--light;
+  @include hide-for(medium);
+  overflow: auto;
+  position: absolute;
+  height: calc(60px);
+  width: 100%;
+  z-index: 1000;
+  transition: height 0.3s;
+
+  &.active, &:hover {
+    height: calc(100% - 80px);
+
+
+  }
+
+  &__container {
+    @include container();
+    overflow: auto;
+  }
+
+  &__button {
+    height: 60px;
+    line-height: 60px;
+    background-image: url(/assets/img/expand.svg);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+  }
+
+  &__links {
+
+    //transition: opacity 0.5s;
+
+    ul {
+
+      li {
+
+        ul {
+
+        }
+
+      }
+    }
+  }
+
+  ul {
+
+  }
+  li {
+    list-style-type: none;
+  }
+}
