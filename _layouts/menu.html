@@ -4,6 +4,17 @@ layout: default
 
 {% include menu-dropdown.html %}
 
+<div class="menu-modal" id="cf-gallery-modal">
+
+  <img class="menu-modal__image" id="cf-gallery-modal-img">
+
+  <div class="menu-modal__preloader">
+    <img src="/assets/img/loader.svg">
+  </div>
+
+</div>
+
+
 <div id="menu-status-bar" class="menu-status-bar">
 </div>
 
@@ -39,23 +50,31 @@ layout: default
 
       {% if page.is_alcohol %}
 
-      {% for item in subcategory.items %}
-      <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
-
-        <div class="menu__subcategory__item__title">{{ item.name }}</div>
-        <div class="menu__subcategory__item__description">{{item.abv}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.origin}}&nbsp;&nbsp;&nbsp;&nbsp;{{ item.description }}</div>
-        <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
-
-      </div>
-      {% endfor %}
-
-
-      {% else %}
         {% for item in subcategory.items %}
         <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
 
           <div class="menu__subcategory__item__title">{{ item.name }}</div>
-          <div class="menu__subcategory__item__description">{{ item.description }}</div>
+          <div class="menu__subcategory__item__description">{{item.abv}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.origin}}&nbsp;&nbsp;&nbsp;&nbsp;{{ item.description }}</div>
+          <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
+
+        </div>
+        {% endfor %}
+
+      {% else %}
+
+        {% for item in subcategory.items %}
+        <div id="{{ item.name | slugify }}" class="menu__subcategory__item">
+
+          <div class="menu__subcategory__item__title">{{ item.name }}</div>
+
+          {% if item.image_path %}
+            <a href="#" data-fullsize="{{item.image_path}}" class="menu__subcategory__item__photo">Photo</a>
+          {% endif %}
+
+          <div class="menu__subcategory__item__description">
+            {{ item.description }}
+          </div>
+
           <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
 
           {% if item.orderable %}
@@ -83,6 +102,7 @@ layout: default
       {% endif %}
 
     </div>
+
     {% endfor %}
 
   </div>

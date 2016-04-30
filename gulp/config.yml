@@ -60,6 +60,7 @@ javascript:
     # All the files in this list are concatenated into all.js
     - "!assets/js/all.js"
     - "assets/js/cf-imgswap.js"
+    - "assets/js/cf-modal.js"
     - "assets/js/app.js"
     - "assets/js/gallery.js"
     - "assets/js/menu.js"
@@ -103,6 +104,7 @@ watch:
     - "assets/js/app.js"
     - "assets/js/gallery.js"
     - "assets/js/menu.js"
+    - "assets/js/cf-modal.js"
     - "assets/js/init.js"
   sass: "assets/scss/**/*.scss"
   pages:

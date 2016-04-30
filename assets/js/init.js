@@ -34,6 +34,7 @@ $(document).ready(function(){
     case 'menu':
       theBottleRoom.initSmoothScrollAnchors();
       theBottleRoom.initMenuDropdown();
+      cf.modalGallery('.menu__subcategory__item__photo');
       break;
 
 
