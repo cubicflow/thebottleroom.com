@@ -1,6 +1,6 @@
-<div class="menu-dropdown">
+<div id="menu-dropdown" class="menu-dropdown">
   <div class="menu-dropdown__container">
-    <div class="menu-dropdown__button">
+    <div id="menu-dropdown-button" class="menu-dropdown__button">
       Categories
     </div>
     <div class="menu-dropdown__links">
@@ -8,11 +8,11 @@
         {% assign menu = site.menu | sort: 'sidebar_order' %}
         {% for category in menu %}
 
-          <li>
+          <li class="menu-dropdown__links__dropdown">
             {{ category.title }}
             <ul>
             {% for subcategory in category.subcategories %}
-              <li><a href="#{{ subcategory.name | slugify }}">{{ subcategory.name }}</a></li>
+              <li><a href="{{category.url}}#{{subcategory.name | slugify}}">{{ subcategory.name }}</a></li>
             {% endfor %}
             </ul>
           </li>

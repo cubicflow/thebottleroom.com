@@ -20,6 +20,37 @@ theBottleRoom.opts = {
   largeBrowserWidth: 1280
 };
 
+
+theBottleRoom.initMenuDropdown = function(){
+
+  const mainDropdown = document.getElementById('menu-dropdown');
+  const mainDropdownBtn = document.getElementById('menu-dropdown-button');
+  const dropdowns = document.querySelectorAll('.menu-dropdown__links__dropdown');
+
+
+  mainDropdownBtn.addEventListener('click', () => {
+    mainDropdown.classList.toggle('active');
+
+    console.log(theBottleRoom.bodyCanScroll());
+
+    if (theBottleRoom.bodyCanScroll()) {
+      theBottleRoom.disableBodyScroll();
+    } else {
+      theBottleRoom.enableBodyScroll();
+    }
+  });
+
+
+  for (let i = 0; i < dropdowns.length; i++){
+
+    let dropdown = dropdowns[i];
+    dropdown.addEventListener('click', () => {
+      dropdown.classList.toggle('active');
+    });
+  }
+
+};
+
 //
 // DISABLE/ENABLE BODY SCROLL
 //
@@ -45,6 +76,11 @@ theBottleRoom.enableBodyScroll = function(){
   bodyElem.style.overflow = 'auto';
   bodyElem.style.position = 'static';
 };
+
+theBottleRoom.bodyCanScroll = function(){
+  const bodyElem = document.querySelector('body');
+  return bodyElem.style.position != 'fixed';
+}
 
 //
 //  getCurrentPage
@@ -190,6 +226,11 @@ theBottleRoom.initHomepageSlides = function(){
 theBottleRoom.initSmoothScrollAnchors = function(){
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+      theBottleRoom.enableBodyScroll();
+      const mainDropdown = document.getElementById('menu-dropdown');
+      mainDropdown.classList.toggle('active');
+
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.6">
+        <g id="categories-expanded" transform="translate(-332.000000, -189.000000)" fill="#807D7B">
+            <g id="categories" transform="translate(0.000000, 80.000000)">
+                <g id="dropdown" transform="translate(331.000000, 109.000000)">
+                    <path d="M3,9.00191115 L3,9.00191115 L3,-0.998088848 C3,-1.8459265 3.98885748,-2.30908256 4.6401844,-1.76631013 L10.6401844,3.23368987 C11.1199385,3.63348498 11.1199385,4.37033732 10.6401844,4.77013243 L4.6401844,9.77013243 C3.98885748,10.3129049 3,9.8497488 3,9.00191115 L3,9.00191115 Z" id="drilldown" transform="translate(7.000000, 4.001911) rotate(-270.000000) translate(-7.000000, -4.001911) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -3,17 +3,18 @@
   @include font-size--medium();
   font-family: $font-family--light;
   @include hide-for(medium);
-  overflow: auto;
+  overflow: hidden;
   position: absolute;
   height: calc(60px);
   width: 100%;
   z-index: 98;
+  top: 80px;
   transition: height 0.3s;
 
-  &.active, &:hover {
+  &.active{
     height: calc(100% - 80px);
-
-
+    overflow: auto;
+    position: fixed;
   }
 
   &__container {
@@ -34,21 +35,55 @@
     //transition: opacity 0.5s;
 
     ul {
+      border-top: 1px solid fade-out($cream, 0.6);
+      margin: 0px 0px;
+      padding: 0px 0px 0px 0px;
+    }
 
-      li {
+    &__dropdown {
 
+      font-family: $font-family--alt;
+      color: fade-out($cream, 0.6);
+      @include font-size--xlarge();
+      margin-top: 15px;
+      background-image: url(/assets/img/dropdown.svg);
+      background-repeat: no-repeat;
+      background-position: right 12px top 11px;
+
+
+      &.active {
         ul {
+          opacity: 1;
+          pointer-events: all;
+          position: relative;
+        }
+      }
 
+      ul {
+
+        opacity: 0;
+        border-top: 0px;
+        padding: 0px;
+        pointer-events: none;
+        margin-bottom: 20px;
+        position: absolute;
+        transition: opacity 0.2s;
+
+        li {
+          @include font-size--large();
+          margin-top: 10px;
+          margin-left: 20px;
+          list-style-type: none;
         }
 
+        a {
+          color: fade-out($cream, 0.6);
+          &:hover {
+            color: $cream;
+          }
+        }
       }
     }
-  }
 
-  ul {
-
-  }
-  li {
-    list-style-type: none;
   }
 }

@@ -33,6 +33,7 @@ $(document).ready(function(){
 
     case 'menu':
       theBottleRoom.initSmoothScrollAnchors();
+      theBottleRoom.initMenuDropdown();
       break;
 
 
