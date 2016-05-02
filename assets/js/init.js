@@ -40,6 +40,7 @@ $(document).ready(function(){
 
     case 'location':
       theBottleRoom.initMap();
+      theBottleRoom.initContactBar();
       break;
 
 
