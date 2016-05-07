@@ -54,15 +54,41 @@
     &--events {
       background-color: $grey-cool--green;
       background-image: url(/assets/img/cta-events.svg);
+      background-position: center top 60px;
+      background-repeat: no-repeat;
+
+      @include breakpoint(medium) {
+        background-position: center top 80px;
+        background-size: 144px 144px;
+      }
+
+      @include breakpoint(large) {
+        background-position: center top 100px;
+        background-size: 160px 160px;
+      }
+
       &:hover {
-        background-color: lighten($grey-cool--green, 3%);
+        background-color: darken($grey-cool--green, 3%);
       }
     }
     &--gallery {
       background-color: $grey-cool--blue;
       background-image: url(/assets/img/cta-gallery.svg);
+      background-position: center top 60px;
+      background-repeat: no-repeat;
+
+      @include breakpoint(medium) {
+        background-position: center top 80px;
+        background-size: 144px 144px;
+      }
+
+      @include breakpoint(large) {
+        background-position: center top 100px;
+        background-size: 160px 160px;
+      }
+
       &:hover {
-        background-color: lighten($grey-cool--blue, 3%);
+        background-color: darken($grey-cool--blue, 3%);
       }
     }
 
@@ -80,7 +106,7 @@
     display: block;
     position: relative;
     height: 280px;
-    background-position: center;
+    background-position: center top 80px;
     background-repeat: no-repeat;
     transition: all 0.3s;
     width: 100%;
@@ -88,14 +114,19 @@
     @include breakpoint(medium) {
       height: 350px;
       width: 100%;
+      background-position: center top 130px;
+      background-size: 199px 70px;
     }
+
     @include breakpoint(large) {
       height: 400px;
       width: 100%;
+      background-position: center top 150px;
+      background-size: 239px 84px;
     }
 
     &:hover {
-      background-color: lighten($beige, 3%);
+      background-color: darken($beige, 3%);
     }
 
     span {

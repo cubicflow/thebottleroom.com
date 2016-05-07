@@ -3,7 +3,7 @@ timePeriods:
     normalService: 3pm - 12am (Happy Hour 3 - 7pm)
     breakfast:
   - label: Friday
-    normalService: 3pm - 12am (Happy Hour 3 - 7pm)
+    normalService: 12pm - 12am (Happy Hour 3 - 7pm)
     breakfast:
   - label: Saturday
     normalService: 12pm - 12am
