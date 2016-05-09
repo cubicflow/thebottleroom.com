@@ -115,7 +115,7 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-  - name: Salads
+  - name: Fresh Salads
     items:
       - name: Wild Argula Salad
         description: French feta, pickled onions, hazelnuts and white balsamic
