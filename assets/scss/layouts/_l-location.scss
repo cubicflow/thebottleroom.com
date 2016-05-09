@@ -1,4 +1,5 @@
 .location-cover {
+  position: relative;
   background-color: $beige;
   @include small-cover-bottom-margin();
   min-height: $cover-min-height;
@@ -9,11 +10,22 @@
     border: 0px;
     pointer-events: none;
     min-height: $cover-min-height;
+    cursor: grab;
   }
 
   &.active {
     iframe {
       pointer-events: all;
+    }
+  }
+
+  &__mobile-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    @include breakpoint(medium) {
+      pointer-events: none;
     }
   }
 }
