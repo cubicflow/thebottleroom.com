@@ -15,6 +15,10 @@
     height: calc(100% - 80px);
     overflow: auto;
     position: fixed;
+
+    .menu-dropdown__button:before {
+      transform: rotate(45deg);
+    }
   }
 
   &__container {
@@ -25,9 +29,19 @@
   &__button {
     height: 60px;
     line-height: 60px;
-    background-image: url(/assets/img/expand.svg);
-    background-position: right 10px center;
-    background-repeat: no-repeat;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 22px;
+      top: 18px;
+      background-image: url(/assets/img/expand.svg);
+      background-position: right center;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
+    }
   }
 
   &__links {
@@ -46,9 +60,21 @@
       color: fade-out($cream, 0.6);
       @include font-size--xlarge();
       margin-top: 15px;
-      background-image: url(/assets/img/dropdown.svg);
-      background-repeat: no-repeat;
-      background-position: right 12px top 11px;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        top: 11px;
+        right: 12px;
+        z-index: 100000;
+        background-image: url(/assets/img/dropdown.svg);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        transition: all 0.3s;
+      }
 
 
       &.active {
@@ -56,6 +82,10 @@
           opacity: 1;
           pointer-events: all;
           position: relative;
+        }
+
+        &:before {
+          transform: rotate(180deg);
         }
       }
 
