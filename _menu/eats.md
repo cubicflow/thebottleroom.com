@@ -65,7 +65,7 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-  - name: Small Bites
+  - name: Seasonal Creations
     items:
       - name: Grilled Asparagus
         description: Serrano ham, sherry honey, marcona almonds
