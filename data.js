@@ -1,8 +1,6 @@
 ---
-title: doodoo
 ---
-alert('hello');
 
-var data = {
+window.data = {
   name: 'dan'
 };
