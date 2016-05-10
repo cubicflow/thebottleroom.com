@@ -7,6 +7,8 @@ google-verification:    ""
 
 version: 3.0.3
 
+ordering_enabled: false
+
 # Handling Reading
 include:
   - ".htaccess"

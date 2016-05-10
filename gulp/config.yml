@@ -59,6 +59,7 @@ javascript:
     # Paths to your own project code are here
     # All the files in this list are concatenated into all.js
     - "!assets/js/all.js"
+    - "/_site/data.js"
     - "assets/js/cf-imgswap.js"
     - "assets/js/cf-modal.js"
     - "assets/js/app.js"

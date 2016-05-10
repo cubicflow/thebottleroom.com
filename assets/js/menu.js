@@ -11,7 +11,7 @@ theBottleRoom.menu = (function(){
   const cartBar = document.querySelector('#cart-bar');
   const buyButtons = document.querySelectorAll('.snipcart-add-item');
   const statusBar = document.querySelector('#menu-status-bar');
-  let orderingEnabled = false;
+  let orderingEnabled = document.body.classList.contains('can-order');
   let isInitialized = false;
   let itemsCount = 0;
 
@@ -19,36 +19,43 @@ theBottleRoom.menu = (function(){
     monday: {
       open: '08:00',
       close: '22:00',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     tuesday: {
       open: '01:00',
       close: '22:47',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     wednesday: {
       open: '08:00',
       close: '22:00',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     thursday: {
       open: '08:00',
       close: '23:30',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     friday: {
       open: '08:00',
       close: '23:59',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     saturday: {
       open: '08:00',
       close: '22:00',
+      restaurantClose: '33:00',
       breakfast: {}
     },
     sunday: {
       open: '08:00',
       close: '22:00',
+      restaurantClose: '33:00',
       breakfast: {}
     },
   };
@@ -60,7 +67,7 @@ theBottleRoom.menu = (function(){
 
     const openTodayLabel = document.querySelector('#open-today');
     const todayOpenTime = militaryToStandardTime(schedule[dayofweekName].open);
-    const todayCloseTime = militaryToStandardTime(schedule[dayofweekName].close);
+    const todayCloseTime = militaryToStandardTime(schedule[dayofweekName].restaurantClose);
 
     if (openTodayLabel){
       openTodayLabel.innerHTML = "Open Today: " + todayOpenTime + ' - ' + todayCloseTime;
@@ -247,17 +254,26 @@ theBottleRoom.menu = (function(){
 
   const getDateTime = function(callback){
 
+    // Check sessionStorage for date object
     let storedDateObject = sessionStorage.getItem('dateTime');
 
     if(storedDateObject){
 
+      // parse object from sessionStorage
       let parsedDateObject = JSON.parse(storedDateObject);
+
+      // Update the stored object with time passed
       updateDateObject(parsedDateObject, function(err, updatedDateObject){
         if (err) {
+          // If there is error clear sessionStorage and try again
           sessionStorage.clear();
           getDateTime(callback);
+          return
         }
-        if (callback && updatedDateObject) callback(updatedDateObject);
+        if (callback && updatedDateObject) {
+          callback(updatedDateObject);
+          return
+        }
       });
 
     } else {
@@ -272,7 +288,10 @@ theBottleRoom.menu = (function(){
         }
 
         sessionStorage.setItem('dateTime', JSON.stringify(dateObject));
-        if (callback) callback(dateObject);
+        if (callback) {
+          callback(dateObject);
+          return
+        }
       });
     }
 
@@ -341,8 +360,13 @@ theBottleRoom.menu = (function(){
 
       updateOpenToday(dateTime.dayofweekName);
 
+      if(!orderingEnabled) {
+          return;
+      }
+
       if (isOrderingOpen(dateTime)){
 
+        console.log(orderingEnabled);
         enableOrdering();
         showBarIfNeeded();
 

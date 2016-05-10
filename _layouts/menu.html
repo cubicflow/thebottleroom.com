@@ -77,7 +77,7 @@ layout: default
 
           <div class="menu__subcategory__item__price">$ {{ item.price }}</div>
 
-          {% if item.orderable %}
+          {% if item.orderable and site.data.settings.online_ordering_enabled %}
             <a href="#" class="menu__subcategory__item__bag snipcart-add-item disabled"
             data-item-id="{{item.name | slugify}}{{forloop.index}}"
             data-item-name="{{item.name}}"
