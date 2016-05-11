@@ -1,4 +1,5 @@
 var $             = require('gulp-load-plugins')();
+var browserSync   = require('browser-sync');
 var config        = require('../util/loadConfig');
 var gulp          = require('gulp');
 var ftp           = require('vinyl-ftp');
