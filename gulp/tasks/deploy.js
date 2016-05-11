@@ -1,6 +1,7 @@
 var $             = require('gulp-load-plugins')();
 var config        = require('../util/loadConfig');
 var gulp          = require('gulp');
+var ftp           = require('vinyl-ftp');
 var minimist      = require('minimist');
 var TRAVIS        = minimist(process.argv.slice(2));
 
