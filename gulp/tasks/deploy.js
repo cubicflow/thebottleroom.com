@@ -8,6 +8,8 @@ var TRAVIS        = minimist(process.argv.slice(2));
 
 gulp.task('deploy', function() {
 
+  console.log('DESTINATION IS:   ' + TRAVIS.FTP_DESTINATION)
+
   var conn = ftp.create({
     host:     TRAVIS.FTP_HOST,
     user:     TRAVIS.FTP_USER,
