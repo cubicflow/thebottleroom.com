@@ -3,17 +3,15 @@ var browserSync   = require('browser-sync');
 var config        = require('../util/loadConfig');
 var gulp          = require('gulp');
 var ftp           = require('vinyl-ftp');
-var minimist      = require('minimist');
-var TRAVIS        = minimist(process.argv.slice(2));
 
 gulp.task('deploy', function() {
 
-  console.log('DESTINATION IS:   ' + TRAVIS.FTP_DESTINATION)
+  console.log('DESTINATION IS:   ' + process.env.FTP_DESTINATION)
 
   var conn = ftp.create({
-    host:     TRAVIS.FTP_HOST,
-    user:     TRAVIS.FTP_USER,
-    password: TRAVIS.FTP_PASSWORD,
+    host:     process.env.FTP_HOST,
+    user:     process.env.FTP_USER,
+    password: process.env.FTP_PASSWORD,
     parallel: 10,
     log:      console.log
   });
@@ -22,6 +20,6 @@ gulp.task('deploy', function() {
 // turn off buffering in gulp.src for best performance
 
 return gulp.src( '_site/**/*', { base: '.', buffer: false } )
-  .pipe( conn.newer( TRAVIS.FTP_DESTINATION ) ) // only upload newer files
-  .pipe( conn.dest( TRAVIS.FTP_DESTINATION ) );
+  .pipe( conn.newer( process.env.FTP_DESTINATION ) ) // only upload newer files
+  .pipe( conn.dest( process.env.FTP_DESTINATION ) );
 });
