@@ -15,50 +15,7 @@ theBottleRoom.menu = (function(){
   let isInitialized = false;
   let itemsCount = 0;
 
-  const schedule = {
-    monday: {
-      open: '08:00',
-      close: '22:00',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    tuesday: {
-      open: '01:00',
-      close: '22:47',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    wednesday: {
-      open: '08:00',
-      close: '22:00',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    thursday: {
-      open: '08:00',
-      close: '23:30',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    friday: {
-      open: '08:00',
-      close: '23:59',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    saturday: {
-      open: '08:00',
-      close: '22:00',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-    sunday: {
-      open: '08:00',
-      close: '22:00',
-      restaurantClose: '33:00',
-      breakfast: {}
-    },
-  };
+  const schedule = window.data.schedule
 
 
   const updateOpenToday = function(dayofweekName){
@@ -366,7 +323,6 @@ theBottleRoom.menu = (function(){
 
       if (isOrderingOpen(dateTime)){
 
-        console.log(orderingEnabled);
         enableOrdering();
         showBarIfNeeded();
 
