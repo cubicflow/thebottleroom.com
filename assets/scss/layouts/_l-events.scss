@@ -1,8 +1,9 @@
 .events-cover {
   position: relative;
   width: 100%;
-  background-size: 200px 200px;
-  padding: 40px 0px 20px 0px;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0px 40px 0px;
   min-height: $cover-min-height;
   @include small-cover-bottom-margin();
 
@@ -78,7 +79,6 @@
       font-family: $font-family--light;
       font-size: $font-size--xsmall;
       position: absolute;
-
       left: 90px;
 
       @include breakpoint(medium) {
