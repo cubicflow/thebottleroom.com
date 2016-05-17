@@ -1,6 +1,6 @@
 online_ordering_enabled: false
 social_media:
-  facebook_url: https://www.facebook.com/The-Bottle-Room-122821818112/
+  facebook_url: https://www.facebook.com/thebottleroombar
   twitter_url: https://twitter.com/thebottleroom
   instagram_url: https://www.instagram.com/thebottleroom/
   yelp_url: http://www.yelp.com/biz/the-bottle-room-whittier
@@ -10,5 +10,5 @@ location:
   address_line_1: 6741 Greenleaf Avenue
   address_line_2: Whittier, CA 90601
   email: info@thebottleroombar.com
-send_contact_to: dan@cubicflow.com
-ordering_disabled_notice: Ordering is disabled
+send_contact_to: info@thebottleroombar.com
+ordering_disabled_notice: Online ordering is currently disabled

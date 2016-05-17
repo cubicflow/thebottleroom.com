@@ -5,7 +5,7 @@ sidebar_order: 1
 is_public: true
 is_alcohol: false
 subcategories:
-  - name: Small Bites
+  - name: Bar Bites
     items:
       - name: Hummus
         description: Parsley pesto, French feta, pita and extra virgin olive oil
@@ -25,8 +25,8 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-      - name: Mini Bottle Room Burgers (2)
-        description: Sweet onion relish, blue and swiss cheeses
+      - name: Mini Bottle Room Burgers
+        description: Two sliders served with sweet onion relish, blue and swiss cheeses
         price: 7.00
         image_path:
         stackable: true
@@ -35,7 +35,7 @@ subcategories:
         description: Weekly selection of cheeses with toast and apricot jam
         price: 13.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: With Charcuterie +$4
@@ -65,7 +65,7 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-  - name: Seasonal Creations
+  - name: Seasonal Small Bites
     items:
       - name: Grilled Asparagus
         description: Serrano ham, sherry honey, marcona almonds
@@ -97,27 +97,27 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-      - name: Pan Seared Salmon Tacos (2)
-        description: Pico de gallo, chipotle crema, and avocado
+      - name: Pan Seared Salmon Tacos
+        description: (2) Tacos with Pico de gallo, chipotle crema, and avocado
         price: 9.00
         image_path:
         stackable: true
         orderable: true
       - name: Pork Belly Bao
-        description: Sweet & Spicy BBQ and pickled daikon slaw
+        description: (2) Bao "tacos" with sweet & Spicy BBQ and pickled daikon slaw
         price: 6.00
         image_path:
         stackable: true
         orderable: true
       - name: Lamb Barbacoa Tacos
-        description: Slow braised lamb shoulder, guajillo salsa, and pickled onions
+        description: (2) Tacos with slow braised lamb shoulder, guajillo salsa, and pickled onions
         price: 7.00
         image_path:
         stackable: true
         orderable: true
   - name: Fresh Salads
     items:
-      - name: Wild Argula Salad
+      - name: Wild Arugula Salad
         description: French feta, pickled onions, hazelnuts and white balsamic
         price: 7.00
         image_path:
@@ -138,7 +138,7 @@ subcategories:
   - name: Flatbreads
     items:
       - name: Mediterranean Artichokes
-        description: With kalamata olives, sundried tomatoes and feta cheeses
+        description: With kalamata olives, sundried tomatoes and feta cheese
         price: 11.00
         image_path:
         stackable: true
@@ -147,7 +147,7 @@ subcategories:
         description: Roasted garlic, ricotta cheese, and chili flakes
         price: 11.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Add bacon +$2
@@ -162,10 +162,10 @@ subcategories:
   - name: Burgers
     items:
       - name: The Bottle Room Original
-        description: Sweet onion relish and arugula with blue and swiss cheeses. With side argula salad
+        description: Sweet onion relish and arugula with blue and swiss cheeses. With side arugula salad
         price: 12.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Meat cooked to
@@ -190,10 +190,10 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: Uptown Bacon Cheese Burger
-        description: Bacon marmalade, swiss cheese, homemade onion ring and BBQ. With side argula salad
+        description: Bacon marmalade, swiss cheese, homemade onion ring and BBQ. With side arugula salad
         price: 13.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Meat cooked to
@@ -218,10 +218,10 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: American Dream
-        description: Crispy pickles, House-Made American Cheese and Russian Dressing. With side argula salad
+        description: Crispy pickles, House-Made American Cheese and Russian Dressing. With side arugula salad
         price: 12.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Meat cooked to
@@ -246,10 +246,10 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: The Bacon & Egg
-        description: 75/25 beef and bacon patty. Thick-cut bacon, fried egg, House-Made American Cheese and Buttermilk Aioli. With side argula salad
-        price: 12.00
+        description: 75/25 beef and bacon patty. Thick-cut bacon, fried egg, House-Made American Cheese and Buttermilk Aioli. With side arugula salad
+        price: 13.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Meat cooked to
@@ -274,10 +274,10 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: Avocado Turkey Burger
-        description: Dark and white turkey blend. North Country bacon, mushrooms, swiss cheese, and garlic aioli. With side argula salad
+        description: Dark and white turkey blend. North Country bacon, mushrooms, swiss cheese, and garlic aioli. With side arugula salad
         price: 12.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
         custom_fields:
           - name: Add bacon +$2
@@ -306,7 +306,7 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-      - name: English Pea "Guacamole"
+      - name: Hard Root Beer Float
         description: Root Cellars Row Hard Root Beer with vanilla gelato
         price: 7.00
         image_path:

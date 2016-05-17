@@ -7,6 +7,18 @@ is_alcohol: true
 subcategories:
   - name: Hoppy
     items:
+      - name: Bear Republic El Oso
+        abv: 4.9%
+        origin: Healdsburg, CA
+        description: Mexican Amber
+        price: $7 - 16oz
+        image_path:
+      - name: De Ranke XXX Bitter
+        abv: 6%
+        origin: Dottignies, Belgium
+        description: Belgian IPA
+        price: $9 - 9oz
+        image_path:
       - name: El Segundo Mayberry IPA
         abv: 7.1%
         origin: El Segundo, CA
@@ -29,7 +41,7 @@ subcategories:
         abv: 6.5%
         origin: Vista, CA
         description:
-        price: $8 - 16oz
+        price: $7 - 16oz
         image_path:
       - name: Noble Ale Works Mass Confusion
         abv: 6.5%
@@ -37,11 +49,11 @@ subcategories:
         description: Wheat IPA
         price: $8 - 16oz
         image_path:
-      - name: Russian River Blind Pig
-        abv: 6.25%
+      - name: Russian River Pliny The Elder
+        abv: 8%
         origin: Santa Rosa, CA
-        description: IPA
-        price: $8 - 16oz
+        description: Double IPA
+        price: $9 - 16oz
         image_path:
   - name: Malty
     items:
@@ -51,41 +63,23 @@ subcategories:
         description:
         price: $7 - 16oz
         image_path:
-      - name: Barrel Roll Hammerhead
-        abv: 13.8%
-        origin: Redlands, CA
-        description: Barleywine
-        price: $9 - 9oz
-        image_path:
-      - name: Bear Republic El Oso
-        abv: 4.9%
-        origin: Healdsburg, CA
-        description: Mexican Amber
-        price: $7 - 16oz
-        image_path:
       - name: Bear Republic Short Shifter
         abv: 5.5%
         origin: Healdsburg, CA
         description: Lager
         price: $7 - 16oz
         image_path:
-      - name: Boulevard Rye-On-Rye-On-Rye
-        abv: 14.6%
-        origin: Kansas City, MO
-        description:
-        price: $9 - 9oz
-        image_path:
       - name: Craftsman 1903
-        abv: 6.25%
+        abv: 5.6%
         origin: Pasadena, CA
         description: Pre-Prohibition style lager
-        price: $8 - 16oz
+        price: $7 - 16oz
         image_path:
       - name: Founders Backwoods Bastard
         abv: 11.6%
         origin: Grand Rapids, MI
-        description: BBA Scotch Ale
-        price: $9 - 6oz
+        description: BA Scotch Ale
+        price: $10 - 12oz
         image_path:
       - name: Noble Ale Works Tank Top
         abv: 5.3%
@@ -102,14 +96,8 @@ subcategories:
       - name: Oskar Blues Beerito
         abv: 4%
         origin: Lyons, CO
-        description: American Lager
+        description: Mexican Lager
         price: $7 - 16oz
-        image_path:
-      - name: The Bruery Or Xata
-        abv: 7.2%
-        origin: Placentia, CA
-        description: Cinnamon golden ale
-        price: $9 - 12oz
         image_path:
   - name: Belgian Style etc...
     items:
@@ -119,17 +107,17 @@ subcategories:
         description: Witbier
         price: $7 - 16oz
         image_path:
+      - name: Boulevard Rye-On-Rye-On-Rye
+        abv: 14.6%
+        origin: Kansas City, MO
+        description:
+        price: $9 - 9oz
+        image_path:
       - name: Craftsman Heavenly Hefeweizen
         abv: 4.8%
         origin: Pasadena, CA
         description:
         price: $7 - 16oz
-        image_path:
-      - name: De Ranke XX Bitter
-        abv: 6.2%
-        origin: Dottignies, Belgium
-        description: Belgian IPA
-        price: $9 - 9oz
         image_path:
       - name: Ommegang / D'Achouffe Gnomegang
         abv: 9.5%
@@ -137,11 +125,17 @@ subcategories:
         description:
         price: $7 - 12oz
         image_path:
+      - name: The Bruery Or Xata
+        abv: 7.2%
+        origin: Placentia, CA
+        description: Cinnamon golden ale
+        price: $9 - 12oz
+        image_path:
       - name: Van Steenberge Tripel Van De Garre
         abv: 10.5%
         origin: Lindenlaan, Belgium
-        description: Wheat IPA
-        price: $8 - 16oz
+        description:
+        price: $9 - 12oz
         image_path:
   - name: Fruity/Sour
     items:
@@ -154,7 +148,7 @@ subcategories:
       - name: Phantom Carriage Muis
         abv: 6.75%
         origin: Carson, CA
-        description:
+        description: 100% Brett Blonde
         price: $7 - 12oz
         image_path:
 ---
