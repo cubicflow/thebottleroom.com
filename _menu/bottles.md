@@ -95,13 +95,13 @@ subcategories:
         description: Jim Beam barrel aged tripel
         price: $26 - 750ml
         image_path:
-      - name: Logsdon Fresh Hop Seizon
+      - name: Logsdon Fresh Hop Seizoen
         abv: 8.5%
         origin: Hood River, OR
         description:
         price: $36 - 750ml
         image_path:
-      - name: Logsdon Oak Aged Seizon
+      - name: Logsdon Oak Aged Seizoen
         abv: 8.5%
         origin: Hood River, OR
         description:
@@ -159,7 +159,7 @@ subcategories:
         description: Dopplebock
         price: $8 - 12oz
         image_path:
-      - name: Paulaner Premium Pils
+      - name: Paulaner Premium Pilsner
         abv: 5%
         origin: Germany
         description:
