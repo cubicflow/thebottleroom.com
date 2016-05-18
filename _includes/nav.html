@@ -15,7 +15,11 @@
     {% endif %}
     {% if include.style == 'button' %}
       <a class="nav__button" href="/menu/eats">
+        {% if site.data.settings.online_ordering_enabled %}
         Order
+        {% else %}
+        Menu
+        {% endif %}
       </a>
     {% endif %}
 
