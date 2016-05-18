@@ -73,8 +73,8 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-      - name: English Pea "Guacamole"
-        description: With queso fresco on grilled giabatta
+      - name: English Pea "Guacamole" Toast
+        description: With queso fresco on grilled ciabatta
         price: 6.00
         image_path:
         stackable: true
