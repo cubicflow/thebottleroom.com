@@ -23,11 +23,15 @@
 
   &__button {
 
+    @include show-for(medium);
+    
     @extend .button, .button--outline;
     margin-top: 20px;
     margin-left: 0px;
     float: left;
     min-width: 0px;
+
+
   }
 
   &__links {
