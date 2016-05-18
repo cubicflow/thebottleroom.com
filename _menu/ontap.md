@@ -7,38 +7,38 @@ is_alcohol: true
 subcategories:
   - name: Hoppy
     items:
-      - name: Bear Republic El Oso
-        abv: 4.9%
-        origin: Healdsburg, CA
-        description: Mexican Amber
+      - name: Alpine Beer Co. Duet
+        abv: 7%
+        origin: Alpine, CA
+        description: IPA
         price: $7 - 16oz
         image_path:
       - name: De Ranke XXX Bitter
         abv: 6%
         origin: Dottignies, Belgium
-        description: Belgian IPA
+        description: Hoppy Belgian
         price: $9 - 9oz
         image_path:
-      - name: El Segundo Mayberry IPA
-        abv: 7.1%
-        origin: El Segundo, CA
-        description:
+      - name: Eagle Rock Winning Team
+        abv: 8.5%
+        origin: Eagle Rock, CA
+        description: Double IPA
         price: $8 - 16oz
         image_path:
-      - name: Firestone Walker Luponic Distortion
-        abv: 5.9%
-        origin: Paso Robles, CA
-        description: IPA
+      - name: El Segundo Citra Pale Ale
+        abv: 5.5%
+        origin: El Segundo, CA
+        description:
         price: $7 - 16oz
         image_path:
-      - name: King Harbor Azaccattacka
-        abv: 8%
-        origin: Redondo, CA
-        description: Double IPA
-        price: $8 - 12oz
+      - name: Founders Mosaic Promise
+        abv: 5.5%
+        origin: Grand Rapids, MI
+        description: American Pale Ale
+        price: $7 - 16oz
         image_path:
       - name: Mother Earth Boo Koo IPA
-        abv: 6.5%
+        abv: 7.5%
         origin: Vista, CA
         description:
         price: $7 - 16oz
@@ -49,17 +49,29 @@ subcategories:
         description: Wheat IPA
         price: $8 - 16oz
         image_path:
-      - name: Russian River Pliny The Elder
-        abv: 8%
-        origin: Santa Rosa, CA
-        description: Double IPA
-        price: $9 - 16oz
+      - name: Pizza Port Shark Bite
+        abv: 5.8%
+        origin: San Clemente, CA
+        description: Red Ale
+        price: $7 - 16oz
         image_path:
   - name: Malty
     items:
-      - name: AleSmith Nut Brown
-        abv: 5%
-        origin: San Diego, CA
+      - name: Avery Samael's
+        abv: 14.6%
+        origin: Boulder, CO
+        description: Oak Aged Ale English Barleywine
+        price: $9 - 6oz
+        image_path:
+      - name: Bear Republic El Oso
+        abv: 4.9%
+        origin: Healdsburg, CA
+        description: Mexican Amber
+        price: $7 - 16oz
+        image_path:
+      - name: Bear Republic Peter Brown Tribute Ale
+        abv: 6.3%
+        origin: Healdsburg, CA
         description:
         price: $7 - 16oz
         image_path:
@@ -75,23 +87,17 @@ subcategories:
         description: Pre-Prohibition style lager
         price: $7 - 16oz
         image_path:
-      - name: Founders Backwoods Bastard
-        abv: 11.6%
-        origin: Grand Rapids, MI
-        description: BA Scotch Ale
-        price: $10 - 12oz
+      - name: Mother Earth Sin-Tax
+        abv: 8.1%
+        origin: Vista, CA
+        description: Peanut Butter Imperial Stout
+        price: $7 - 16oz
         image_path:
       - name: Noble Ale Works Tank Top
         abv: 5.3%
         origin: Anaheim, CA
         description: Cream Ale
         price: $7 - 16oz
-        image_path:
-      - name: North Coast Old Rasputin on NITRO
-        abv: 9%
-        origin: Fort Bragg, CA
-        description: Imperial Russian Stout
-        price: $8 - 16oz
         image_path:
       - name: Oskar Blues Beerito
         abv: 4%
@@ -101,11 +107,11 @@ subcategories:
         image_path:
   - name: Belgian Style etc...
     items:
-      - name: Allagash White
-        abv: 5.1%
-        origin: Portland, ME
-        description: Witbier
-        price: $7 - 16oz
+      - name: 21st Amendment Monk's Blood
+        abv: 8.3%
+        origin: San Francisco, CA
+        description: Belgian Dark Ale
+        price: $9 - 12oz
         image_path:
       - name: Boulevard Rye-On-Rye-On-Rye
         abv: 14.6%
@@ -119,16 +125,16 @@ subcategories:
         description:
         price: $7 - 16oz
         image_path:
-      - name: Ommegang / D'Achouffe Gnomegang
-        abv: 9.5%
-        origin: Cooperstown, NY
+      - name: Maredsous 6
+        abv: 6%
+        origin: Breendonk-Puurs, Belgium
         description:
-        price: $7 - 12oz
+        price: $9 - 12oz
         image_path:
       - name: The Bruery Or Xata
         abv: 7.2%
         origin: Placentia, CA
-        description: Cinnamon golden ale
+        description: Cinnamon Golden Ale
         price: $9 - 12oz
         image_path:
       - name: Van Steenberge Tripel Van De Garre
