@@ -17,7 +17,6 @@ theBottleRoom.menu = (function(){
 
   const schedule = window.data.schedule
 
-
   const updateOpenToday = function(dayofweekName){
 
     dayofweekName = dayofweekName.toLowerCase();
@@ -37,14 +36,33 @@ theBottleRoom.menu = (function(){
     let minutes = militaryTime.slice(3, 5);
     let period = '';
 
-    if (hours >= 12) {
+    if (militaryTime.length != 5){
+      console.warn(militaryTime + ' is not a valid 24hr time');
+      return;
+    }
+    if (hours > 24) {
+      console.warn(militaryTime + ' is not a valid 24hr time');
+      return;
+    }
+    if (minutes > 59) {
+      console.warn(militaryTime + ' is not a valid 24hr time');
+      return;
+    }
+
+    if (hours > 12) {
       period = 'PM';
       hours = hours - 12;
-    } else if (hours <= 12) {
+    } else if (hours == 12) {
+      period = 'PM';
+    } else if (hours < 12) {
+      period = 'AM';
+    } else if (hours == 24) {
       period = 'AM';
     }
 
-    return removeZeroPad(hours) + ':' + minutes + ' ' + period
+    hours = hours == '00' ? 12 : removeZeroPad(hours);
+
+    return hours + ':' + minutes + ' ' + period;
   }
 
 
