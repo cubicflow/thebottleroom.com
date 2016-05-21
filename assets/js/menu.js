@@ -36,18 +36,16 @@ theBottleRoom.menu = (function(){
     let minutes = militaryTime.slice(3, 5);
     let period = '';
 
-    if (militaryTime.length != 5){
+    if (
+      militaryTime.length != 5 ||
+      hours > 24 ||
+      minutes > 59 ||
+      militaryTime.slice(2, 3) != ':'
+    ){
       console.warn(militaryTime + ' is not a valid 24hr time');
       return;
     }
-    if (hours > 24) {
-      console.warn(militaryTime + ' is not a valid 24hr time');
-      return;
-    }
-    if (minutes > 59) {
-      console.warn(militaryTime + ' is not a valid 24hr time');
-      return;
-    }
+
 
     if (hours > 12) {
       period = 'PM';
