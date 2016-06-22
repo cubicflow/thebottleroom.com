@@ -102,7 +102,7 @@
 
   &__container {
     @include container();
-    background-image: url(/assets/img/cta-menu-spring-16.svg);
+    background-image: url(/assets/img/cta-menu-summer-16.svg);
     display: block;
     position: relative;
     height: 280px;
@@ -115,14 +115,14 @@
       height: 350px;
       width: 100%;
       background-position: center top 130px;
-      background-size: 199px 70px;
+      background-size: 350px 62px;
     }
 
     @include breakpoint(large) {
       height: 400px;
       width: 100%;
       background-position: center top 150px;
-      background-size: 239px 84px;
+      background-size: 380px 67px;
     }
 
     &:hover {
