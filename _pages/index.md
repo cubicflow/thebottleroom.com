@@ -145,6 +145,6 @@ show_call_to_action: true
 
 <div class="new-menu-cta">
   <a href="/menu/eats/" class="new-menu-cta__container">
-    <span class="editable">The New Menu</span>
+    <span class="editable">The Menu</span>
   </a>
 </div>
