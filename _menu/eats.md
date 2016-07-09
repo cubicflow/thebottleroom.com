@@ -25,12 +25,6 @@ subcategories:
         image_path:
         stackable: true
         orderable: true
-      - name: Mini Bottle Room Burgers
-        description: Two sliders served with sweet onion relish, blue and swiss cheeses
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
       - name: Chef's Cheese Plate
         description: Weekly selection of cheeses with toast and apricot jam
         price: 13.00
@@ -67,84 +61,78 @@ subcategories:
         orderable: true
   - name: Seasonal Small Bites
     items:
-      - name: Grilled Asparagus
-        description: Serrano ham, sherry honey, marcona almonds
+      - name: Corn on the Cob
+        description: Mexican crema, cotija and chili powder
+        price: 4.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Baby Heirloom Tomato Toast
+        description: Basil & garlic marinated with goat cheese on grilled ciabatta
+        price: 6.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Watermelon Salad
+        description: Baby kale with farro, feta, raisins and pickled onions
         price: 7.00
         image_path:
         stackable: true
         orderable: true
-      - name: English Pea "Guacamole" Toast
-        description: With queso fresco on grilled ciabatta
-        price: 6.00
+      - name: Stuffed Squash Blossoms
+        description: With zucchini, ricotta cheese and red pepper coulis
+        price: 7.00
         image_path:
         stackable: true
         orderable: true
-      - name: Spaghetti Carbonara
-        description: Creamy parmesan sauce with bacon and 63-Degree Egg
+      - name: BBQ Shrimp “Cocktail”
+        description: Sweet and spicy shrimp over horseradish scented coleslaw
         price: 9.00
         image_path:
         stackable: true
         orderable: true
-      - name: Quesadilla de Chorizo
-        description: Mexican pork chorizo with oaxacan cheese and rajas
-        price: 6.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Shrimp Tostada
-        description: White bean spread, chipotle crema, and avocado
+      - name: Pork Belly Tacos
+        description: (2) Slow braised pork belly with peach and habanero salsa
         price: 8.00
         image_path:
         stackable: true
         orderable: true
-      - name: Pan Seared Salmon Tacos
-        description: (2) Tacos with Pico de gallo, chipotle crema, and avocado
+      - name: Grilled Pheasant Sausage
+        description: Bacon baked lentils and duck-fat onions
+        price: 8.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Baby Back Ribs
+        description: Miso BBQ glaze and american potato salad
         price: 9.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Pork Belly Bao
-        description: (2) Bao "tacos" with sweet & Spicy BBQ and pickled daikon slaw
-        price: 6.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Lamb Barbacoa Tacos
-        description: (2) Tacos with slow braised lamb shoulder, guajillo salsa, and pickled onions
-        price: 7.00
         image_path:
         stackable: true
         orderable: true
   - name: Fresh Salads
     items:
+      - name: House Greens
+        description: Blue cheese crumbles, dried apricots, almonds and sherry-honey
+        price: 7.00
+        image_path:
+        stackable: true
+        orderable: true
       - name: Wild Arugula Salad
         description: French feta, pickled onions, hazelnuts and white balsamic
         price: 7.00
         image_path:
         stackable: true
         orderable: true
-      - name: Roasted Beet Salad
-        description: Goat cheese, blood oranges, and pistachios
-        price: 8.00
-        image_path:
-        stackable: true
-        orderable: true
       - name: Caesar Salad
-        description: Romaine hearts, caesar dressing, fried croutons
+        description: Romaine hearts, caesar dressing, fried brioche croutons
         price: 8.00
         image_path:
         stackable: true
         orderable: true
   - name: Flatbreads
     items:
-      - name: Mediterranean Artichokes
-        description: With kalamata olives, sundried tomatoes and feta cheese
-        price: 11.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Fingerling Potato and Spinach
-        description: Roasted garlic, ricotta cheese, and chili flakes
+      - name: Summer Margarita
+        description: Fresh and sun dried tomatoes, basil and crispy garlic
         price: 11.00
         image_path:
         stackable: false
@@ -152,6 +140,16 @@ subcategories:
         custom_fields:
           - name: Add bacon +$2
             options: "No|Yes[+2.00]"
+            required: false
+      - name: Kernel Swine
+        description: North country bacon, roasted corn, caramelized onions and ricotta
+        price: 11.00
+        image_path:
+        stackable: false
+        orderable: true
+        custom_fields:
+          - name: Vegetarian option (no charge)
+            options: "No|Yes"
             required: false
       - name: Spanish Chorizo
         description: Piquillo peppers, goat cheese, and scallions
@@ -180,6 +178,9 @@ subcategories:
           - name: Add avocado +$1
             options: "No|Yes[+1.00]"
             required: false
+          - name: Add tomato +$1
+            options: "No|Yes[+1.00]"
+            required: false
           - name: Add pickles +$1
             options: "No|Yes[+1.00]"
             required: false
@@ -191,7 +192,7 @@ subcategories:
             required: false
       - name: Uptown Bacon Cheese Burger
         description: Bacon marmalade, swiss cheese, homemade onion ring and BBQ. With side arugula salad
-        price: 13.00
+        price: 12.00
         image_path:
         stackable: false
         orderable: true
@@ -206,6 +207,9 @@ subcategories:
             options: "No|Yes[+1.00]"
             required: false
           - name: Add avocado +$1
+            options: "No|Yes[+1.00]"
+            required: false
+          - name: Add tomato +$1
             options: "No|Yes[+1.00]"
             required: false
           - name: Add pickles +$1
@@ -236,6 +240,9 @@ subcategories:
           - name: Add avocado +$1
             options: "No|Yes[+1.00]"
             required: false
+          - name: Add tomato +$1
+            options: "No|Yes[+1.00]"
+            required: false
           - name: Add pickles +$1
             options: "No|Yes[+1.00]"
             required: false
@@ -245,9 +252,9 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: The Bacon & Egg
-        description: 75/25 beef and bacon patty. Thick-cut bacon, fried egg, House-Made American Cheese and Buttermilk Aioli. With side arugula salad
-        price: 13.00
+      - name: California Classic
+        description: Cheddar, lettuce, House Pickles, tomato and thousand island. With side arugula salad
+        price: 12.00
         image_path:
         stackable: false
         orderable: true
@@ -264,6 +271,9 @@ subcategories:
           - name: Add avocado +$1
             options: "No|Yes[+1.00]"
             required: false
+          - name: Add tomato +$1
+            options: "No|Yes[+1.00]"
+            required: false
           - name: Add pickles +$1
             options: "No|Yes[+1.00]"
             required: false
@@ -274,7 +284,7 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: Avocado Turkey Burger
-        description: Dark and white turkey blend. North Country bacon, mushrooms, swiss cheese, and garlic aioli. With side arugula salad
+        description: Dark and white turkey blend. North Country Bacon, mushrooms, swiss cheese, and garlic aioli. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -290,6 +300,9 @@ subcategories:
             options: "No|Yes[+1.00]"
             required: false
           - name: Add pickles +$1
+            options: "No|Yes[+1.00]"
+            required: false
+          - name: Add tomato +$1
             options: "No|Yes[+1.00]"
             required: false
           - name: Substitute Mushrooms for non-meat eaters (no charge)

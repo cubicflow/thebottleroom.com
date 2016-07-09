@@ -7,78 +7,90 @@ is_alcohol: true
 subcategories:
   - name: Hoppy
     items:
-      - name: Alpine Beer Co. Duet
-        abv: 7%
-        origin: Alpine, CA
-        description: IPA
-        price: $7 - 16oz
-        image_path:
-      - name: De Ranke XXX Bitter
-        abv: 6%
-        origin: Dottignies, Belgium
-        description: Hoppy Belgian
-        price: $9 - 9oz
-        image_path:
-      - name: Eagle Rock Winning Team
-        abv: 8.5%
-        origin: Eagle Rock, CA
-        description: Double IPA
+      - name: Anchor Brotherhood
+        abv: 5.6%
+        origin: San Francisco, CA
+        description: Hoppy Steam Beer
         price: $8 - 16oz
         image_path:
-      - name: El Segundo Citra Pale Ale
-        abv: 5.5%
+      - name: El Segundo Hop Logger
+        abv: 7.4%
         origin: El Segundo, CA
-        description:
+        description: IPL
         price: $7 - 16oz
         image_path:
-      - name: Founders Mosaic Promise
-        abv: 5.5%
+      - name: Founders ReDANKulous
+        abv: 9.5%
         origin: Grand Rapids, MI
-        description: American Pale Ale
-        price: $7 - 16oz
+        description: Imperial Red IPA
+        price: $9 - 12oz
         image_path:
-      - name: Mother Earth Boo Koo IPA
-        abv: 7.5%
-        origin: Vista, CA
-        description:
-        price: $7 - 16oz
-        image_path:
-      - name: Noble Ale Works Mass Confusion
+      - name: Knee Deep Senior Smiley
         abv: 6.5%
-        origin: Anaheim, CA
-        description: Wheat IPA
-        price: $8 - 16oz
-        image_path:
-      - name: Pizza Port Shark Bite
-        abv: 5.8%
-        origin: San Clemente, CA
-        description: Red Ale
+        origin: Auburn, CA
+        description: Pale Ale
         price: $7 - 16oz
+        image_path:
+      - name: Mumford Bleacher Beer
+        abv: 4.6%
+        origin: Los Angeles, CA
+        description: Pale Ale
+        price: $7 - 16oz
+        image_path:
+      - name: Phantom Carriage Fog Island
+        abv: 5.5%
+        origin: Carson, CA
+        description: Pale Ale
+        price: $9 - 16oz
+        image_path:
+      - name: Port Brewing 10th Anniversary Ale
+        abv: 11%
+        origin: San Marcos, CA
+        description: Double IPA
+        price: $7 - 12oz
+        image_path:
+      - name: Stone Enjoy By 07.25.16
+        abv: 9.4%
+        origin: San Escondido, CA
+        description: Double IPA with tangerines
+        price: $9 - 16oz
+        image_path:
+      - name: Three Weav3rs Knotty
+        abv: 8.6%
+        origin: Inglewood, CA
+        description: Double IPA
+        price: $9 - 16oz
         image_path:
   - name: Malty
     items:
-      - name: Avery Samael's
-        abv: 14.6%
+      - name: Anderson Valley Wild Turkey
+        abv: 6.9%
+        origin: Boonville, CA
+        description: Bourbon Barrel Aged Stout
+        price: $9 - 12oz
+        image_path:
+      - name: Avery Tweak
+        abv: 17.8%
         origin: Boulder, CO
-        description: Oak Aged Ale English Barleywine
+        description: Bourbon Barrel Aged Stout
         price: $9 - 6oz
         image_path:
-      - name: Bear Republic El Oso
-        abv: 4.9%
-        origin: Healdsburg, CA
-        description: Mexican Amber
+      - name: Barrel House Sunny Daze
+        abv: 5.2%
+        origin: Paso Robles, CA
+        description: Blonde Ale
+        price: $7 - 16oz
+        image_path:
+      - name: Beachwood Oatmonster
+        abv: 5.5%
+        origin: Long Beach, CA
+        description: Oatmeal Stout
         price: $7 - 16oz
         image_path:
       - name: Bear Republic Peter Brown Tribute Ale
         abv: 6.3%
         origin: Healdsburg, CA
         description:
-        price: $7 - 16oz
-        image_path:
-      - name: Bear Republic Short Shifter
-        abv: 5.5%
-        origin: Healdsburg, CA
-        description: Lager
         price: $7 - 16oz
         image_path:
       - name: Craftsman 1903
@@ -90,34 +102,16 @@ subcategories:
       - name: Mother Earth Sin-Tax
         abv: 8.1%
         origin: Vista, CA
-        description: Peanut Butter Imperial Stout
-        price: $7 - 16oz
-        image_path:
-      - name: Noble Ale Works Tank Top
-        abv: 5.3%
-        origin: Anaheim, CA
-        description: Cream Ale
-        price: $7 - 16oz
-        image_path:
-      - name: Oskar Blues Beerito
-        abv: 4%
-        origin: Lyons, CO
-        description: Mexican Lager
+        description: Peanut butter Stout
         price: $7 - 16oz
         image_path:
   - name: Belgian Style etc...
     items:
-      - name: 21st Amendment Monk's Blood
-        abv: 8.3%
-        origin: San Francisco, CA
-        description: Belgian Dark Ale
-        price: $9 - 12oz
-        image_path:
-      - name: Boulevard Rye-On-Rye-On-Rye
-        abv: 14.6%
-        origin: Kansas City, MO
-        description:
-        price: $9 - 9oz
+      - name: Allagash Confluence
+        abv: 7.5%
+        origin: Portland, ME
+        description: Belgian Pale Ale
+        price: $11 - 9oz
         image_path:
       - name: Craftsman Heavenly Hefeweizen
         abv: 4.8%
@@ -125,17 +119,23 @@ subcategories:
         description:
         price: $7 - 16oz
         image_path:
-      - name: Maredsous 6
-        abv: 6%
-        origin: Breendonk-Puurs, Belgium
+      - name: Eagle Rock Ginger Saison
+        abv: 4.8%
+        origin: Eagle Rock, CA
         description:
-        price: $9 - 12oz
+        price: $7 - 12oz
         image_path:
-      - name: The Bruery Or Xata
-        abv: 7.2%
+      - name: The Bruery White Oak
+        abv: 12.5%
         origin: Placentia, CA
-        description: Cinnamon Golden Ale
-        price: $9 - 12oz
+        description: Wheatwine
+        price: $11 - 9oz
+        image_path:
+      - name: The Bruery Trade Winds Tripel
+        abv: 8.1%
+        origin: Placentia, CA
+        description:
+        price: $8 - 12oz
         image_path:
       - name: Van Steenberge Tripel Van De Garre
         abv: 10.5%
@@ -145,16 +145,16 @@ subcategories:
         image_path:
   - name: Fruity/Sour
     items:
-      - name: Bear Republic Sonoma County Wild Pale Ale
-        abv: 7.6%
-        origin: Healdsburg, CA
-        description:
-        price: $9 - 12oz
+      - name: Modern Times Fruitlands
+        abv: 4.8%
+        origin: San Diego, CA
+        description: Guava & passion fruit
+        price: $7 - 16oz
         image_path:
-      - name: Phantom Carriage Muis
-        abv: 6.75%
-        origin: Carson, CA
-        description: 100% Brett Blonde
+      - name: North Coast Cherry Berliner Weisse
+        abv: 3.5%
+        origin: Fort Bragg, CA
+        description:
         price: $7 - 12oz
         image_path:
 ---
