@@ -1,21 +1,21 @@
 featured_items:
-  - name: Hummus
-    item_url: /menu/eats/#hummus
+  - name: Jidori Chicken "Lollipops"
+    item_url: /menu/eats/#jidori-chicken-lollipops
   - name: Mac n Cheese
     item_url: /menu/eats/#mac-n-cheese
   - name: Tony Tots
     item_url: /menu/eats/#tony-tots
-  - name: Shrimp Tostada
-    item_url: /menu/eats/#shrimp-tostada
-  - name: Lamb Barbacoa Tacos
-    item_url: /menu/eats/#lamb-barbacoa-tacos
-  - name: Roasted Beet Salad
-    item_url: /menu/eats/#roasted-beet-salad
-  - name: Spanish Chorizo Flatbread
-    item_url: /menu/eats/#spanish-chorizo
+  - name: BBQ Shrimp "Cocktail"
+    item_url: /menu/eats/#bbq-shrimp-cocktail
+  - name: Grilled Pheasant Sausage
+    item_url: /menu/eats/#grilled-pheasant-sausage
+  - name: Baby Back Ribs
+    item_url: /menu/eats/#baby-back-ribs
+  - name: Kernel Swine
+    item_url: /menu/eats/#kernel-swine
   - name: Uptown Bacon Cheese Burger
     item_url: /menu/eats/#uptown-bacon-cheese-burger
-  - name: American Dream
-    item_url: /menu/eats/#american-dream
-  - name: The Bacon & Egg
-    item_url: /menu/eats/#the-bacon-egg
+  - name: California Classic
+    item_url: /menu/eats/#california-classic
+  - name: The Bottle Room Original
+    item_url: /menu/eats/#the-bottle-room-original
