@@ -20,8 +20,14 @@ subcategories:
         stackable: true
         orderable: true
       - name: Jidori Chicken "Lollipops"
-        description: Fried drumsticks with spicy sriracha honey glaze
+        description: Fried drumsticks with spicy Sriracha honey glaze
         price: 6.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Mini Bottle Room Burgers (2)
+        description: Sweet onion relish, blue and Swiss cheeses
+        price: 7.00
         image_path:
         stackable: true
         orderable: true
@@ -42,7 +48,7 @@ subcategories:
         stackable: true
         orderable: true
       - name: Tony Tots
-        description: Homemade potato tots with chipotle aioli
+        description: Homemade potato tots with chipotle aïoli
         price: 5.00
         image_path:
         stackable: true
@@ -61,78 +67,78 @@ subcategories:
         orderable: true
   - name: Seasonal Small Bites
     items:
-      - name: Corn on the Cob
-        description: Mexican crema, cotija and chili powder
-        price: 4.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Baby Heirloom Tomato Toast
-        description: Basil & garlic marinated with goat cheese on grilled ciabatta
+      - name: Roasted Pumpkin and Burata
+        description: Brown butter-brown sugar drizzle, pumpkin seeds
         price: 6.00
         image_path:
         stackable: true
         orderable: true
-      - name: Watermelon Salad
-        description: Baby kale with farro, feta, raisins and pickled onions
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Stuffed Squash Blossoms
-        description: With zucchini, ricotta cheese and red pepper coulis
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: BBQ Shrimp “Cocktail”
-        description: Sweet and spicy shrimp over horseradish scented coleslaw
-        price: 9.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Pork Belly Tacos
-        description: (2) Slow braised pork belly with peach and habanero salsa
+      - name: Pink Lady Apple Salad
+        description: Arugula, feta, raisins, hazelnuts, and pickled onions
         price: 8.00
         image_path:
         stackable: true
         orderable: true
-      - name: Grilled Pheasant Sausage
-        description: Bacon baked lentils and duck-fat onions
-        price: 8.00
+      - name: Mama's Gnocchi
+        description: Yukon gold potato dumplings with Nduja (en-doo-ya) Sauce and mushrooms
+        price: 7.00
         image_path:
         stackable: true
         orderable: true
-      - name: Baby Back Ribs
-        description: Miso BBQ glaze and american potato salad
+      - name: BBQ Shrimp "Martini"
+        description: Sweet and spicy shrimp, horseradish coleslaw and crushed almonds
         price: 9.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Grilled Octopus Tacos (2)
+        description: Marinated in chimichurri and served with Mexican chorizo salsa
+        price: 10.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: House Cured Pork Belly (Berkshire)
+        description: Butternut squash, caramelized blueberries
+        price: 9.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Dug Leg Confit (Hudson Valley)
+        description: Braised red cabbage and sweet potato dumplings
+        price: 9.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Ribeye Pub Steak (6 oz.)
+        description: Maitred'Hôtel Butter, garlic fries and aïoli
+        price: 14.00
         image_path:
         stackable: true
         orderable: true
   - name: Fresh Salads
     items:
       - name: House Greens
-        description: Blue cheese crumbles, dried apricots, almonds and sherry-honey
+        description: Blue cheese crumbles, apricots, almonds and sherry-vinaigrette
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Wild Arugula Salad
-        description: French feta, pickled onions, hazelnuts and white balsamic
+        description: French Feta, pickled onions, hazelnuts and white balsamic
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Caesar Salad
-        description: Romaine hearts, caesar dressing, fried brioche croutons
+        description: Romaine hearts, Caesar Dressing, fried brioche croutons
         price: 8.00
         image_path:
         stackable: true
         orderable: true
   - name: Flatbreads
     items:
-      - name: Summer Margarita
-        description: Fresh and sun dried tomatoes, basil and crispy garlic
+      - name: Japanese Pumpkin
+        description: Sautéed black kale, feta crumbles, and fresh arugula
         price: 11.00
         image_path:
         stackable: false
@@ -141,17 +147,13 @@ subcategories:
           - name: Add bacon +$2
             options: "No|Yes[+2.00]"
             required: false
-      - name: Kernel Swine
-        description: North country bacon, roasted corn, caramelized onions and ricotta
-        price: 11.00
+      - name: Mushroom
+        description: Cremini and shiitake mushrooms, shallot confit and white truffle oil
+        price: 12.00
         image_path:
-        stackable: false
+        stackable: true
         orderable: true
-        custom_fields:
-          - name: Vegetarian option (no charge)
-            options: "No|Yes"
-            required: false
-      - name: Spanish Chorizo
+      - name: Spanish Chorizo (Pamplona)
         description: Piquillo peppers, goat cheese, and scallions
         price: 12.00
         image_path:
@@ -160,7 +162,7 @@ subcategories:
   - name: Burgers
     items:
       - name: The Bottle Room Original
-        description: Sweet onion relish and arugula with blue and swiss cheeses. With side arugula salad
+        description: Sweet onion relish and arugula with blue and Swiss cheeses. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -191,7 +193,7 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: Uptown Bacon Cheese Burger
-        description: Bacon marmalade, swiss cheese, homemade onion ring and BBQ. With side arugula salad
+        description: Bacon marmalade, Swiss Cheese, homemade onion ring and BBQ. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -221,8 +223,8 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: American Dream
-        description: Crispy pickles, House-Made American Cheese and Russian Dressing. With side arugula salad
+      - name: Black & Bleu
+        description: Black fig jam, St. Agur Bleu and duck fat onions. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -253,7 +255,7 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: California Classic
-        description: Cheddar, lettuce, House Pickles, tomato and thousand island. With side arugula salad
+        description: Cheddar, lettuce, House Pickles, tomato and Secret Sauce. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -284,7 +286,7 @@ subcategories:
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
       - name: Avocado Turkey Burger
-        description: Dark and white turkey blend. North Country Bacon, mushrooms, swiss cheese, and garlic aioli. With side arugula salad
+        description: Dark and white turkey blend. North Country Bacon, mushrooms, Swiss Cheese, and garlic aïoli. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
