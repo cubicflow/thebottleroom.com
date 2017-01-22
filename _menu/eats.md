@@ -8,31 +8,31 @@ subcategories:
   - name: Bar Bites
     items:
       - name: Hummus
-        description: Parsley pesto, French feta, pita and extra virgin olive oil
+        description: Parsley Pesto, French Feta, Pita and Extra Virgin Olive Oil
         price: 6.00
         image_path:
         stackable: true
         orderable: true
       - name: Crispy Fried Calamari
-        description: Szechuan dipping sauce and lemon
+        description: Szechuan Dipping Sauce and Lemon
         price: 8.00
         image_path:
         stackable: true
         orderable: true
       - name: Jidori Chicken "Lollipops"
-        description: Fried drumsticks with spicy Sriracha honey glaze
+        description: Fried Drumsticks with Spicy Sriracha Honey Glaze
         price: 6.00
         image_path:
         stackable: true
         orderable: true
       - name: Mini Bottle Room Burgers (2)
-        description: Sweet onion relish, blue and Swiss cheeses
+        description: Sweet Onion Relish, Blue and Swiss Cheeses
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Chef's Cheese Plate
-        description: Weekly selection of cheeses with toast and apricot jam
+        description: Weekly selection of Cheeses with Toast and Apricot Jam
         price: 13.00
         image_path:
         stackable: false
@@ -42,127 +42,121 @@ subcategories:
             options: "No|Yes[+4.00]"
             required: false
       - name: Mac n Cheese
-        description: Grafton aged cheddar and bacon-fat bread crumbs
+        description: Grafton Aged Cheddar and Bacon-Fat Bread Crumbs
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Tony Tots
-        description: Homemade potato tots with chipotle aïoli
+        description: Homemade Potato Tots with Chipotle Aïoli
         price: 5.00
         image_path:
         stackable: true
         orderable: true
       - name: Sweet Potato Fries
-        description: Tossed in fried ginger salt
+        description: Tossed in Fried Ginger Salt
         price: 5.00
         image_path:
         stackable: true
         orderable: true
       - name: Shoestring Potatoes
-        description: Skinny fries tossed in sea salt and raw garlic
+        description: Skinny Fries tossed in Sea Salt and Raw Garlic
         price: 5.00
         image_path:
         stackable: true
         orderable: true
   - name: Seasonal Small Bites
     items:
-      - name: Roasted Pumpkin and Burata
-        description: Brown butter-brown sugar drizzle, pumpkin seeds
-        price: 6.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Pink Lady Apple Salad
-        description: Arugula, feta, raisins, hazelnuts, and pickled onions
+      - name: Fuyu Persimmon Salad
+        description: Tangerines, Purple Haze Goat Cheese, Almonds, Passion Fruit Vinaigrette
         price: 8.00
         image_path:
         stackable: true
         orderable: true
-      - name: Mama's Gnocchi
-        description: Yukon gold potato dumplings with Nduja (en-doo-ya) Sauce and mushrooms
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: BBQ Shrimp "Martini"
-        description: Sweet and spicy shrimp, horseradish coleslaw and crushed almonds
-        price: 9.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Grilled Octopus Tacos (2)
-        description: Marinated in chimichurri and served with Mexican chorizo salsa
+      - name: Crispy Shrimp Taco (2)
+        description: Roasted Jalapeño Tartar Sauce and Creamy Coleslaw
         price: 10.00
         image_path:
         stackable: true
         orderable: true
-      - name: House Cured Pork Belly (Berkshire)
-        description: Butternut squash, caramelized blueberries
+      - name: Cannellini “Cassoulet”
+        description: Italian White Bean Stew and Black Kale with Duck Sausage
+        price: 7.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Pork Belly Tostada (Berkshire)
+        description: Marinated Cabbage, Morita Salsa, Black Beans and Peanuts
+        price: 7.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: House Pastrami “Poutine”
+        description: Au Jus Gravy, Cheddar and Thousand Island over Thick-Cut Fries
         price: 9.00
         image_path:
         stackable: true
         orderable: true
-      - name: Dug Leg Confit (Hudson Valley)
-        description: Braised red cabbage and sweet potato dumplings
+      - name: Spaghetti alla Bolognese
+        description: Italian Pork Sausage, Bacon and Tomato Ragu with Spaghetti. Add Egg +$2
         price: 9.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
-      - name: Ribeye Pub Steak (6 oz.)
-        description: Maitred'Hôtel Butter, garlic fries and aïoli
-        price: 14.00
+        custom_fields:
+          - name: Add egg +$2
+            options: "No|Yes[+2.00]"
+            required: false
+      - name: Prime Flat Iron Steak (8oz)
+        description: Maitre d’Hôtel Butter, Garlic Fries and Aïoli
+        price: 15.00
         image_path:
         stackable: true
         orderable: true
   - name: Fresh Salads
     items:
       - name: House Greens
-        description: Blue cheese crumbles, apricots, almonds and sherry-vinaigrette
+        description: Blue Cheese Crumbles, Apricots, Almonds and Sherry Vinaigrette
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Wild Arugula Salad
-        description: French Feta, pickled onions, hazelnuts and white balsamic
+        description: French Feta, Pickled Onions, Hazelnuts and White Balsamic
         price: 7.00
         image_path:
         stackable: true
         orderable: true
       - name: Caesar Salad
-        description: Romaine hearts, Caesar Dressing, fried brioche croutons
+        description: Romaine Hearts, Caesar Dressing, Fried Brioche Croutons
         price: 8.00
         image_path:
         stackable: true
         orderable: true
   - name: Flatbreads
     items:
-      - name: Japanese Pumpkin
-        description: Sautéed black kale, feta crumbles, and fresh arugula
-        price: 11.00
-        image_path:
-        stackable: false
-        orderable: true
-        custom_fields:
-          - name: Add bacon +$2
-            options: "No|Yes[+2.00]"
-            required: false
-      - name: Mushroom
-        description: Cremini and shiitake mushrooms, shallot confit and white truffle oil
+      - name: Winter Margarita
+        description: Oven Dried and Sun Dried Tomatoes with Black Kale and Crispy Garlic
         price: 12.00
         image_path:
         stackable: true
         orderable: true
+      - name: The Nixon
+        description: Italian Sausage Meat Sauce, Bacon, Chorizo and Pepperoni
+        price: 15.00
+        image_path:
+        stackable: true
+        orderable: true
       - name: Spanish Chorizo (Pamplona)
-        description: Piquillo peppers, goat cheese, and scallions
+        description: Piquillo Peppers, Goat Cheese, and Scallions
         price: 12.00
         image_path:
         stackable: true
         orderable: true
   - name: Burgers
     items:
-      - name: The Bottle Room Original
-        description: Sweet onion relish and arugula with blue and Swiss cheeses. With side arugula salad
+      - name: The Bottle Room Original (7oz)
+        description: Sweet Onion Relish and Arugula with Blue and Swiss Cheeses. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -192,8 +186,8 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: Uptown Bacon Cheese Burger
-        description: Bacon marmalade, Swiss Cheese, homemade onion ring and BBQ. With side arugula salad
+      - name: Uptown Bacon Cheese Burger (7oz)
+        description: Bacon Marmalade, Swiss Cheese, Homemade Onion Ring and BBQ. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -223,8 +217,8 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: Black & Bleu
-        description: Black fig jam, St. Agur Bleu and duck fat onions. With side arugula salad
+      - name: Black & Bleu (7oz)
+        description: Black Fig Jam, St. Agur Bleu and Duck Fat Onions. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -233,20 +227,8 @@ subcategories:
           - name: Meat cooked to
             options: "Rare|Medium-rare|Medium|Medium-well|Well"
             required: true
-          - name: Add bacon +$2
-            options: "No|Yes[+2.00]"
-            required: false
-          - name: Add fried egg +$1
-            options: "No|Yes[+1.00]"
-            required: false
-          - name: Add avocado +$1
-            options: "No|Yes[+1.00]"
-            required: false
-          - name: Add tomato +$1
-            options: "No|Yes[+1.00]"
-            required: false
-          - name: Add pickles +$1
-            options: "No|Yes[+1.00]"
+          - name: The Black & Bleu DELUXE +$3
+            options: "No|Yes[+3.00]"
             required: false
           - name: Substitute Mushrooms for non-meat eaters (no charge)
             options: "No|Yes"
@@ -254,8 +236,8 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: California Classic
-        description: Cheddar, lettuce, House Pickles, tomato and Secret Sauce. With side arugula salad
+      - name: Bacon Machine (5oz)
+        description: Bacon & Beef Blend Patty, Thick Bacon, “American Cheese”, Buttermilk Aioli. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -285,8 +267,8 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: Avocado Turkey Burger
-        description: Dark and white turkey blend. North Country Bacon, mushrooms, Swiss Cheese, and garlic aïoli. With side arugula salad
+      - name: Avocado Turkey Burger (7oz)
+        description: Dark and White Turkey Blend. North Country Bacon, Mushrooms, Swiss Cheese and Garlic Aïoli. With side arugula salad
         price: 12.00
         image_path:
         stackable: false
@@ -316,13 +298,13 @@ subcategories:
   - name: Sweets
     items:
       - name: Warm brioche bread pudding
-        description: With vanilla bean gelato, salted caramel and candied hazelnuts
+        description: With Vanilla Bean Gelato, Salted Caramel and Candied Hazelnuts
         price: 5.00
         image_path:
         stackable: true
         orderable: true
       - name: Hard Root Beer Float
-        description: Root Cellars Row Hard Root Beer with vanilla gelato
+        description: Root Cellars Row Hard Root Beer with Vanilla Gelato
         price: 7.00
         image_path:
         stackable: true

@@ -102,12 +102,12 @@
 
   &__container {
     @include container();
-    background-image: url(/assets/img/cta-menu-autumn-16@2x.png);
+    background-image: url(/assets/img/cta-menu-winter-17@2x.png);
     display: block;
     position: relative;
     height: 380px;
     background-position: center top 100px;
-    background-size: 280px 140px;
+    background-size: 313px 140px;
     background-repeat: no-repeat;
     transition: all 0.3s;
     width: 100%;
@@ -115,15 +115,15 @@
     @include breakpoint(medium) {
       height: 350px;
       width: 100%;
-      background-position: center top 80px;
-      background-size: 320px 160px;
+      background-position: center top 70px;
+      background-size: 380px 170px;
     }
 
     @include breakpoint(large) {
       height: 400px;
       width: 100%;
-      background-position: center top 105px;
-      background-size: 380px 190px;
+      background-position: center top 85px;
+      background-size: 448px 199px;
     }
 
     &:hover {
