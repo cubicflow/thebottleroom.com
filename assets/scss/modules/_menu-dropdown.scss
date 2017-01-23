@@ -23,7 +23,7 @@
 
   &__container {
     @include container();
-    overflow: auto;
+    overflow: none;
   }
 
   &__button {
