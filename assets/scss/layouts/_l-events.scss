@@ -2,10 +2,16 @@
   position: relative;
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  background-color: #252525;
   padding: 80px 0px 40px 0px;
-  min-height: $cover-min-height;
+  // min-height: $cover-min-height;
+  min-height: 300px;
   @include small-cover-bottom-margin();
+
+  @include breakpoint(medium) {
+    min-height: 400px;
+  }
 
   &__content {
     @include container-small();
