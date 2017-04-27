@@ -7,154 +7,152 @@ is_alcohol: true
 subcategories:
   - name: Hoppy
     items:
-      - name: Artifex Cirta Happy
-        abv: 5.7%
-        origin: San Clemente, CA
-        description: APA
-        price: $7 - 16oz
-        image_path:
-      - name: Beachwood Knucklehead Red
-        abv: 5.4%
-        origin: Long Beach, CA
-        description: Red Ale
-        price: $7 - 16oz
-        image_path:
-      - name: El Segundo Level One
+      - name: Artifex Fake Brews
         abv: 8%
-        origin: El Segundo, CA
+        origin: San Clemente, CA
         description: DIPA
         price: $8 - 16oz
         image_path:
-      - name: Figueroa Mountain Hoppy Poppy
-        abv: 6.5%
-        origin: Buellton, CA
+      - name: Bell's Two Hearted Ale
+        abv: 7%
+        origin: Kalamazoo, MI
         description: IPA
-        price: $7 - 16oz
-        image_path:
-      - name: Founders All Day
-        abv: 4.7%
-        origin: Grand Rapids, MI
-        description: IPA
-        price: $7 - 16oz
-        image_path:
-      - name: Knee Deep Breaking Bud
-        abv: 6%
-        origin: Auburn, CA
-        description: Pale Ale
         price: $8 - 16oz
         image_path:
-      - name: Mumford Third Term
-        abv: 6.9%
-        origin: Los Angeles, CA
-        description: IPA
-        price: $8 - 12oz
+      - name: Craftsman Spring Citrus
+        abv: 5.8%
+        origin: Pasadena, CA
+        description: APA
+        price: $7 - 16oz
         image_path:
-      - name: Noble Big Whig
-        abv: 6.8%
+      - name: Fremont Lush
+        abv: 7%
+        origin: Seattle, WA
+        description: IPA
+        price: $8 - 16oz
+        image_path:
+      - name: Hop Concept Galaxy and Comet IPA
+        abv: 8%
+        origin: San Marcos, CA
+        description:
+        price: $8 - 16oz
+        image_path:
+      - name: Modern Times Dymaxion
+        abv: 6.25%
+        origin: San Diego, CA
+        description: APA
+        price: $7 - 16oz
+        image_path:
+      - name: Noble Ale Works Sailor Mom
+        abv: 9.2%
         origin: Anaheim, CA
-        description: IPA
-        price: $7 - 16oz
+        description: DIPA
+        price: $9 - 16oz
         image_path:
-      - name: Pizza Port Chronic
-        abv: 4.95%
-        origin: San Clemente, CA
-        description: Amber Ale
-        price: $7 - 16oz
+      - name: Stone Doublicious
+        abv: 9.5%
+        origin: Escondido, CA
+        description: DIPA
+        price: $8 - 16oz
         image_path:
   - name: Malty
     items:
-      - name: Artifex Party Milk
-        abv: 5.2%
-        origin: San Clemente, CA
-        description: Milk Stout with coffee
-        price: $8 - 16oz
-        image_path:
-      - name: Craftsman 1903
-        abv: 5.6%
-        origin: Pasadena, CA
-        description: Lager
+      - name: Alesmith Spezial Pilz
+        abv: 4.9%
+        origin: San Diego, CA
+        description: Czech Pilsner
         price: $7 - 16oz
         image_path:
-      - name: Craftsman French Toast Ale
-        abv: 9.8%
-        origin: Pasadena, CA
-        description:
+      - name: BLVD Brewing Scotch on Scotch
+        abv: 9.6%
+        origin: Kansas City, MO
+        description: Wee Heavy
         price: $9 - 12oz
         image_path:
-      - name: Dogfish Head Palo Santo
-        abv: 12%
-        origin: Milton, DE
-        description: Brown Ale
-        price: $9 - 9oz
-        image_path:
-      - name: Founders Lizard of Koz
-        abv: 10.5%
-        origin: Grand Rapids, MI
+      - name: Mike Hess Cappuccino Porter
+        abv: 5.9%
+        origin: San Diego, CA
         description:
-        price: $9 - 9oz
+        price: $7 - 16oz
         image_path:
-      - name: Mumford Cooling Trend
-        abv: 7.5%
-        origin: Los Angeles, CA
-        description: Winter Warmer
-        price: $9 - 12oz
+      - name: Modern Times Devil's Teeth
+        abv: 11%
+        origin: San Diego, CA
+        description: Ole Ale / Stout
+        price: $11 - 6oz
+        image_path:
+      - name: Noble Ale Works Naughty Sauce
+        abv: 5.4%
+        origin: Anaheim, CA
+        description:
+        price: $8 - 16oz
+        image_path:
+      - name: The Lost Abbey Deliverance
+        abv: 12.5%
+        origin: San Marcos, CA
+        description: BBA Strong Ale
+        price: $9 - 9oz
         image_path:
   - name: Belgian Style etc...
     items:
-      - name: Allagash Hoppy Table Beer
-        abv: 4.5%
+      - name: Allagash Saison
+        abv: 6.1%
         origin: Portland, ME
-        description: Dry Hopped
+        description:
         price: $7 - 12oz
         image_path:
-      - name: Chimay Grande Réserve (Blue)
-        abv: 9%
-        origin: Belgium
-        description: Quad
-        price: $11 - 9oz
+      - name: Bear Republic Zut Alors
+        abv: 10.5%
+        origin: Healdsburg, CA
+        description: Oak-aged Saison
+        price: $9 - 6oz
         image_path:
       - name: Craftsman Heavenly Hefeweizen
-        abv: 5%
+        abv: 4.8%
         origin: Pasadena, CA
         description:
         price: $7 - 16oz
         image_path:
-      - name: Gulden Draak
-        abv: 10.5%
-        origin: Lindelaan, Belgium
-        description: Dark Tripel
-        price: $9 - 12oz
+      - name: The Bruery Mélange 3
+        abv: 15.5%
+        origin: Pasadena, CA
+        description: Barrel-aged Blend
+        price: $11 - 6oz
         image_path:
-      - name: Saison Dupont
-        abv: 6.5%
-        origin: Tourpes, Belgium
-        description: Belgian Farmhouse Ale
-        price: $9 - 12oz
+      - name: The Lost Abbey Santo Ron Diego
+        abv: 12.5%
+        origin: San Marcos, CA
+        description: Quad
+        price: $11 - 9oz
         image_path:
-      - name: Sanctum Parable Saison
-        abv: 5%
-        origin: Pomona, CA
-        description:
-        price: $7 - 12oz
-        image_path:
-      - name: Val-Dieu Cuvee 800
-        abv: 5.5%
-        origin: Aubel, Belgium
-        description: Belgian Pale Ale
-        price: $9 - 12oz
+      - name: Unibroue Maudite
+        abv: 8%
+        origin: Quebec, Canada
+        description: Belgian Strong Ale
+        price: $8 - 12oz
         image_path:
   - name: Fruity/Sour
     items:
-      - name: Eagle Rock Tarte Noir
-        abv: 4.2%
-        origin: Los Angeles, CA
-        description: Wild Ale
-        price: $9 - 12oz
-        image_path:
-      - name: The Bruery Wiki Wiki Tart
-        abv: 7%
-        origin: Placentia, CA
-        description:
+      - name: Allagash Little Brett
+        abv: 4.8%
+        origin: Portland, ME
+        description: American Wild Ale
         price: $9 - 9oz
+        image_path:
+      - name: Craftsman Cabernale 13
+        abv: 8.6%
+        origin: Pasadena, CA
+        description: Ale brewed with grapes
+        price: $11 - 12oz
+      - name: Craftsman Third Flor
+        abv: 7.1%
+        origin: Pasadena, CA
+        description: American Wild Ale
+        price: $9 - 9oz
+      - name: Rodenbach Grand Cru
+        abv: 6%
+        origin: Roeselare, Belgium
+        description:
+        price: $11 - 12oz
         image_path:
 ---

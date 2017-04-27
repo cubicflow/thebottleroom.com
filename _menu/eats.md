@@ -67,46 +67,42 @@ subcategories:
         orderable: true
   - name: Seasonal Small Bites
     items:
-      - name: Fuyu Persimmon Salad
-        description: Tangerines, Purple Haze Goat Cheese, Almonds, Passion Fruit Vinaigrette
-        price: 8.00
+      - name: Strawberry & Cucumber Salad
+        description: House Cut Greens, Feta Cheese,Champagne Vinaigrette and Hazelnuts
+        price: 7.00
         image_path:
         stackable: true
         orderable: true
-      - name: Crispy Shrimp Taco (2)
-        description: Roasted Jalapeño Tartar Sauce and Creamy Coleslaw
+      - name: Marinated Red Beets
+        description: Bermuda Triangle Goat, Sweet Grapefruit, and Pistachios
+        price: 7.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Peas & Love
+        description: Bacon Glazed English Peas and Ricotta on Ciabatta
+        price: 7.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Grilled Asparagus
+        description: Burrata Mozzarella, Crispy Prosciutto and Aged Balsamic
+        price: 9.00
+        image_path:
+        stackable: true
+        orderable: true
+      - name: Baja Style Tacos (2)
+        description: Crispy Tempura Halibut, Curry Spiced Salsa and Marinated Cabbage
         price: 10.00
         image_path:
         stackable: true
         orderable: true
-      - name: Cannellini “Cassoulet”
-        description: Italian White Bean Stew and Black Kale with Duck Sausage
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: Pork Belly Tostada (Berkshire)
-        description: Marinated Cabbage, Morita Salsa, Black Beans and Peanuts
-        price: 7.00
-        image_path:
-        stackable: true
-        orderable: true
-      - name: House Pastrami “Poutine”
-        description: Au Jus Gravy, Cheddar and Thousand Island over Thick-Cut Fries
+      - name: Merguez Lamb Sausage
+        description: Harissa Peppers, Beluga Lentil “Dal”, and Spicy Yogurt Sauce
         price: 9.00
         image_path:
         stackable: true
         orderable: true
-      - name: Spaghetti alla Bolognese
-        description: Italian Pork Sausage, Bacon and Tomato Ragu with Spaghetti. Add Egg +$2
-        price: 9.00
-        image_path:
-        stackable: false
-        orderable: true
-        custom_fields:
-          - name: Add egg +$2
-            options: "No|Yes[+2.00]"
-            required: false
       - name: Prime Flat Iron Steak (8oz)
         description: Maitre d’Hôtel Butter, Garlic Fries and Aïoli
         price: 15.00
@@ -135,15 +131,20 @@ subcategories:
         orderable: true
   - name: Flatbreads
     items:
-      - name: Winter Margarita
-        description: Oven Dried and Sun Dried Tomatoes with Black Kale and Crispy Garlic
-        price: 12.00
+      - name: Spring Garlic and Asparagus
+        description: With English Peas and Ricotta Cheese
+        price: 11.00
         image_path:
-        stackable: true
+        stackable: false
         orderable: true
-      - name: The Nixon
-        description: Italian Sausage Meat Sauce, Bacon, Chorizo and Pepperoni
-        price: 15.00
+        orderable: true
+        custom_fields:
+          - name: Add bacon +$2
+            options: "No|Yes[+2.00]"
+            required: true
+      - name: Three Little Pigs
+        description: Bacon, Chorizo, Pepperoni
+        price: 14.00
         image_path:
         stackable: true
         orderable: true
@@ -236,9 +237,9 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: Bacon Machine (5oz)
-        description: Bacon & Beef Blend Patty, Thick Bacon, “American Cheese”, Buttermilk Aioli. With side arugula salad
-        price: 12.00
+      - name: Lamburguesa (6oz)
+        description: Fried Jalapenos, Smoked Chili Cheddar, Guajillo Ketchup
+        price: 14.00
         image_path:
         stackable: false
         orderable: true
