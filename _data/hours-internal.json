@@ -30,13 +30,13 @@
     "breakfast": {}
   },
   "saturday": {
-    "open": "08:00",
+    "open": "09:00",
     "close": "22:59",
     "restaurantClose": "23:59",
     "breakfast": {}
   },
   "sunday": {
-    "open": "08:00",
+    "open": "09:00",
     "close": "21:00",
     "restaurantClose": "22:00",
     "breakfast": {}

@@ -10,7 +10,7 @@ timePeriods:
     breakfast:
   - label: Saturday
     normalService: 12pm - 12am
-    breakfast: 8am - 11:30am
+    breakfast: 9am - 12pm
   - label: Sunday
     normalService: 12pm - 10pm (Happy Hour ALL DAY)
-    breakfast: 8am - 11:30am
+    breakfast: 9am - 12pm
