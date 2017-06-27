@@ -7,152 +7,146 @@ is_alcohol: true
 subcategories:
   - name: Hoppy
     items:
-      - name: Artifex Fake Brews
-        abv: 8%
-        origin: San Clemente, CA
+      - name: Avery Real Peel
+        abv: 6.3%
+        origin: Boulder, CO
         description: DIPA
-        price: $8 - 16oz
-        image_path:
-      - name: Bell's Two Hearted Ale
-        abv: 7%
-        origin: Kalamazoo, MI
-        description: IPA
-        price: $8 - 16oz
-        image_path:
-      - name: Craftsman Spring Citrus
-        abv: 5.8%
-        origin: Pasadena, CA
-        description: APA
         price: $7 - 16oz
         image_path:
-      - name: Fremont Lush
-        abv: 7%
-        origin: Seattle, WA
+      - name: Green Cheek Soft Skin
+        abv: 6%
+        origin: Orange, CA
+        description: Hazy IPA
+        price: $9 - 16oz
+        image_path:
+      - name: Kern River Sequoia
+        abv: 5.2%
+        origin: Kernville, CA
+        description: Red
+        price: $7 - 16oz
+        image_path:
+      - name: Mason Ale Works Gutterball Trio
+        abv: 5.6%
+        origin: Oceanside, CA
+        description: IPA
+        price: $7 - 16oz
+        image_path:
+      - name: Modern Times Effective Dreams
+        abv: 7.2%
+        origin: San Diego, CA
         description: IPA
         price: $8 - 16oz
         image_path:
-      - name: Hop Concept Galaxy and Comet IPA
-        abv: 8%
-        origin: San Marcos, CA
-        description:
-        price: $8 - 16oz
-        image_path:
-      - name: Modern Times Dymaxion
-        abv: 6.25%
+      - name: Modern Times Orderville
+        abv: 7.2%
         origin: San Diego, CA
         description: APA
         price: $7 - 16oz
         image_path:
-      - name: Noble Ale Works Sailor Mom
-        abv: 9.2%
-        origin: Anaheim, CA
-        description: DIPA
-        price: $9 - 16oz
+      - name: Mumford Hunky Dory
+        abv: 7.45%
+        origin: Los Angeles, CA
+        description: IPA
+        price: $8 - 16oz
         image_path:
-      - name: Stone Doublicious
-        abv: 9.5%
-        origin: Escondido, CA
-        description: DIPA
+      - name: Pizza Port Pickleweed Point
+        abv: 6.2%
+        origin: San Clemente, CA
+        description: IPA
         price: $8 - 16oz
         image_path:
   - name: Malty
     items:
-      - name: Alesmith Spezial Pilz
-        abv: 4.9%
-        origin: San Diego, CA
-        description: Czech Pilsner
+      - name: Barrelhouse Sunny Daze
+        abv: 5.2%
+        origin: Paso Robles, CA
+        description: Blonde
         price: $7 - 16oz
         image_path:
-      - name: BLVD Brewing Scotch on Scotch
-        abv: 9.6%
-        origin: Kansas City, MO
-        description: Wee Heavy
-        price: $9 - 12oz
+      - name: Craftsman 1903
+        abv: 5.6%
+        origin: Pasadena, CA
+        description: Lager
+        price: $7 - 12oz
         image_path:
-      - name: Mike Hess Cappuccino Porter
-        abv: 5.9%
+      - name: Modern Times Blazing World
+        abv: 6.8%
         origin: San Diego, CA
-        description:
+        description: Amber
         price: $7 - 16oz
         image_path:
-      - name: Modern Times Devil's Teeth
-        abv: 11%
-        origin: San Diego, CA
-        description: Ole Ale / Stout
+      - name: Smog City The Nothing
+        abv: 9.3%
+        origin: Torrance, CA
+        description: Imperial Russian Stout
+        price: $8 - 12oz
+        image_path:
+      - name: The Bruery Saule
+        abv: 16.1%
+        origin: Placentia, CA
+        description: Barrel Age Old Ale
         price: $11 - 6oz
         image_path:
-      - name: Noble Ale Works Naughty Sauce
-        abv: 5.4%
-        origin: Anaheim, CA
-        description:
+      - name: Track 7 Nuckin' Futz
+        abv: 7.3%
+        origin: Sacramento, CA
+        description: Peanut Butter / Cocoa Cream Porter
         price: $8 - 16oz
-        image_path:
-      - name: The Lost Abbey Deliverance
-        abv: 12.5%
-        origin: San Marcos, CA
-        description: BBA Strong Ale
-        price: $9 - 9oz
         image_path:
   - name: Belgian Style etc...
     items:
-      - name: Allagash Saison
-        abv: 6.1%
+      - name: Allagash Curieux
+        abv: 11%
         origin: Portland, ME
-        description:
-        price: $7 - 12oz
+        description: BA Tripel
+        price: $9 - 12oz
         image_path:
-      - name: Bear Republic Zut Alors
-        abv: 10.5%
-        origin: Healdsburg, CA
-        description: Oak-aged Saison
-        price: $9 - 6oz
+      - name: Artifex Unicorn Juice
+        abv: 5%
+        origin: San Clemente, CA
+        description: Passionfruit Wheat
+        price: $7 - 16oz
+        image_path:
+      - name: Beachwood 3rd Dimension
+        abv: 9.5%
+        origin: Long Beach, CA
+        description:
+        price: $7 - 16oz
         image_path:
       - name: Craftsman Heavenly Hefeweizen
-        abv: 4.8%
+        abv: 5%
         origin: Pasadena, CA
         description:
         price: $7 - 16oz
         image_path:
-      - name: The Bruery Mélange 3
-        abv: 15.5%
-        origin: Pasadena, CA
-        description: Barrel-aged Blend
-        price: $11 - 6oz
-        image_path:
-      - name: The Lost Abbey Santo Ron Diego
-        abv: 12.5%
-        origin: San Marcos, CA
-        description: Quad
-        price: $11 - 9oz
-        image_path:
-      - name: Unibroue Maudite
-        abv: 8%
-        origin: Quebec, Canada
-        description: Belgian Strong Ale
-        price: $8 - 12oz
+      - name: Modern Times Transit of Venus
+        abv: 5.7%
+        origin: San Diego, CA
+        description: Saison
+        price: $7 - 12oz
         image_path:
   - name: Fruity/Sour
     items:
-      - name: Allagash Little Brett
-        abv: 4.8%
+      - name: Allagash Hibernal Fluxus
+        abv: 8%
         origin: Portland, ME
-        description: American Wild Ale
-        price: $9 - 9oz
-        image_path:
-      - name: Craftsman Cabernale 13
-        abv: 8.6%
-        origin: Pasadena, CA
-        description: Ale brewed with grapes
-        price: $11 - 12oz
-      - name: Craftsman Third Flor
-        abv: 7.1%
-        origin: Pasadena, CA
-        description: American Wild Ale
-        price: $9 - 9oz
-      - name: Rodenbach Grand Cru
-        abv: 6%
-        origin: Roeselare, Belgium
         description:
-        price: $11 - 12oz
+        price: $11 - 9oz
+        image_path:
+      - name: Allagash Josephine
+        abv: 10.4%
+        origin: Portland, ME
+        description:
+        price: $11 - 9oz
+      - name: Cascade Bourbonic Plague 13
+        abv: 13%
+        origin: Portland, OR
+        description:
+        price: $13 - 6oz
+      - name: The Bruery Guava Libre
+        abv: 7.5%
+        origin: Placentia, CA
+        description: Cream Ale
+        price: $9 - 12oz
         image_path:
 ---
