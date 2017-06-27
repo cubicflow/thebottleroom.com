@@ -24,7 +24,7 @@
   &__button {
 
     @include show-for(medium);
-    
+
     @extend .button, .button--outline;
     margin-top: 20px;
     margin-left: 0px;
@@ -132,7 +132,7 @@
 
     @include hide-for(medium);
     position: absolute;
-    z-index: 99;
+    z-index: 90;
     right: 0px;
     top: 20px;
 
