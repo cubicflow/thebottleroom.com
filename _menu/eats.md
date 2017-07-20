@@ -67,39 +67,39 @@ subcategories:
         orderable: true
   - name: Seasonal Small Bites
     items:
-      - name: Strawberry & Cucumber Salad
-        description: House Cut Greens, Feta Cheese,Champagne Vinaigrette and Hazelnuts
-        price: 7.00
+      - name: Grilled Corn on the Cob "Elote"
+        description: Mayo, Queso Cotija, Lime, and Smoked Chili Powder
+        price: 4.00
         image_path:
         stackable: true
         orderable: true
-      - name: Marinated Red Beets
-        description: Bermuda Triangle Goat, Sweet Grapefruit, and Pistachios
-        price: 7.00
+      - name: Watermelon Salad
+        description: Feta Cheese, Yuzu Vinaigrette, Cucumber, Red Onioj
+        price: 8.00
         image_path:
         stackable: true
         orderable: true
-      - name: Peas & Love
-        description: Bacon Glazed English Peas and Ricotta on Ciabatta
-        price: 7.00
+      - name: Heirloom Tomato & Avocado "Toast"
+        description: Marinated Baby Heirloom Tomatoes, Avocado Chunks, Cilantro
+        price: 8.00
         image_path:
         stackable: true
         orderable: true
-      - name: Grilled Asparagus
-        description: Burrata Mozzarella, Crispy Prosciutto and Aged Balsamic
-        price: 9.00
+      - name: Shrimp Tostada
+        description: Marinated Shrimp, Napa Cabbage, Szechuan Vinaigrette, Cilantro, Peanuts
+        price: 11.00
         image_path:
         stackable: true
         orderable: true
-      - name: Baja Style Tacos (2)
-        description: Crispy Tempura Halibut, Curry Spiced Salsa and Marinated Cabbage
+      - name: Pork Belly Tacos (2)
+        description: Crispy Pork Belly with Pineapple Habanero Salsa
         price: 10.00
         image_path:
         stackable: true
         orderable: true
-      - name: Merguez Lamb Sausage
-        description: Harissa Peppers, Beluga Lentil “Dal”, and Spicy Yogurt Sauce
-        price: 9.00
+      - name: Baby Back Ribs
+        description: Spicy BBQ, American Potato Salad, and 1/2 Grilled Corn
+        price: 13.00
         image_path:
         stackable: true
         orderable: true
@@ -131,8 +131,8 @@ subcategories:
         orderable: true
   - name: Flatbreads
     items:
-      - name: Spring Garlic and Asparagus
-        description: With English Peas and Ricotta Cheese
+      - name: Summer Margarita
+        description: Baby Heirlooms, Sun Dried Tomatoes, San Marzano Sauce, Basil
         price: 11.00
         image_path:
         stackable: false
@@ -142,9 +142,9 @@ subcategories:
           - name: Add bacon +$2
             options: "No|Yes[+2.00]"
             required: true
-      - name: Three Little Pigs
-        description: Bacon, Chorizo, Pepperoni
-        price: 14.00
+      - name: Squash Blossoms
+        description: Goat Cheese, Baby Zucchino, Aleppo Chilies
+        price: 12.00
         image_path:
         stackable: true
         orderable: true
@@ -237,16 +237,13 @@ subcategories:
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
             required: false
-      - name: Lamburguesa (6oz)
-        description: Fried Jalapenos, Smoked Chili Cheddar, Guajillo Ketchup
-        price: 14.00
+      - name: Spicy Crispy Chicken Sandwich
+        description: Buttermilk Tabasco Marinated, Chipotle Aïoli, Pickles, and Slaw
+        price: 12.00
         image_path:
         stackable: false
         orderable: true
         custom_fields:
-          - name: Meat cooked to
-            options: "Medium|Medium-well|Well"
-            required: true
           - name: Add bacon +$2
             options: "No|Yes[+2.00]"
             required: false
@@ -255,15 +252,6 @@ subcategories:
             required: false
           - name: Add avocado +$1
             options: "No|Yes[+1.00]"
-            required: false
-          - name: Add tomato +$1
-            options: "No|Yes[+1.00]"
-            required: false
-          - name: Add pickles +$1
-            options: "No|Yes[+1.00]"
-            required: false
-          - name: Substitute Mushrooms for non-meat eaters (no charge)
-            options: "No|Yes"
             required: false
           - name: Substitute Salad for Fries +$2
             options: "No|Yes, Shoestring Fries[+2.00]|Yes, Sweet potato fries[+2.00]"
