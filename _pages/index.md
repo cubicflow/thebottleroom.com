@@ -62,7 +62,7 @@ show_call_to_action: true
 <div class="slide slide--atmosphere cf-responsive">
   <div class="slide__content">
     <h1 class="editable">A simple atmosphere</h1>
-    <p class="editable">Showcased by a beautifully exposed brick wall and raw construction along side modern amenities, The Bottle Room evokes the idea of historic building revivals. The simplicity is intentional. It allows guests the opportunity to surround themselves in a cozy environment free from unwanted distractions. We believe the design should be in the food, the drinks and friends.</p>
+    <p class="editable">Showcased by a beautifully exposed brick wall and raw construction along side modern&nbsp;amenities, The&nbsp;Bottle Room evokes the idea of historic building revivals. The simplicity is intentional. It&nbsp;allows guests the opportunity to surround themselves in a cozy environment free from unwanted&nbsp;distractions. We&nbsp;believe this ethos should be in the&nbsp;food, the&nbsp;drinks, and&nbsp;experience.</p>
   </div>
 
   <div class="slide__overlay">
@@ -74,7 +74,7 @@ show_call_to_action: true
 <div class="slide slide--pairings cf-responsive">
   <div class="slide__content">
     <h1 class="editable">Delightful pairings</h1>
-    <p class="editable">We pair the finest craft beer and carefully selected wines with traditional dishes done better — we try to keep things that simple. The menu is designed to infuse fresh and vibrant ingredients into everyone’s favorite dishes. The food is not fancy, but the way it’s prepared is.</p>
+    <p class="editable">We pair the finest craft beer and carefully selected wines with traditional dishes done&nbsp;better — we&nbsp;try to keep things that&nbsp;simple. The&nbsp;menu is designed to infuse fresh and vibrant ingredients into everyone’s favorite&nbsp;dishes. The&nbsp;food itself is not&nbsp;fancy, but&nbsp;the way it’s prepared&nbsp;is.</p>
     <div class="slide--pairings__row">
       <div class="slide--pairings__col">
         <img src="/assets/img/home/pairing-goblet.svg">
@@ -106,7 +106,7 @@ show_call_to_action: true
 <div class="slide slide--moment cf-responsive">
   <div class="slide__content">
     <h1 class="editable">In the moment</h1>
-    <p class="editable">Seasonal menus. Pairing dinners. Special events. Ultra-rare beers. We live in the moment at The Bottle Room with the mission to deliver the fresh and exciting. Everyday is an idea, an experiment, an adventure. Pro-tip: The Bottle Room features 24 rotating taps of craft beer so there’s always something new to try when you return.</p>
+    <p class="editable">Seasonal menus. Pairing&nbsp;dinners. Special&nbsp;events. Ultra-rare&nbsp;beers. We&nbsp;live in the moment at The&nbsp;Bottle Room with the mission to deliver the fresh and&nbsp;exciting. Everyday&nbsp;is an&nbsp;idea, an experiment, an&nbsp;adventure. Pro-tip: The&nbsp;Bottle Room features 24 rotating taps of craft beer so there’s always something new to try when you&nbsp;return.</p>
     <div class="slide--moment__row">
       <div class="slide--moment__col">
         24
@@ -135,7 +135,7 @@ show_call_to_action: true
 <div class="slide slide--inspired cf-responsive">
   <div class="slide__content">
     <h1 class="editable">Distinctly inspired</h1>
-    <p class="editable">The Bottle Room’s chef, Tony Alcazar, has drawn from his years of fine-dining cooking experience to upgrade our most enjoyed meals into distinctive creations. We would love for you to come and join us.</p>
+    <p class="editable">The Bottle Room’s chef, Tony&nbsp;Alcazar, has&nbsp;drawn from his years of fine-dining cooking experience to upgrade our most enjoyed meals into distinctive&nbsp;creations. We&nbsp;would love for you to come and join&nbsp;us.</p>
   </div>
 
   <div class="slide__overlay">
