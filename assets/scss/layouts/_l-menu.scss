@@ -11,21 +11,21 @@
   @include cover-min-height();
 }
 
+.brunchtime {
+  color: $brick--lighter;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+}
 
 .menu {
   @include container();
   padding: 0px 0px 30px 0px;
   overflow: auto;
 
-  &__brunchtime {
-    color: $brick--lighter;
-    margin-bottom: 24px;
-    text-align: center;
-
-    @include breakpoint(medium) {
-      text-align: left;
-    }
-  }
 
   &__sidebar {
     @include small-cover-top-margin();
