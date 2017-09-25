@@ -45,6 +45,10 @@ layout: default
 
     <div id="{{ subcategory.name | slugify }}" class="menu__subcategory">
 
+      {% if page.is_brunch %}
+      <div class="menu__brunch-hours">Brunch served every Saturday &amp; Sunday, 9am&nbsp;-&nbsp;12pm</div>
+      {% endif %}
+
       <div class="menu__subcategory__title">{{ subcategory.name }}</div>
 
 

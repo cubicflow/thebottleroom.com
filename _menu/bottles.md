@@ -4,6 +4,7 @@ layout: menu
 sidebar_order: 3
 is_public: true
 is_alcohol: true
+is_brunch: false
 subcategories:
   - name: Hoppy
     items:

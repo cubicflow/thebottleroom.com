@@ -4,6 +4,7 @@ layout: menu
 sidebar_order: 5
 is_public: true
 is_alcohol: false
+is_brunch: true
 subcategories:
   - name: Eggs, Pancakes, etc...
     items:
