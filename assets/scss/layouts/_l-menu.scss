@@ -12,9 +12,12 @@
 }
 
 .brunchtime {
-  color: $brick--lighter;
   margin-bottom: 24px;
-  text-align: center;
+
+  span {
+    color: $brick--lighter;
+    text-align: center;
+  }
 
   @include breakpoint(medium) {
     text-align: left;
