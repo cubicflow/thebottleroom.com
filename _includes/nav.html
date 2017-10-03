@@ -38,11 +38,12 @@
         <li><a {% if page.url == '/' %} class="active" {% endif %} href="/">Home</a></li>
         <li><a {% if page.url == '/menu/eats/' %} class="active" {% endif %} href="/menu/eats">Menu</a></li>
         <li><a {% if page.url == '/menu/ontap/' %} class="active" {% endif %} href="/menu/ontap">Beer</a></li>
-        <li><a {% if page.url == '/location' %} class="active" {% endif %} href="/location">Location</a></li>
+        <li><a {% if page.url == '/location' %} class="active" {% endif %} href="/location">Hours</a></li>
         <li><a {% if page.url == '/gallery' %} class="active" {% endif %} href="/gallery">Gallery</a></li>
         <li>
           <a {% if page.url == '/more' %} class="active" {% endif %}>More +</a>
           <ul class="nav__links__dropdown">
+            <li><a href="/location">Location</a></li>
             <li><a href="/events">Events and Press</a></li>
             <!-- <li><a href="/gallery">Gallery</a></li> -->
             <li><a href="/chef">Chef&nbsp;Tony</a></li>
